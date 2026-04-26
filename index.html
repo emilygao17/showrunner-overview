@@ -703,11 +703,14 @@ function initMap(allCheckins, ym) {
 
   let currentWeek = 0;
 
+  const NYC_BOUNDS = [[-74.02, 40.68], [-73.90, 40.85]];
   const map = new maplibregl.Map({
     container: 'map-container',
     style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
-    center: [-73.990, 40.735],
+    center: [-73.960, 40.765],
     zoom: 11.8,
+    minZoom: 11.8,
+    maxBounds: NYC_BOUNDS,
     attributionControl: false,
   });
 
