@@ -1,0 +1,1197 @@
+{
+  "month": "2025-08",
+  "label": "August 2025",
+  "total_checkins": 114,
+  "total_shows_seen": 102,
+  "show_of_the_month": {
+    "show_id": "35684",
+    "title": "herbivore",
+    "venue_name": "The Hole",
+    "neighborhood": "SoHo-NoHo",
+    "gallery_tier": "Intermediate",
+    "seen_count": 4,
+    "save_count": 0,
+    "mediums": [
+      "Paintings",
+      "Sculptures",
+      "Photography",
+      "Videos",
+      "Multimedia"
+    ],
+    "artists": [
+      "Theo A. Rosenblum",
+      "Barry Mcgee",
+      "E.V. Day",
+      "Paul Wackers",
+      "Nathan Ritterpusch",
+      "Andy Dixon",
+      "Caroline Larsen",
+      "Hein Koh",
+      "Michael Assiff",
+      "Ben Godward",
+      "Hanna Hansdotter",
+      "Kembra Pfahler",
+      "Ariane Heloise Hughes",
+      "Graphic Rewilding",
+      "Lee Baker And Catherine Borowski",
+      "Chelsea Seltzer",
+      "Carly Owens Weiss"
+    ],
+    "end_date": "2025-08-31",
+    "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/6542ebec60a8497c9c2a24a62275b15a_original.jpg",
+    "short_description": "The Hole's summer exhibition, \"Herbivore,\" showcases diverse artists exploring botanical themes through various media. Works reflect the symbolic and stylistic significance of plan\u2026"
+  },
+  "top_5_seen": [
+    {
+      "show_id": "35684",
+      "title": "herbivore",
+      "venue_name": "The Hole",
+      "neighborhood": "SoHo-NoHo",
+      "gallery_tier": "Intermediate",
+      "seen_count": 4,
+      "save_count": 0,
+      "mediums": [
+        "Paintings",
+        "Sculptures",
+        "Photography",
+        "Videos",
+        "Multimedia"
+      ],
+      "artists": [
+        "Theo A. Rosenblum",
+        "Barry Mcgee",
+        "E.V. Day",
+        "Paul Wackers",
+        "Nathan Ritterpusch",
+        "Andy Dixon",
+        "Caroline Larsen",
+        "Hein Koh",
+        "Michael Assiff",
+        "Ben Godward",
+        "Hanna Hansdotter",
+        "Kembra Pfahler",
+        "Ariane Heloise Hughes",
+        "Graphic Rewilding",
+        "Lee Baker And Catherine Borowski",
+        "Chelsea Seltzer",
+        "Carly Owens Weiss"
+      ],
+      "end_date": "2025-08-31",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/6542ebec60a8497c9c2a24a62275b15a_original.jpg",
+      "short_description": "The Hole's summer exhibition, \"Herbivore,\" showcases diverse artists exploring botanical themes through various media. Works reflect the symbolic and stylistic significance of plan\u2026"
+    },
+    {
+      "show_id": "35682",
+      "title": "guest of a guest",
+      "venue_name": "The Hole",
+      "neighborhood": "Tribeca",
+      "gallery_tier": "Intermediate",
+      "seen_count": 4,
+      "save_count": 0,
+      "mediums": [
+        "Paintings",
+        "Sculptures",
+        "Installation",
+        "Design"
+      ],
+      "artists": [
+        "Colin J. Radcliffe",
+        "Etty Anderson",
+        "Jonni Cheatwood",
+        "Mark Frygell",
+        "Scout Zabinski",
+        "Michael Mcgregor",
+        "Ad\u00e8le Aproh",
+        "Carly Owens Weiss"
+      ],
+      "end_date": "2025-08-30",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/934f8fdf22c24ba5828aad80edaf41af.jpg",
+      "short_description": "The Hole's summer exhibition, \"Guest of a Guest,\" features diverse artists and curators showcasing themes of gatherings, including dinner and afterparties, through various engaging\u2026"
+    },
+    {
+      "show_id": "35898",
+      "title": "Rashid Johnson",
+      "venue_name": "Guggenheim Museum",
+      "neighborhood": "Upper East Side",
+      "gallery_tier": "Blue Chip",
+      "seen_count": 2,
+      "save_count": 0,
+      "mediums": [
+        "Paintings",
+        "Sculptures",
+        "Videos"
+      ],
+      "artists": [
+        "Rashid Johnson"
+      ],
+      "end_date": "2026-01-19",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/fd7e45a3ad3e4e45b906c9d852cb7b8c_mobile.jpg",
+      "short_description": "The upcoming exhibition showcases nearly 90 works by artist Rashid Johnson, exploring themes of art history and Black culture. It features diverse media, including sculptures and f\u2026"
+    },
+    {
+      "show_id": "34069",
+      "title": "de anima",
+      "venue_name": "Swiss Institute",
+      "neighborhood": "East Village",
+      "gallery_tier": "Intermediate",
+      "seen_count": 2,
+      "save_count": 0,
+      "mediums": [
+        "Paintings",
+        "Sculptures",
+        "Videos",
+        "Multimedia"
+      ],
+      "artists": [
+        "Louise Bonnet",
+        "Elizabeth King"
+      ],
+      "end_date": "2025-09-07",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/8a0c098c239b473ab89da1c3bca6add1.jpg",
+      "short_description": "Swiss Institute's exhibition \"De Anima\" features Louise Bonnet and Elizabeth King's works, exploring themes of life versus nonlife through their unique artistic dialogues on gestur\u2026"
+    },
+    {
+      "show_id": "35846",
+      "title": "Scott Csoke",
+      "venue_name": "Sargent's Daughters",
+      "neighborhood": "Tribeca",
+      "gallery_tier": "Intermediate",
+      "seen_count": 2,
+      "save_count": 0,
+      "mediums": [
+        "Paintings",
+        "Installation"
+      ],
+      "artists": [
+        "Scott Csoke"
+      ],
+      "end_date": "2025-08-22",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/c6006a8de5b24e0f8ee2c3713c88ceb2.jpg",
+      "short_description": "Sargent\u2019s Daughters presents \"Carnival of the Animals,\" Brooklyn artist Scott Csoke\u2019s debut solo show, featuring acrylic paintings that explore queerness and identity through expre\u2026"
+    }
+  ],
+  "top_5_saved": [],
+  "map_checkins": [
+    {
+      "timestamp": "2025-08-01 17:39:55.972407+00",
+      "lat": 40.768238348951,
+      "lon": -73.968568382828,
+      "neighborhood": "Upper East Side",
+      "show_title": "take me to your leader!",
+      "venue_name": "Richard Saltoun"
+    },
+    {
+      "timestamp": "2025-08-01 17:40:07.256895+00",
+      "lat": 40.7250872,
+      "lon": -73.9926904,
+      "neighborhood": "SoHo-NoHo",
+      "show_title": "herbivore",
+      "venue_name": "The Hole"
+    },
+    {
+      "timestamp": "2025-08-01 17:41:29.134267+00",
+      "lat": 40.7120541127902,
+      "lon": -74.0073759529175,
+      "neighborhood": "Chelsea",
+      "show_title": "Cannupa Hanska Luger",
+      "venue_name": "Public Art Fund"
+    },
+    {
+      "timestamp": "2025-08-01 17:41:32.15723+00",
+      "lat": 40.700291313659,
+      "lon": -73.9966995,
+      "neighborhood": "Central Brooklyn",
+      "show_title": "Huma Bhabha",
+      "venue_name": "Public Art Fund"
+    },
+    {
+      "timestamp": "2025-08-01 17:41:43.52618+00",
+      "lat": 40.7120541127902,
+      "lon": -74.0073759529175,
+      "neighborhood": "Chelsea",
+      "show_title": "Thaddeus Mosley",
+      "venue_name": "Public Art Fund"
+    },
+    {
+      "timestamp": "2025-08-01 17:41:58.786768+00",
+      "lat": 40.765127582972,
+      "lon": -73.972649777315,
+      "neighborhood": "Murray Hill",
+      "show_title": "Fred Eversley",
+      "venue_name": "Public Art Fund"
+    },
+    {
+      "timestamp": "2025-08-01 17:42:21.993867+00",
+      "lat": 40.765127582972,
+      "lon": -73.972649777315,
+      "neighborhood": "Murray Hill",
+      "show_title": "Edra Soto",
+      "venue_name": "Public Art Fund"
+    },
+    {
+      "timestamp": "2025-08-01 21:04:38.667981+00",
+      "lat": 40.713118989708,
+      "lon": -73.990181059034,
+      "neighborhood": "Lower East Side",
+      "show_title": "Harris Rosenblum",
+      "venue_name": "Foreign & Domestic"
+    },
+    {
+      "timestamp": "2025-08-02 04:06:23.508619+00",
+      "lat": 40.7126981,
+      "lon": -73.9953302,
+      "neighborhood": "Lower East Side",
+      "show_title": "Lily Macrae",
+      "venue_name": "Long Story Short"
+    },
+    {
+      "timestamp": "2025-08-02 16:09:14.508974+00",
+      "lat": 40.721806315748,
+      "lon": -74.001138864943,
+      "neighborhood": "Tribeca",
+      "show_title": "revolve",
+      "venue_name": "Market Gallery"
+    },
+    {
+      "timestamp": "2025-08-02 16:13:09.682078+00",
+      "lat": 40.750692,
+      "lon": -74.003183,
+      "neighborhood": "Chelsea",
+      "show_title": "En Iwamura",
+      "venue_name": "Ross + Kramer"
+    },
+    {
+      "timestamp": "2025-08-02 16:13:13.624944+00",
+      "lat": 40.7661897,
+      "lon": -73.9703272,
+      "neighborhood": "Chelsea",
+      "show_title": "Esther Mahlangu",
+      "venue_name": "Ross + Kramer Gallery"
+    },
+    {
+      "timestamp": "2025-08-02 16:13:19.974844+00",
+      "lat": 40.750692,
+      "lon": -74.003183,
+      "neighborhood": "Chelsea",
+      "show_title": "sideways",
+      "venue_name": "Ross + Kramer"
+    },
+    {
+      "timestamp": "2025-08-02 16:13:21.84535+00",
+      "lat": 40.750692,
+      "lon": -74.003183,
+      "neighborhood": "Chelsea",
+      "show_title": "Katherine Auchterlonie",
+      "venue_name": "Ross + Kramer"
+    },
+    {
+      "timestamp": "2025-08-02 16:13:26.227062+00",
+      "lat": 40.750692,
+      "lon": -74.003183,
+      "neighborhood": "Chelsea",
+      "show_title": "Noritoshi Mitsuuchi",
+      "venue_name": "Ross + Kramer"
+    },
+    {
+      "timestamp": "2025-08-03 13:39:24.875161+00",
+      "lat": 40.747541760903,
+      "lon": -74.005623271758,
+      "neighborhood": "Chelsea",
+      "show_title": "celebrating 30 years",
+      "venue_name": "Yancey Richardson Gallery"
+    },
+    {
+      "timestamp": "2025-08-03 13:39:36.737601+00",
+      "lat": 40.747768734906,
+      "lon": -74.006670095257,
+      "neighborhood": "Chelsea",
+      "show_title": "Francis Picabia",
+      "venue_name": "Hauser & Wirth"
+    },
+    {
+      "timestamp": "2025-08-03 13:39:49.849415+00",
+      "lat": 40.746854,
+      "lon": -74.00672,
+      "neighborhood": "Chelsea",
+      "show_title": "Jetzeit (Now - Time)",
+      "venue_name": "Gladstone Gallery"
+    },
+    {
+      "timestamp": "2025-08-03 13:41:04.557426+00",
+      "lat": 40.7497336,
+      "lon": -74.0051016,
+      "neighborhood": "Chelsea",
+      "show_title": "Trevor Paglen",
+      "venue_name": "Pace Gallery"
+    },
+    {
+      "timestamp": "2025-08-04 00:44:27.538038+00",
+      "lat": 40.719384221358,
+      "lon": -74.003900136059,
+      "neighborhood": "Tribeca",
+      "show_title": "Steve Keister",
+      "venue_name": "Derek Eller Gallery"
+    },
+    {
+      "timestamp": "2025-08-04 14:43:19.595278+00",
+      "lat": 40.7513002,
+      "lon": -74.004346,
+      "neighborhood": "Chelsea",
+      "show_title": "Park Joon",
+      "venue_name": "Roundcube Contemporary"
+    },
+    {
+      "timestamp": "2025-08-04 21:32:29.113181+00",
+      "lat": 40.748487,
+      "lon": -74.004583,
+      "neighborhood": "Chelsea",
+      "show_title": "Hugh Hayden",
+      "venue_name": "Lisson Gallery"
+    },
+    {
+      "timestamp": "2025-08-05 19:14:17.069143+00",
+      "lat": 40.7214779295,
+      "lon": -73.993828477299,
+      "neighborhood": "SoHo-NoHo",
+      "show_title": "exaltation",
+      "venue_name": "Plato"
+    },
+    {
+      "timestamp": "2025-08-06 19:30:04.113421+00",
+      "lat": 40.739505,
+      "lon": -74.008946,
+      "neighborhood": "West Village",
+      "show_title": "Amy Sherald",
+      "venue_name": "Whitney Museum of American Art"
+    },
+    {
+      "timestamp": "2025-08-06 19:30:47.717272+00",
+      "lat": 40.74728316908,
+      "lon": -74.005553049587,
+      "neighborhood": "Chelsea",
+      "show_title": "Jack Kabangu",
+      "venue_name": "Harper's Chelsea 512"
+    },
+    {
+      "timestamp": "2025-08-07 17:59:21.412076+00",
+      "lat": 40.716559,
+      "lon": -73.991278,
+      "neighborhood": "Lower East Side",
+      "show_title": "Light Lies Sleeping",
+      "venue_name": "Colbo NYC"
+    },
+    {
+      "timestamp": "2025-08-07 17:59:29.023827+00",
+      "lat": 40.713119,
+      "lon": -73.995966,
+      "neighborhood": "Lower East Side",
+      "show_title": "relative to the sun",
+      "venue_name": "HAIR+NAILS"
+    },
+    {
+      "timestamp": "2025-08-08 02:08:55.327715+00",
+      "lat": 40.74935446657,
+      "lon": -74.00469634051,
+      "neighborhood": "Chelsea",
+      "show_title": "summer city idyll 2025",
+      "venue_name": "Agora Gallery"
+    },
+    {
+      "timestamp": "2025-08-08 02:11:22.376302+00",
+      "lat": 40.773059681519,
+      "lon": -73.962114805933,
+      "neighborhood": "Upper East Side",
+      "show_title": "ever so present ii: between home and elsewhere",
+      "venue_name": "Gagosian"
+    },
+    {
+      "timestamp": "2025-08-08 02:11:31.877647+00",
+      "lat": 40.745546,
+      "lon": -73.947229,
+      "neighborhood": "Queens",
+      "show_title": "The Gatherers",
+      "venue_name": "MoMA PS1 "
+    },
+    {
+      "timestamp": "2025-08-08 02:11:56.685254+00",
+      "lat": 40.745587,
+      "lon": -73.946929,
+      "neighborhood": "Queens",
+      "show_title": "Julien Ceccaldi",
+      "venue_name": "MoMA PS1"
+    },
+    {
+      "timestamp": "2025-08-08 02:12:03.241445+00",
+      "lat": 40.745587,
+      "lon": -73.946929,
+      "neighborhood": "Queens",
+      "show_title": "Whitney Claflin",
+      "venue_name": "MoMA PS1"
+    },
+    {
+      "timestamp": "2025-08-08 02:12:11.764194+00",
+      "lat": 40.745546,
+      "lon": -73.947229,
+      "neighborhood": "Queens",
+      "show_title": "Alanis Obomsawin",
+      "venue_name": "MoMA PS1 "
+    },
+    {
+      "timestamp": "2025-08-08 13:36:07.703173+00",
+      "lat": 40.782934,
+      "lon": -73.958982,
+      "neighborhood": "Upper East Side",
+      "show_title": "Rashid Johnson",
+      "venue_name": "Guggenheim Museum"
+    },
+    {
+      "timestamp": "2025-08-08 14:37:18.399971+00",
+      "lat": 40.7159928,
+      "lon": -73.9927892,
+      "neighborhood": "Lower East Side",
+      "show_title": "after h(ours)",
+      "venue_name": "Kiang Malingue"
+    },
+    {
+      "timestamp": "2025-08-08 14:37:47.616632+00",
+      "lat": 40.713340448218,
+      "lon": -73.992055154964,
+      "neighborhood": "Lower East Side",
+      "show_title": "Will Yackulic",
+      "venue_name": "Gern en Regalia"
+    },
+    {
+      "timestamp": "2025-08-08 14:37:55.483627+00",
+      "lat": 40.7133314835073,
+      "lon": -73.9920715984863,
+      "neighborhood": "Lower East Side",
+      "show_title": "Will Yackulic",
+      "venue_name": "Gern en Regalia"
+    },
+    {
+      "timestamp": "2025-08-08 14:38:20.666668+00",
+      "lat": 40.718186,
+      "lon": -74.0024068,
+      "neighborhood": "Tribeca",
+      "show_title": "Karen Arm",
+      "venue_name": "P.P.O.W"
+    },
+    {
+      "timestamp": "2025-08-08 14:40:44.02139+00",
+      "lat": 40.755091277458,
+      "lon": -73.975836249076,
+      "neighborhood": "Midtown",
+      "show_title": "summering in cyberspace",
+      "venue_name": "Charmoli Ciarmoli"
+    },
+    {
+      "timestamp": "2025-08-08 16:17:29.637351+00",
+      "lat": 40.7226132,
+      "lon": -73.9854593,
+      "neighborhood": "East Village",
+      "show_title": "Choichun Leung",
+      "venue_name": "Ruby/Dakota"
+    },
+    {
+      "timestamp": "2025-08-10 15:36:47.273661+00",
+      "lat": 40.782934,
+      "lon": -73.958982,
+      "neighborhood": "Upper East Side",
+      "show_title": "Rashid Johnson",
+      "venue_name": "Guggenheim Museum"
+    },
+    {
+      "timestamp": "2025-08-10 15:37:08.04247+00",
+      "lat": 40.726756613672,
+      "lon": -73.99310765,
+      "neighborhood": "SoHo-NoHo",
+      "show_title": "Rasheed Araeen",
+      "venue_name": "Aicon Art"
+    },
+    {
+      "timestamp": "2025-08-10 15:37:10.805417+00",
+      "lat": 40.7266655,
+      "lon": -73.9931832,
+      "neighborhood": "SoHo-NoHo",
+      "show_title": "Victor Ekpuk",
+      "venue_name": "Aicon Art"
+    },
+    {
+      "timestamp": "2025-08-10 15:37:15.596755+00",
+      "lat": 40.726756613672,
+      "lon": -73.99310765,
+      "neighborhood": "SoHo-NoHo",
+      "show_title": "Victor Ekpuk",
+      "venue_name": "Aicon Art"
+    },
+    {
+      "timestamp": "2025-08-10 15:37:32.376367+00",
+      "lat": 40.7482259,
+      "lon": -74.0046431,
+      "neighborhood": "Chelsea",
+      "show_title": "stand clear of the closing doors, please.",
+      "venue_name": "GOCA by Garde"
+    },
+    {
+      "timestamp": "2025-08-10 15:37:59.809775+00",
+      "lat": 40.7488158,
+      "lon": -74.0062125,
+      "neighborhood": "Chelsea",
+      "show_title": "Jialu Gao",
+      "venue_name": "Crossing Art"
+    },
+    {
+      "timestamp": "2025-08-11 01:05:58.762446+00",
+      "lat": 40.7250872,
+      "lon": -73.9926904,
+      "neighborhood": "SoHo-NoHo",
+      "show_title": "herbivore",
+      "venue_name": "The Hole"
+    },
+    {
+      "timestamp": "2025-08-11 05:05:23.062206+00",
+      "lat": 40.719444953085,
+      "lon": -74.002813224537,
+      "neighborhood": "Tribeca",
+      "show_title": "Katherine Bradford",
+      "venue_name": "CANADA"
+    },
+    {
+      "timestamp": "2025-08-12 07:13:48.765852+00",
+      "lat": 40.728431861775,
+      "lon": -73.987543804894,
+      "neighborhood": "East Village",
+      "show_title": "de anima",
+      "venue_name": "Swiss Institute"
+    },
+    {
+      "timestamp": "2025-08-12 14:48:00.670894+00",
+      "lat": 40.718351850569,
+      "lon": -74.002610045031,
+      "neighborhood": "East Village",
+      "show_title": "i have become my own worst fear",
+      "venue_name": "P\u00b7P\u00b7O\u00b7W"
+    },
+    {
+      "timestamp": "2025-08-12 14:48:08.815705+00",
+      "lat": 40.718232613668,
+      "lon": -74.00233615,
+      "neighborhood": "Tribeca",
+      "show_title": "i have become my own worst fear",
+      "venue_name": "P\u00b7P\u00b7O\u00b7W"
+    },
+    {
+      "timestamp": "2025-08-13 03:00:32.336598+00",
+      "lat": 40.717684383751,
+      "lon": -74.003144841009,
+      "neighborhood": "Tribeca",
+      "show_title": "Scott Csoke",
+      "venue_name": "Sargent's Daughters"
+    },
+    {
+      "timestamp": "2025-08-13 03:00:56.662017+00",
+      "lat": 40.718613544996,
+      "lon": -74.00450137013,
+      "neighborhood": "Tribeca",
+      "show_title": "parallax: traversing image and text",
+      "venue_name": "1969 Gallery"
+    },
+    {
+      "timestamp": "2025-08-13 03:01:11.924222+00",
+      "lat": 40.718613544996,
+      "lon": -74.00450137013,
+      "neighborhood": "Tribeca",
+      "show_title": "parallax: traversing image and text",
+      "venue_name": "1969 Gallery"
+    },
+    {
+      "timestamp": "2025-08-13 12:52:09.679309+00",
+      "lat": 40.773040163694,
+      "lon": -73.96574415,
+      "neighborhood": "Upper East Side",
+      "show_title": "Group Show",
+      "venue_name": "Craig Starr Gallery"
+    },
+    {
+      "timestamp": "2025-08-15 16:53:46.878761+00",
+      "lat": 40.753994879413,
+      "lon": -73.993461688396,
+      "neighborhood": "Midtown",
+      "show_title": "Nobuyoshi Araki",
+      "venue_name": "Meredith Rosen Gallery"
+    },
+    {
+      "timestamp": "2025-08-16 15:10:20.38409+00",
+      "lat": 40.717789624699,
+      "lon": -74.000470129448,
+      "neighborhood": "Tribeca",
+      "show_title": "adam unparadis\u2019d",
+      "venue_name": "Francis Irv"
+    },
+    {
+      "timestamp": "2025-08-16 15:13:19.915239+00",
+      "lat": 40.717744,
+      "lon": -74.002223,
+      "neighborhood": "Tribeca",
+      "show_title": "life\u2014a group show",
+      "venue_name": "Artists Space"
+    },
+    {
+      "timestamp": "2025-08-16 15:14:30.252974+00",
+      "lat": 40.718531483543,
+      "lon": -74.003921053906,
+      "neighborhood": "Tribeca",
+      "show_title": "Purvai Rai",
+      "venue_name": "James Fuentes"
+    },
+    {
+      "timestamp": "2025-08-16 15:14:44.646807+00",
+      "lat": 40.719178013668,
+      "lon": -74.0032476,
+      "neighborhood": "Tribeca",
+      "show_title": "Ej Hill",
+      "venue_name": "David Zwirner"
+    },
+    {
+      "timestamp": "2025-08-16 15:14:45.941976+00",
+      "lat": 40.719090864896,
+      "lon": -74.003319224583,
+      "neighborhood": "Tribeca",
+      "show_title": "Ej Hill",
+      "venue_name": "52 Walker"
+    },
+    {
+      "timestamp": "2025-08-16 15:22:25.31905+00",
+      "lat": 40.717912945367,
+      "lon": -74.003341300296,
+      "neighborhood": "Tribeca",
+      "show_title": "paint the lines",
+      "venue_name": "Broadway"
+    },
+    {
+      "timestamp": "2025-08-16 15:24:29.609127+00",
+      "lat": 40.718634,
+      "lon": -74.003842,
+      "neighborhood": "Tribeca",
+      "show_title": "Purvai Rai",
+      "venue_name": "James Fuentes"
+    },
+    {
+      "timestamp": "2025-08-16 18:38:45.924275+00",
+      "lat": 40.713642384302,
+      "lon": -73.99413579997,
+      "neighborhood": "Tribeca",
+      "show_title": "adam unparadis'd",
+      "venue_name": "Francis Irv"
+    },
+    {
+      "timestamp": "2025-08-16 20:37:24.699981+00",
+      "lat": 40.718495613668,
+      "lon": -73.98267995,
+      "neighborhood": "Lower East Side",
+      "show_title": "Danym Kwon",
+      "venue_name": "Hashimoto Contemporary"
+    },
+    {
+      "timestamp": "2025-08-16 20:37:54.581341+00",
+      "lat": 40.7165611,
+      "lon": -73.9899858,
+      "neighborhood": "Lower East Side",
+      "show_title": "Danym Kwon",
+      "venue_name": "Hashimoto Contemporary"
+    },
+    {
+      "timestamp": "2025-08-16 20:37:57.187705+00",
+      "lat": 40.7165611,
+      "lon": -73.9899858,
+      "neighborhood": "Lower East Side",
+      "show_title": "Giorgiko",
+      "venue_name": "Hashimoto Contemporary"
+    },
+    {
+      "timestamp": "2025-08-17 02:01:08.611308+00",
+      "lat": 40.7178686,
+      "lon": -74.0053451,
+      "neighborhood": "Tribeca",
+      "show_title": "snake summer",
+      "venue_name": "Locker Room Gallery"
+    },
+    {
+      "timestamp": "2025-08-17 02:01:26.81021+00",
+      "lat": 40.715533582115,
+      "lon": -73.997948645105,
+      "neighborhood": "Tribeca",
+      "show_title": "crosscurrents",
+      "venue_name": "Latitude Gallery"
+    },
+    {
+      "timestamp": "2025-08-17 02:01:46.219844+00",
+      "lat": 40.71911909443,
+      "lon": -74.003285233095,
+      "neighborhood": "Tribeca",
+      "show_title": "Terra Keck",
+      "venue_name": "Storage"
+    },
+    {
+      "timestamp": "2025-08-17 02:01:54.344981+00",
+      "lat": 40.7226132,
+      "lon": -73.9854593,
+      "neighborhood": "East Village",
+      "show_title": "gathering",
+      "venue_name": "Ruby/Dakota"
+    },
+    {
+      "timestamp": "2025-08-17 02:02:40.293388+00",
+      "lat": 40.71911909443,
+      "lon": -74.003285233095,
+      "neighborhood": "Tribeca",
+      "show_title": "Olivia Springberg",
+      "venue_name": "Storage"
+    },
+    {
+      "timestamp": "2025-08-17 02:03:07.394297+00",
+      "lat": 40.7190631,
+      "lon": -73.9873309,
+      "neighborhood": "Lower East Side",
+      "show_title": "John Knuth",
+      "venue_name": "Hollis Taggart Downtown"
+    },
+    {
+      "timestamp": "2025-08-17 02:03:09.722043+00",
+      "lat": 40.719057936438,
+      "lon": -73.987195560681,
+      "neighborhood": "Lower East Side",
+      "show_title": "John Knuth",
+      "venue_name": "Hollis Taggart"
+    },
+    {
+      "timestamp": "2025-08-17 19:05:06.385674+00",
+      "lat": 40.7163369,
+      "lon": -73.9915829,
+      "neighborhood": "Lower East Side",
+      "show_title": "life and death",
+      "venue_name": "KALINER"
+    },
+    {
+      "timestamp": "2025-08-19 02:46:25.345057+00",
+      "lat": 40.7182695,
+      "lon": -74.0013514,
+      "neighborhood": "Tribeca",
+      "show_title": "guest of a guest",
+      "venue_name": "The Hole"
+    },
+    {
+      "timestamp": "2025-08-19 02:50:38.253209+00",
+      "lat": 40.7177352,
+      "lon": -74.0014313,
+      "neighborhood": "Tribeca",
+      "show_title": "Florian Meisenberg",
+      "venue_name": "WINDOW"
+    },
+    {
+      "timestamp": "2025-08-19 02:56:18.100504+00",
+      "lat": 40.7250872,
+      "lon": -73.9926904,
+      "neighborhood": "SoHo-NoHo",
+      "show_title": "Mathew Zefeldt",
+      "venue_name": "The Hole"
+    },
+    {
+      "timestamp": "2025-08-19 03:02:00.965396+00",
+      "lat": 40.76991,
+      "lon": -73.96425,
+      "neighborhood": "Upper East Side",
+      "show_title": "Generations",
+      "venue_name": "Asia Society"
+    },
+    {
+      "timestamp": "2025-08-19 15:08:14.921242+00",
+      "lat": 40.7250872,
+      "lon": -73.9926904,
+      "neighborhood": "SoHo-NoHo",
+      "show_title": "herbivore",
+      "venue_name": "The Hole"
+    },
+    {
+      "timestamp": "2025-08-19 15:08:18.629064+00",
+      "lat": 40.7182695,
+      "lon": -74.0013514,
+      "neighborhood": "Tribeca",
+      "show_title": "guest of a guest",
+      "venue_name": "The Hole"
+    },
+    {
+      "timestamp": "2025-08-19 15:08:24.702911+00",
+      "lat": 40.717912945367,
+      "lon": -74.003341300296,
+      "neighborhood": "Tribeca",
+      "show_title": "paint the lines",
+      "venue_name": "Broadway"
+    },
+    {
+      "timestamp": "2025-08-19 15:08:49.593086+00",
+      "lat": 40.719147613668,
+      "lon": -74.0044061,
+      "neighborhood": "Tribeca",
+      "show_title": "Alfie Caine",
+      "venue_name": "Margot Samel"
+    },
+    {
+      "timestamp": "2025-08-19 15:09:03.958882+00",
+      "lat": 40.74908,
+      "lon": -74.005042,
+      "neighborhood": "Chelsea",
+      "show_title": "Salman Toor",
+      "venue_name": "Luhring Augustine"
+    },
+    {
+      "timestamp": "2025-08-19 15:09:08.838101+00",
+      "lat": 40.744271580987,
+      "lon": -74.00519108612,
+      "neighborhood": "Chelsea",
+      "show_title": "William Kentridge",
+      "venue_name": "Hauser & Wirth"
+    },
+    {
+      "timestamp": "2025-08-19 15:09:13.699958+00",
+      "lat": 40.745867278882,
+      "lon": -74.006983469871,
+      "neighborhood": "Chelsea",
+      "show_title": "Michael Armitage",
+      "venue_name": "David Zwirner"
+    },
+    {
+      "timestamp": "2025-08-19 15:09:18.722445+00",
+      "lat": 40.746848474087,
+      "lon": -74.006419898148,
+      "neighborhood": "Chelsea",
+      "show_title": "Takashi Murakami",
+      "venue_name": "Gagosian"
+    },
+    {
+      "timestamp": "2025-08-19 15:09:28.793553+00",
+      "lat": 40.746598922899,
+      "lon": -74.00680923887,
+      "neighborhood": "Chelsea",
+      "show_title": "Jin Han Lee",
+      "venue_name": "Gallery Hyundai New York Project Space"
+    },
+    {
+      "timestamp": "2025-08-19 15:09:35.161141+00",
+      "lat": 40.7506804,
+      "lon": -74.0030472,
+      "neighborhood": "Chelsea",
+      "show_title": "Alexis Ralaivao",
+      "venue_name": "Olney Gleason"
+    },
+    {
+      "timestamp": "2025-08-19 17:01:27.811659+00",
+      "lat": 40.775989413696,
+      "lon": -73.962546,
+      "neighborhood": "Upper East Side",
+      "show_title": "purpose",
+      "venue_name": "Alexander Berggruen"
+    },
+    {
+      "timestamp": "2025-08-20 18:02:18.110573+00",
+      "lat": 40.745867278882,
+      "lon": -74.006983469871,
+      "neighborhood": "Chelsea",
+      "show_title": "Sasha Gordon",
+      "venue_name": "David Zwirner"
+    },
+    {
+      "timestamp": "2025-08-20 18:55:19.510427+00",
+      "lat": 40.750219363683,
+      "lon": -74.0036949,
+      "neighborhood": "Chelsea",
+      "show_title": "the making of a new world: art of the 1980s",
+      "venue_name": "Hollis Taggart"
+    },
+    {
+      "timestamp": "2025-08-20 18:55:37.536103+00",
+      "lat": 40.7184138,
+      "lon": -74.0048398,
+      "neighborhood": "Tribeca",
+      "show_title": "under the sun",
+      "venue_name": "Pontone Gallery"
+    },
+    {
+      "timestamp": "2025-08-20 19:14:45.759784+00",
+      "lat": 40.725282092216,
+      "lon": -73.990907466037,
+      "neighborhood": "East Village",
+      "show_title": "Jane Dickson",
+      "venue_name": "Karma"
+    },
+    {
+      "timestamp": "2025-08-20 22:45:23.213711+00",
+      "lat": 40.717683550381,
+      "lon": -74.00316030434,
+      "neighborhood": "Tribeca",
+      "show_title": "extraordinary",
+      "venue_name": "370 Broadway"
+    },
+    {
+      "timestamp": "2025-08-20 22:47:12.581083+00",
+      "lat": 40.717684383751,
+      "lon": -74.003144841009,
+      "neighborhood": "Tribeca",
+      "show_title": "Scott Csoke",
+      "venue_name": "Sargent's Daughters"
+    },
+    {
+      "timestamp": "2025-08-20 22:47:17.652469+00",
+      "lat": 40.717684383751,
+      "lon": -74.003144841009,
+      "neighborhood": "Tribeca",
+      "show_title": "instrumentos de silencio",
+      "venue_name": "Sargent's Daughters"
+    },
+    {
+      "timestamp": "2025-08-20 22:47:31.718041+00",
+      "lat": 40.779204574532,
+      "lon": -73.96279653852,
+      "neighborhood": "Upper East Side",
+      "show_title": "The Costume Institute",
+      "venue_name": "The Met"
+    },
+    {
+      "timestamp": "2025-08-20 22:47:47.927324+00",
+      "lat": 40.779204574532,
+      "lon": -73.96279653852,
+      "neighborhood": "Upper East Side",
+      "show_title": "Jennie C. Jones",
+      "venue_name": "The Met"
+    },
+    {
+      "timestamp": "2025-08-20 22:47:51.257007+00",
+      "lat": 40.761359,
+      "lon": -73.977723,
+      "neighborhood": "Midtown",
+      "show_title": "Hilma Af Klint",
+      "venue_name": "Museum of Modern Art"
+    },
+    {
+      "timestamp": "2025-08-21 02:14:56.264261+00",
+      "lat": 40.728431861775,
+      "lon": -73.987543804894,
+      "neighborhood": "East Village",
+      "show_title": "de anima",
+      "venue_name": "Swiss Institute"
+    },
+    {
+      "timestamp": "2025-08-21 02:15:02.879405+00",
+      "lat": 40.7250872,
+      "lon": -73.9926904,
+      "neighborhood": "SoHo-NoHo",
+      "show_title": "herbivore",
+      "venue_name": "The Hole"
+    },
+    {
+      "timestamp": "2025-08-21 02:15:41.737795+00",
+      "lat": 40.7182695,
+      "lon": -74.0013514,
+      "neighborhood": "Tribeca",
+      "show_title": "guest of a guest",
+      "venue_name": "The Hole"
+    },
+    {
+      "timestamp": "2025-08-21 02:16:33.524959+00",
+      "lat": 40.7497336,
+      "lon": -74.0051016,
+      "neighborhood": "Chelsea",
+      "show_title": "David Byrne",
+      "venue_name": "Pace Gallery"
+    },
+    {
+      "timestamp": "2025-08-21 02:18:29.643183+00",
+      "lat": 40.728431861775,
+      "lon": -73.987543804894,
+      "neighborhood": "East Village",
+      "show_title": "K Allado-Mcdowell",
+      "venue_name": "Swiss Institute"
+    },
+    {
+      "timestamp": "2025-08-21 16:58:07.683271+00",
+      "lat": 40.7175029,
+      "lon": -74.0039908,
+      "neighborhood": "Tribeca",
+      "show_title": "Chloe Wise",
+      "venue_name": "Almine Rech"
+    },
+    {
+      "timestamp": "2025-08-22 19:17:19.972094+00",
+      "lat": 40.739505,
+      "lon": -74.008946,
+      "neighborhood": "West Village",
+      "show_title": "Christine Sun Kim",
+      "venue_name": "Whitney Museum of American Art"
+    },
+    {
+      "timestamp": "2025-08-24 17:20:43.876472+00",
+      "lat": 40.714021713666,
+      "lon": -74.0081429,
+      "neighborhood": "Tribeca",
+      "show_title": "Jorge Torrealba",
+      "venue_name": "One Art Space"
+    },
+    {
+      "timestamp": "2025-08-27 14:47:55.298376+00",
+      "lat": 40.7182695,
+      "lon": -74.0013514,
+      "neighborhood": "Tribeca",
+      "show_title": "guest of a guest",
+      "venue_name": "The Hole"
+    },
+    {
+      "timestamp": "2025-08-29 18:33:16.531468+00",
+      "lat": 40.7465935,
+      "lon": -74.0067876,
+      "neighborhood": "Chelsea",
+      "show_title": "summer blow out: pop",
+      "venue_name": "Dean Borghi Fine Art"
+    },
+    {
+      "timestamp": "2025-08-30 17:50:46.57163+00",
+      "lat": 40.7408113,
+      "lon": -74.0066468,
+      "neighborhood": "West Village",
+      "show_title": "primary exposure: fatherly photographs",
+      "venue_name": "Affirmation Arts"
+    },
+    {
+      "timestamp": "2025-08-30 18:13:47.340117+00",
+      "lat": 40.7175029,
+      "lon": -74.0039908,
+      "neighborhood": "Tribeca",
+      "show_title": "Chloe Wise",
+      "venue_name": "Almine Rech"
+    },
+    {
+      "timestamp": "2025-08-30 22:45:58.692731+00",
+      "lat": 40.761359,
+      "lon": -73.977723,
+      "neighborhood": "Midtown",
+      "show_title": "Hilma Af Klint",
+      "venue_name": "Museum of Modern Art"
+    },
+    {
+      "timestamp": "2025-08-31 02:52:59.045141+00",
+      "lat": 40.7111232,
+      "lon": -73.9351276,
+      "neighborhood": "North Brooklyn",
+      "show_title": "an electric dream",
+      "venue_name": "Zepster Gallery"
+    }
+  ],
+  "neighborhoods": [
+    {
+      "neighborhood": "Tribeca",
+      "checkin_count": 34
+    },
+    {
+      "neighborhood": "Chelsea",
+      "checkin_count": 27
+    },
+    {
+      "neighborhood": "Lower East Side",
+      "checkin_count": 13
+    },
+    {
+      "neighborhood": "Upper East Side",
+      "checkin_count": 9
+    },
+    {
+      "neighborhood": "SoHo-NoHo",
+      "checkin_count": 9
+    },
+    {
+      "neighborhood": "East Village",
+      "checkin_count": 7
+    }
+  ],
+  "returning_favorites": [],
+  "closing_this_month": [
+    {
+      "show_id": "33751",
+      "title": "Francis Picabia",
+      "venue_name": "Hauser & Wirth",
+      "neighborhood": "Chelsea",
+      "end_date": "2025-08-01",
+      "seen_count": 1
+    },
+    {
+      "show_id": "35519",
+      "title": "Harris Rosenblum",
+      "venue_name": "Foreign & Domestic",
+      "neighborhood": "Lower East Side",
+      "end_date": "2025-08-09",
+      "seen_count": 1
+    },
+    {
+      "show_id": "35705",
+      "title": "revolve",
+      "venue_name": "Market Gallery",
+      "neighborhood": "Tribeca",
+      "end_date": "2025-08-10",
+      "seen_count": 1
+    },
+    {
+      "show_id": "35326",
+      "title": "take me to your leader!",
+      "venue_name": "Richard Saltoun",
+      "neighborhood": "Upper East Side",
+      "end_date": "2025-08-15",
+      "seen_count": 1
+    },
+    {
+      "show_id": "35622",
+      "title": "celebrating 30 years",
+      "venue_name": "Yancey Richardson Gallery",
+      "neighborhood": "Chelsea",
+      "end_date": "2025-08-15",
+      "seen_count": 1
+    },
+    {
+      "show_id": "35846",
+      "title": "Scott Csoke",
+      "venue_name": "Sargent's Daughters",
+      "neighborhood": "Tribeca",
+      "end_date": "2025-08-22",
+      "seen_count": 2
+    },
+    {
+      "show_id": "32389",
+      "title": "Edra Soto",
+      "venue_name": "Public Art Fund",
+      "neighborhood": "Murray Hill",
+      "end_date": "2025-08-24",
+      "seen_count": 1
+    },
+    {
+      "show_id": "36154",
+      "title": "paint the lines",
+      "venue_name": "Broadway",
+      "neighborhood": "Tribeca",
+      "end_date": "2025-08-29",
+      "seen_count": 2
+    },
+    {
+      "show_id": "35682",
+      "title": "guest of a guest",
+      "venue_name": "The Hole",
+      "neighborhood": "Tribeca",
+      "end_date": "2025-08-30",
+      "seen_count": 4
+    },
+    {
+      "show_id": "35684",
+      "title": "herbivore",
+      "venue_name": "The Hole",
+      "neighborhood": "SoHo-NoHo",
+      "end_date": "2025-08-31",
+      "seen_count": 4
+    }
+  ]
+}

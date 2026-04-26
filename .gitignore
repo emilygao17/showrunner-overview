@@ -1,0 +1,11 @@
+# Raw data (not for version control)
+data files/
+test.md
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# macOS
+.DS_Store

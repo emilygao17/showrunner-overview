@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Showrunner Monthly Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,700;0,14..32,900;1,14..32,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #EEF0F4;
+    --surface: #fff;
+    --ink: #0A0A0A;
+    --muted: #666;
+    --border: #D8DAE0;
+    --accent: #0A0A0A;
+    --green: #1A6B3C;
+    --red: #C0392B;
+    --radius: 12px;
+    --gap: 16px;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  header {
+    background: var(--ink);
+    color: #fff;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .logo {
+    font-weight: 900;
+    font-stretch: condensed;
+    font-size: 18px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .month-nav {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .month-nav::-webkit-scrollbar { display: none; }
+
+  .month-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.25);
+    color: rgba(255,255,255,0.6);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s;
+  }
+  .month-btn:hover { border-color: rgba(255,255,255,0.6); color: #fff; }
+  .month-btn.active {
+    background: #fff;
+    border-color: #fff;
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  /* ── Layout ── */
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 20px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+  }
+
+  .card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 20px;
+    min-width: 0;
+    border: 1px solid var(--border);
+  }
+
+  .card-full  { grid-column: 1 / -1; }
+  .card-third { grid-column: span 1; }
+
+  .card-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  /* ── Stats hero ── */
+  .stats-hero { grid-column: 1 / -1; }
+  .stats-hero .month-title {
+    font-size: 32px;
+    font-weight: 900;
+    font-stretch: condensed;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .stats-row {
+    display: flex;
+    gap: 32px;
+  }
+  .stat-num {
+    font-size: 26px;
+    font-weight: 900;
+    font-stretch: condensed;
+    line-height: 1;
+  }
+  .stat-item .stat-lbl {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* ── Show of the month ── */
+  .sotm-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    background: var(--bg);
+    display: block;
+  }
+  .sotm-title {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .sotm-venue {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+  .sotm-desc {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .tag {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .sotm-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .sotm-meta strong { color: var(--ink); }
+
+  /* ── Top 5 ── */
+  .show-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .show-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .show-row:last-child { border-bottom: none; }
+  .show-rank {
+    font-size: 20px;
+    font-weight: 900;
+    font-stretch: condensed;
+    color: var(--border);
+    width: 24px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .show-thumb {
+    width: 52px;
+    height: 52px;
+    border-radius: 6px;
+    object-fit: cover;
+    background: var(--bg);
+    flex-shrink: 0;
+  }
+  .show-info { flex: 1; min-width: 0; }
+  .show-title {
+    font-weight: 700;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .show-venue {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .show-medium {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .show-count {
+    font-size: 18px;
+    font-weight: 800;
+    font-stretch: condensed;
+    flex-shrink: 0;
+    text-align: right;
+  }
+  .show-count-lbl {
+    font-size: 10px;
+    color: var(--muted);
+    text-align: right;
+  }
+
+  /* ── Neighborhoods ── */
+  .hood-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hood-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .hood-name {
+    font-size: 13px;
+    font-weight: 500;
+    width: 130px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .hood-bar-wrap {
+    flex: 1;
+    background: var(--bg);
+    border-radius: 4px;
+    height: 8px;
+    overflow: hidden;
+  }
+  .hood-bar {
+    height: 100%;
+    background: var(--ink);
+    border-radius: 4px;
+    transition: width 0.4s ease;
+  }
+  .hood-count {
+    font-size: 12px;
+    font-weight: 700;
+    width: 28px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  /* ── Returning favorites ── */
+  .returning-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .returning-item {
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .returning-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .returning-title { font-weight: 700; font-size: 13px; }
+  .returning-venue { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+  .returning-months {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .returning-month-tag {
+    font-size: 10px;
+    font-weight: 600;
+    background: #f0f4f8;
+    padding: 2px 8px;
+    border-radius: 10px;
+    color: var(--ink);
+  }
+  .empty-state {
+    color: var(--muted);
+    font-size: 13px;
+    font-style: italic;
+    padding: 8px 0;
+  }
+
+  /* ── Map ── */
+  .week-nav {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  .week-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .week-btn:hover { border-color: var(--ink); color: var(--ink); }
+  .week-btn.active { background: var(--ink); border-color: var(--ink); color: #fff; font-weight: 700; }
+
+  .maplibregl-popup-close-button {
+    font-size: 16px;
+    color: #666;
+    padding: 2px 6px;
+    line-height: 1;
+  }
+  .maplibregl-popup-close-button:hover { color: #0A0A0A; }
+  .maplibregl-popup-content { padding: 10px 28px 10px 10px; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+
+  #map-container {
+    height: 380px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 4px;
+  }
+
+  /* ── Closing this month ── */
+  .closing-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .closing-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .closing-row:last-child { border-bottom: none; }
+  .closing-date {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--red);
+    width: 56px;
+    flex-shrink: 0;
+  }
+  .closing-info { flex: 1; min-width: 0; }
+  .closing-title {
+    font-weight: 700;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .closing-venue { font-size: 12px; color: var(--muted); }
+  .closing-seen {
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+    color: var(--muted);
+  }
+
+  /* ── Loading / error ── */
+  #loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px;
+    color: var(--muted);
+    font-size: 16px;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 680px) {
+    main {
+      grid-template-columns: 1fr;
+      padding: 16px 12px 48px;
+    }
+    .card-full, .card-third { grid-column: 1; }
+    header { padding: 0 16px; }
+    .month-nav { max-width: calc(100vw - 140px); }
+    .stats-hero .month-title { font-size: 24px; }
+    .stat-num { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Showrunner</div>
+  <nav class="month-nav" id="month-nav"></nav>
+</header>
+
+<main id="main">
+  <div id="loading">Loading…</div>
+</main>
+
+<script>
+const MONTHS = [
+  { ym: '2025-07', label: 'Jul 2025' },
+  { ym: '2025-08', label: 'Aug 2025' },
+  { ym: '2025-09', label: 'Sep 2025' },
+  { ym: '2025-10', label: 'Oct 2025' },
+  { ym: '2025-11', label: 'Nov 2025' },
+  { ym: '2025-12', label: 'Dec 2025' },
+  { ym: '2026-01', label: 'Jan 2026' },
+  { ym: '2026-02', label: 'Feb 2026' },
+  { ym: '2026-03', label: 'Mar 2026' },
+];
+
+const MONTH_SHORT = {
+  '01':'Jan','02':'Feb','03':'Mar','04':'Apr','05':'May','06':'Jun',
+  '07':'Jul','08':'Aug','09':'Sep','10':'Oct','11':'Nov','12':'Dec',
+};
+
+let currentMap = null;
+
+// ── Month nav ──────────────────────────────────────────────────────────────
+const nav = document.getElementById('month-nav');
+MONTHS.forEach(({ ym, label }) => {
+  const btn = document.createElement('button');
+  btn.className = 'month-btn';
+  btn.textContent = label;
+  btn.dataset.ym = ym;
+  btn.addEventListener('click', () => loadMonth(ym));
+  nav.appendChild(btn);
+});
+
+function setActiveBtn(ym) {
+  document.querySelectorAll('.month-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.ym === ym);
+  });
+}
+
+// ── Helpers ────────────────────────────────────────────────────────────────
+function fmtDate(iso) {
+  if (!iso) return '';
+  const [y, m, d] = iso.split('-');
+  return `${MONTH_SHORT[m]} ${parseInt(d)}`;
+}
+
+function imgOrPlaceholder(url, cls, alt) {
+  if (url) {
+    return `<img class="${cls}" src="${url}" alt="${alt}" onerror="this.style.display='none'">`;
+  }
+  return `<div class="${cls}" style="background:var(--bg);"></div>`;
+}
+
+function tagsHtml(arr) {
+  if (!arr || !arr.length) return '';
+  return `<div class="tag-row">${arr.map(t => `<span class="tag">${t}</span>`).join('')}</div>`;
+}
+
+// ── Render helpers ─────────────────────────────────────────────────────────
+function renderStats(d) {
+  return `
+  <div class="card stats-hero">
+    <div class="month-title">${d.label}</div>
+    <div class="stats-row">
+      <div class="stat-num">${d.total_checkins.toLocaleString()} visits across ${d.total_shows_seen.toLocaleString()} exhibitions</div>
+    </div>
+  </div>`;
+}
+
+function renderSotm(show) {
+  return `
+  <div class="card card-full">
+    <div class="card-label">Show of the Month</div>
+    ${imgOrPlaceholder(show.featured_image, 'sotm-image', show.title)}
+    <div class="sotm-title">${show.title}</div>
+    <div class="sotm-venue">${show.venue_name} · ${show.neighborhood}</div>
+    ${show.short_description ? `<div class="sotm-desc">${show.short_description}</div>` : ''}
+    ${tagsHtml(show.mediums)}
+    ${tagsHtml(show.artists)}
+    <div class="sotm-meta">
+      <span><strong>${show.seen_count}</strong> check-ins</span>
+      ${show.save_count ? `<span><strong>${show.save_count}</strong> saves</span>` : ''}
+      ${show.end_date ? `<span>Closes ${fmtDate(show.end_date)}</span>` : ''}
+      ${show.gallery_tier ? `<span>${show.gallery_tier}</span>` : ''}
+    </div>
+  </div>`;
+}
+
+function renderTop5(shows) {
+  const rows = shows.map((s, i) => `
+    <div class="show-row">
+      <div class="show-rank">${i + 1}</div>
+      ${imgOrPlaceholder(s.featured_image, 'show-thumb', s.title)}
+      <div class="show-info">
+        <div class="show-title">${s.title}</div>
+        <div class="show-venue">${s.venue_name} · ${s.neighborhood}</div>
+        ${s.mediums && s.mediums.length ? `<div class="show-medium">${s.mediums.join(', ')}</div>` : ''}
+      </div>
+      <div>
+        <div class="show-count">${s.seen_count}</div>
+        <div class="show-count-lbl">seen</div>
+      </div>
+    </div>`).join('');
+  return `
+  <div class="card">
+    <div class="card-label">Top 5 Most Visited</div>
+    <div class="show-list">${rows}</div>
+  </div>`;
+}
+
+function renderTop5Saved(shows) {
+  if (!shows || !shows.length) return `
+  <div class="card">
+    <div class="card-label">Top 5 Want to See</div>
+    <div class="empty-state">No saves recorded this month.</div>
+  </div>`;
+  const rows = shows.map((s, i) => `
+    <div class="show-row">
+      <div class="show-rank">${i + 1}</div>
+      ${imgOrPlaceholder(s.featured_image, 'show-thumb', s.title)}
+      <div class="show-info">
+        <div class="show-title">${s.title}</div>
+        <div class="show-venue">${s.venue_name} · ${s.neighborhood}</div>
+        ${s.mediums && s.mediums.length ? `<div class="show-medium">${s.mediums.join(', ')}</div>` : ''}
+      </div>
+      <div>
+        <div class="show-count">${s.save_count}</div>
+        <div class="show-count-lbl">saved</div>
+      </div>
+    </div>`).join('');
+  return `
+  <div class="card">
+    <div class="card-label">Top 5 Want to See</div>
+    <div class="show-list">${rows}</div>
+  </div>`;
+}
+
+function renderNeighborhoods(hoods) {
+  if (!hoods.length) return '';
+  const max = hoods[0].checkin_count;
+  const rows = hoods.map(h => `
+    <div class="hood-row">
+      <div class="hood-name">${h.neighborhood}</div>
+      <div class="hood-bar-wrap">
+        <div class="hood-bar" style="width:${Math.round(h.checkin_count / max * 100)}%"></div>
+      </div>
+      <div class="hood-count">${h.checkin_count}</div>
+    </div>`).join('');
+  return `
+  <div class="card">
+    <div class="card-label">Neighborhoods</div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">Showrunner gallery check-ins by neighborhood</div>
+    <div class="hood-list">${rows}</div>
+  </div>`;
+}
+
+function renderReturning(favorites) {
+  const inner = !favorites.length
+    ? `<div class="empty-state">No returning favorites this month.</div>`
+    : favorites.map(f => `
+      <div class="returning-item">
+        <div class="returning-title">${f.title}</div>
+        <div class="returning-venue">${f.venue_name} · ${f.neighborhood} · ${f.seen_this_month} check-ins</div>
+        <div class="returning-months">
+          ${f.also_top5_in.map(m => {
+            const [y, mo] = m.split('-');
+            return `<span class="returning-month-tag">${MONTH_SHORT[mo]} ${y}</span>`;
+          }).join('')}
+        </div>
+      </div>`).join('');
+  return `
+  <div class="card">
+    <div class="card-label">Returning Favorites</div>
+    <div class="returning-list">${inner}</div>
+  </div>`;
+}
+
+function renderMap() {
+  return `
+  <div class="card card-full">
+    <div class="card-label">Check-in Map</div>
+    <div class="week-nav" id="week-nav">
+      <button class="week-btn active" data-week="0">Week 1</button>
+      <button class="week-btn" data-week="1">Week 2</button>
+      <button class="week-btn" data-week="2">Week 3</button>
+      <button class="week-btn" data-week="3">Week 4</button>
+    </div>
+    <div id="map-container"></div>
+  </div>`;
+}
+
+function renderClosing(closing) {
+  if (!closing.length) return '';
+  const rows = closing.map(c => `
+    <div class="closing-row">
+      <div class="closing-date">${fmtDate(c.end_date)}</div>
+      <div class="closing-info">
+        <div class="closing-title">${c.title}</div>
+        <div class="closing-venue">${c.venue_name} · ${c.neighborhood}</div>
+      </div>
+      <div class="closing-seen">${c.seen_count}×</div>
+    </div>`).join('');
+  return `
+  <div class="card card-full">
+    <div class="card-label">Closing This Month</div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">This month's most popular closing shows, by view count</div>
+    <div class="closing-list">${rows}</div>
+  </div>`;
+}
+
+// ── Map helpers ─────────────────────────────────────────────────────────────
+function weekBounds(ym, week) {
+  const [y, m] = ym.split('-').map(Number);
+  const daysInMonth = new Date(y, m, 0).getDate();
+  const starts = [1, 8, 15, 22];
+  const start = starts[week];
+  const end = week === 3 ? daysInMonth : starts[week + 1] - 1;
+  return { start, end };
+}
+
+function filterByWeek(checkins, ym, week) {
+  const { start, end } = weekBounds(ym, week);
+  return checkins.filter(c => {
+    const day = parseInt(c.timestamp.slice(8, 10), 10);
+    return day >= start && day <= end;
+  });
+}
+
+function toFeatures(checkins) {
+  return checkins
+    .filter(c => c.lat && c.lon)
+    .map(c => {
+      const ts = c.timestamp.slice(0, 10); // YYYY-MM-DD
+      const [, mo, d] = ts.split('-');
+      const dateLabel = `${MONTH_SHORT[mo]} ${parseInt(d)}`;
+      return {
+        type: 'Feature',
+        geometry: { type: 'Point', coordinates: [c.lon, c.lat] },
+        properties: {
+          show: c.show_title,
+          venue: c.venue_name,
+          hood: c.neighborhood,
+          dateLabel,
+        },
+      };
+    });
+}
+
+function buildTooltipHTML(items) {
+  const rows = items.map(p =>
+    `<div style="padding:4px 0;border-bottom:1px solid #eee;line-height:1.4">
+      <strong style="display:block">${p.show}</strong>
+      <span style="color:#444">${p.venue}</span>
+      <span style="color:#999;float:right">${p.dateLabel}</span>
+    </div>`
+  ).join('');
+  return `<div style="font:12px/1.4 Inter,sans-serif;color:#0A0A0A;max-height:200px;overflow-y:auto;width:220px;padding:2px 4px">${rows}</div>`;
+}
+
+// ── Map init ───────────────────────────────────────────────────────────────
+function initMap(allCheckins, ym) {
+  if (currentMap) { currentMap.remove(); currentMap = null; }
+
+  let currentWeek = 0;
+
+  const map = new maplibregl.Map({
+    container: 'map-container',
+    style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
+    center: [-73.990, 40.735],
+    zoom: 11.8,
+    attributionControl: false,
+  });
+
+  currentMap = map;
+
+  // Wire up week buttons
+  document.querySelectorAll('.week-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (!map.isStyleLoaded()) return;
+      const week = parseInt(btn.dataset.week, 10);
+      if (week === currentWeek) return;
+      currentWeek = week;
+      document.querySelectorAll('.week-btn').forEach(b => b.classList.toggle('active', b === btn));
+      switchWeek(week);
+    });
+  });
+
+  function switchWeek(week) {
+    const FADE = 180;
+    // Fade out
+    map.setPaintProperty('clusters',    'circle-opacity', 0);
+    map.setPaintProperty('cluster-count', 'text-opacity', 0);
+    map.setPaintProperty('unclustered', 'circle-opacity', 0);
+    map.setPaintProperty('unclustered', 'circle-stroke-opacity', 0);
+    setTimeout(() => {
+      const filtered = filterByWeek(allCheckins, ym, week);
+      map.getSource('checkins').setData({ type: 'FeatureCollection', features: toFeatures(filtered) });
+      // Fade in
+      map.setPaintProperty('clusters',    'circle-opacity', 0.85);
+      map.setPaintProperty('cluster-count', 'text-opacity', 1);
+      map.setPaintProperty('unclustered', 'circle-opacity', 0.7);
+      map.setPaintProperty('unclustered', 'circle-stroke-opacity', 1);
+    }, FADE);
+  }
+
+  map.on('load', () => {
+    const initFeatures = toFeatures(filterByWeek(allCheckins, ym, 0));
+
+    map.addSource('checkins', {
+      type: 'geojson',
+      data: { type: 'FeatureCollection', features: initFeatures },
+      cluster: true,
+      clusterMaxZoom: 14,
+      clusterRadius: 30,
+      generateId: true,
+    });
+
+    map.addLayer({
+      id: 'clusters',
+      type: 'circle',
+      source: 'checkins',
+      filter: ['has', 'point_count'],
+      paint: {
+        'circle-color': '#0A0A0A',
+        'circle-radius': ['step', ['get', 'point_count'], 12, 10, 18, 30, 24],
+        'circle-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 1, 0.85],
+        'circle-opacity-transition': { duration: 180 },
+      },
+    });
+
+    map.addLayer({
+      id: 'cluster-count',
+      type: 'symbol',
+      source: 'checkins',
+      filter: ['has', 'point_count'],
+      layout: {
+        'text-field': '{point_count_abbreviated}',
+        'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
+        'text-size': 11,
+      },
+      paint: {
+        'text-color': '#fff',
+        'text-opacity': 1,
+        'text-opacity-transition': { duration: 180 },
+      },
+    });
+
+    map.addLayer({
+      id: 'unclustered',
+      type: 'circle',
+      source: 'checkins',
+      filter: ['!', ['has', 'point_count']],
+      paint: {
+        'circle-color': '#0A0A0A',
+        'circle-radius': ['case', ['boolean', ['feature-state', 'hover'], false], 7, 5],
+        'circle-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 1, 0.7],
+        'circle-opacity-transition': { duration: 180 },
+        'circle-stroke-width': 1,
+        'circle-stroke-color': '#fff',
+        'circle-stroke-opacity': 1,
+        'circle-stroke-opacity-transition': { duration: 180 },
+      },
+    });
+
+    const popup = new maplibregl.Popup({
+      closeButton: true,
+      closeOnClick: false,
+      offset: 12,
+      maxWidth: 'none',
+    });
+
+    // ── Hover highlight (no tooltip) ──
+    let hoveredId = null;
+    const setHover = (id, state) => map.setFeatureState({ source: 'checkins', id }, { hover: state });
+
+    ['unclustered', 'clusters'].forEach(layer => {
+      map.on('mouseenter', layer, e => {
+        map.getCanvas().style.cursor = 'pointer';
+        const id = e.features[0].id;
+        if (hoveredId !== null && hoveredId !== id) setHover(hoveredId, false);
+        hoveredId = id;
+        setHover(id, true);
+      });
+      map.on('mouseleave', layer, () => {
+        map.getCanvas().style.cursor = '';
+        if (hoveredId !== null) { setHover(hoveredId, false); hoveredId = null; }
+      });
+    });
+
+    // ── Click to open pinned tooltip ──
+    let clickedOnFeature = false;
+
+    map.on('click', 'unclustered', e => {
+      clickedOnFeature = true;
+      const p = e.features[0].properties;
+      popup.setLngLat(e.lngLat).setHTML(buildTooltipHTML([p])).addTo(map);
+    });
+
+    map.on('click', 'clusters', e => {
+      clickedOnFeature = true;
+      const feat = e.features[0];
+      const clusterId = feat.properties.cluster_id;
+      const count = feat.properties.point_count;
+      Promise.resolve(
+        map.getSource('checkins').getClusterLeaves(clusterId, count, 0)
+      ).then(leaves => {
+        const items = leaves.map(l => l.properties);
+        popup.setLngLat(e.lngLat).setHTML(buildTooltipHTML(items)).addTo(map);
+      }).catch(() => {});
+    });
+
+    // Click on empty map closes popup
+    map.on('click', () => {
+      if (clickedOnFeature) { clickedOnFeature = false; return; }
+      popup.remove();
+    });
+  });
+}
+
+// ── Load month ─────────────────────────────────────────────────────────────
+async function loadMonth(ym) {
+  setActiveBtn(ym);
+  const main = document.getElementById('main');
+  main.innerHTML = '<div id="loading">Loading…</div>';
+  currentMap = null;
+
+  let data;
+  try {
+    data = await fetch(`payloads/${ym}.json?v=3`).then(r => {
+      if (!r.ok) throw new Error(r.status);
+      return r.json();
+    });
+  } catch (e) {
+    main.innerHTML = `<div id="loading" style="color:#c0392b">Failed to load ${ym}: ${e.message}</div>`;
+    return;
+  }
+
+  main.innerHTML = [
+    renderStats(data),
+    renderSotm(data.show_of_the_month),
+    renderTop5(data.top_5_seen),
+    renderTop5Saved(data.top_5_saved),
+    renderNeighborhoods(data.neighborhoods),
+    renderMap(),
+    renderClosing(data.closing_this_month),
+  ].join('');
+
+  initMap(data.map_checkins, data.month);
+}
+
+// ── Init ───────────────────────────────────────────────────────────────────
+// Default to most recent month that has data (Oct 2025)
+loadMonth('2025-10');
+</script>
+</body>
+</html>
