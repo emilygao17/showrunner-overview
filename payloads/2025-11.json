@@ -5187,25 +5187,19 @@
   ],
   "gallery_crawl": [
     {
-      "list_count": 15,
+      "list_count": 10,
       "shows": [
+        {
+          "show_id": "37952",
+          "title": "Richard Prince",
+          "venue_name": "Gagosian",
+          "neighborhood": "Chelsea"
+        },
         {
           "show_id": "38325",
           "title": "Nicole Eisenman",
           "venue_name": "David Zwirner",
           "neighborhood": "Tribeca"
-        },
-        {
-          "show_id": "38378",
-          "title": "Jordan Casteel",
-          "venue_name": "Casey Kaplan",
-          "neighborhood": "Chelsea"
-        },
-        {
-          "show_id": "35518",
-          "title": "David Byrne",
-          "venue_name": "Pace Gallery",
-          "neighborhood": "Chelsea"
         },
         {
           "show_id": "35930",
@@ -5214,45 +5208,51 @@
           "neighborhood": "Tribeca"
         },
         {
-          "show_id": "37952",
-          "title": "Richard Prince",
-          "venue_name": "Gagosian",
+          "show_id": "37228",
+          "title": "Ana Benaroya",
+          "venue_name": "The FLAG Art Foundation",
+          "neighborhood": "Chelsea"
+        },
+        {
+          "show_id": "38378",
+          "title": "Jordan Casteel",
+          "venue_name": "Casey Kaplan",
           "neighborhood": "Chelsea"
         }
       ]
     },
     {
-      "list_count": 13,
+      "list_count": 7,
       "shows": [
         {
-          "show_id": "36247",
-          "title": "Sasha Gordon",
+          "show_id": "38719",
+          "title": "Louise Bourgeois",
+          "venue_name": "Hauser & Wirth",
+          "neighborhood": "Chelsea"
+        },
+        {
+          "show_id": "38810",
+          "title": "Chiharu Shiota",
+          "venue_name": "Templon",
+          "neighborhood": "Chelsea"
+        },
+        {
+          "show_id": "38431",
+          "title": "Alex Da Corte",
+          "venue_name": "Matthew Marks",
+          "neighborhood": "Chelsea"
+        },
+        {
+          "show_id": "38334",
+          "title": "Luc Tuymans",
           "venue_name": "David Zwirner",
           "neighborhood": "Chelsea"
         },
         {
-          "show_id": "36828",
-          "title": "Nathaniel Mary Quinn",
-          "venue_name": "Gagosian",
+          "show_id": "38465",
+          "title": "Joan Mitchell",
+          "venue_name": "David Zwirner",
           "neighborhood": "Chelsea"
-        },
-        {
-          "show_id": "35928",
-          "title": "Chloe Wise",
-          "venue_name": "Almine Rech",
-          "neighborhood": "Tribeca"
-        },
-        {
-          "show_id": "36615",
-          "title": "Chloe Wise",
-          "venue_name": "Almine Rech",
-          "neighborhood": "Tribeca"
-        },
-        {
-          "show_id": "36653",
-          "title": "Elizabeth Glaessner",
-          "venue_name": "P\u00b7P\u00b7O\u00b7W",
-          "neighborhood": "Tribeca"
         }
       ]
     }

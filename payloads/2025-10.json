@@ -2173,43 +2173,20 @@
   ],
   "gallery_crawl": [
     {
-      "list_count": 15,
+      "list_count": 8,
       "shows": [
         {
-          "show_id": "38325",
-          "title": "Nicole Eisenman",
-          "venue_name": "David Zwirner",
-          "neighborhood": "Tribeca"
-        },
-        {
-          "show_id": "38378",
-          "title": "Jordan Casteel",
-          "venue_name": "Casey Kaplan",
+          "show_id": "37228",
+          "title": "Ana Benaroya",
+          "venue_name": "The FLAG Art Foundation",
           "neighborhood": "Chelsea"
         },
         {
-          "show_id": "35518",
-          "title": "David Byrne",
-          "venue_name": "Pace Gallery",
+          "show_id": "37268",
+          "title": "Sarah Theresa Lee",
+          "venue_name": "Ricco/Maresca",
           "neighborhood": "Chelsea"
         },
-        {
-          "show_id": "35930",
-          "title": "Katherine Bradford",
-          "venue_name": "CANADA",
-          "neighborhood": "Tribeca"
-        },
-        {
-          "show_id": "37952",
-          "title": "Richard Prince",
-          "venue_name": "Gagosian",
-          "neighborhood": "Chelsea"
-        }
-      ]
-    },
-    {
-      "list_count": 13,
-      "shows": [
         {
           "show_id": "36247",
           "title": "Sasha Gordon",
@@ -2217,28 +2194,51 @@
           "neighborhood": "Chelsea"
         },
         {
-          "show_id": "36828",
-          "title": "Nathaniel Mary Quinn",
-          "venue_name": "Gagosian",
+          "show_id": "36299",
+          "title": "Gabrielle Garland",
+          "venue_name": "Miles McEnery Gallery",
           "neighborhood": "Chelsea"
         },
         {
-          "show_id": "35928",
-          "title": "Chloe Wise",
-          "venue_name": "Almine Rech",
-          "neighborhood": "Tribeca"
+          "show_id": "36529",
+          "title": "Ohad Meromi",
+          "venue_name": "56 Henry",
+          "neighborhood": "Lower East Side"
+        }
+      ]
+    },
+    {
+      "list_count": 4,
+      "shows": [
+        {
+          "show_id": "35898",
+          "title": "Rashid Johnson",
+          "venue_name": "Guggenheim Museum",
+          "neighborhood": "Upper East Side"
         },
         {
-          "show_id": "36615",
-          "title": "Chloe Wise",
-          "venue_name": "Almine Rech",
-          "neighborhood": "Tribeca"
+          "show_id": "35909",
+          "title": "Lisa Yuskavage",
+          "venue_name": "Morgan Library",
+          "neighborhood": "Murray Hill"
         },
         {
-          "show_id": "36653",
-          "title": "Elizabeth Glaessner",
-          "venue_name": "P\u00b7P\u00b7O\u00b7W",
-          "neighborhood": "Tribeca"
+          "show_id": "37449",
+          "title": "Robert Rauschenberg",
+          "venue_name": "Guggenheim Museum",
+          "neighborhood": "Upper East Side"
+        },
+        {
+          "show_id": "35908",
+          "title": "Christian Marclay",
+          "venue_name": "Brooklyn Museum",
+          "neighborhood": "Central Brooklyn"
+        },
+        {
+          "show_id": "37665",
+          "title": "Lorna Simpson",
+          "venue_name": "The Met",
+          "neighborhood": "Upper East Side"
         }
       ]
     }

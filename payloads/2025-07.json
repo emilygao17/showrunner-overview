@@ -5383,71 +5383,65 @@
   ],
   "gallery_crawl": [
     {
-      "list_count": 15,
+      "list_count": 5,
       "shows": [
         {
-          "show_id": "38325",
-          "title": "Nicole Eisenman",
-          "venue_name": "David Zwirner",
+          "show_id": "34741",
+          "title": "Koichi Sato",
+          "venue_name": "56 Henry",
+          "neighborhood": "Lower East Side"
+        },
+        {
+          "show_id": "35281",
+          "title": "Dustin Yellin",
+          "venue_name": "Almine Rech",
           "neighborhood": "Tribeca"
         },
         {
-          "show_id": "38378",
-          "title": "Jordan Casteel",
-          "venue_name": "Casey Kaplan",
+          "show_id": "35499",
+          "title": "softly radiant, half-buried",
+          "venue_name": "Marianne Boesky Gallery",
           "neighborhood": "Chelsea"
         },
         {
-          "show_id": "35518",
-          "title": "David Byrne",
-          "venue_name": "Pace Gallery",
-          "neighborhood": "Chelsea"
+          "show_id": "34956",
+          "title": "Susumu Kamijo",
+          "venue_name": "Venus Over Manhattan",
+          "neighborhood": "SoHo-NoHo"
         },
         {
-          "show_id": "35930",
-          "title": "Katherine Bradford",
-          "venue_name": "CANADA",
-          "neighborhood": "Tribeca"
-        },
-        {
-          "show_id": "37952",
-          "title": "Richard Prince",
-          "venue_name": "Gagosian",
+          "show_id": "35253",
+          "title": "dialogue with youth",
+          "venue_name": "Harper's Books",
           "neighborhood": "Chelsea"
         }
       ]
     },
     {
-      "list_count": 13,
+      "list_count": 3,
       "shows": [
         {
-          "show_id": "36247",
-          "title": "Sasha Gordon",
-          "venue_name": "David Zwirner",
-          "neighborhood": "Chelsea"
-        },
-        {
-          "show_id": "36828",
-          "title": "Nathaniel Mary Quinn",
-          "venue_name": "Gagosian",
-          "neighborhood": "Chelsea"
-        },
-        {
-          "show_id": "35928",
-          "title": "Chloe Wise",
-          "venue_name": "Almine Rech",
+          "show_id": "35307",
+          "title": "Nova Jiang",
+          "venue_name": "Chapter NY",
           "neighborhood": "Tribeca"
         },
         {
-          "show_id": "36615",
-          "title": "Chloe Wise",
-          "venue_name": "Almine Rech",
+          "show_id": "35456",
+          "title": "Marisa Adesman",
+          "venue_name": "Anat Ebgi",
           "neighborhood": "Tribeca"
         },
         {
-          "show_id": "36653",
-          "title": "Elizabeth Glaessner",
-          "venue_name": "P\u00b7P\u00b7O\u00b7W",
+          "show_id": "35682",
+          "title": "guest of a guest",
+          "venue_name": "The Hole",
+          "neighborhood": "Tribeca"
+        },
+        {
+          "show_id": "35371",
+          "title": "soft structures, curated my jen wroblewski",
+          "venue_name": "Jane Lombard Gallery",
           "neighborhood": "Tribeca"
         }
       ]

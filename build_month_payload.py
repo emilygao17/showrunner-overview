@@ -137,75 +137,6 @@ def show_card(show_id, seen_count, save_count):
     }
 
 
-# ── Gallery Crawl (all-time co-occurrence) ────────────────────────────────
-
-print("Computing gallery crawl co-occurrences…")
-
-co_occ = defaultdict(int)   # (show_id_a, show_id_b) sorted → count
-
-for lst in saved_lists_raw:
-    raw_ids = parse_list(lst["shows"])
-    valid_ids = []
-    for sid in raw_ids:
-        sid_str = str(int(sid)) if isinstance(sid, (int, float)) else str(sid)
-        if sid_str not in shows:
-            continue
-        title = shows[sid_str].get("display_title") or shows[sid_str]["show_title"]
-        if "title tbd" in title.lower():
-            continue
-        valid_ids.append(sid_str)
-    valid_ids = list(dict.fromkeys(valid_ids))   # deduplicate, preserve order
-    for a, b in combinations(valid_ids, 2):
-        co_occ[tuple(sorted([a, b]))] += 1
-
-all_cooc_shows = {sid for pair in co_occ for sid in pair}
-
-def build_crawl(seed_a, seed_b, excluded, max_size=5, min_avg=2.0):
-    crawl = [seed_a, seed_b]
-    crawl_set = {seed_a, seed_b}
-    for _ in range(max_size - 2):
-        best_show, best_avg = None, 0.0
-        for candidate in all_cooc_shows:
-            if candidate in crawl_set or candidate in excluded:
-                continue
-            scores = [co_occ.get(tuple(sorted([candidate, s])), 0) for s in crawl]
-            avg = sum(scores) / len(scores)
-            if avg > best_avg:
-                best_avg = avg
-                best_show = candidate
-        if best_show is None or best_avg < min_avg:
-            break
-        crawl.append(best_show)
-        crawl_set.add(best_show)
-    return crawl
-
-sorted_pairs = sorted(co_occ, key=lambda p: co_occ[p], reverse=True)
-
-gallery_crawl = []
-used_shows = set()
-for seed_a, seed_b in sorted_pairs:
-    if len(gallery_crawl) >= 2:
-        break
-    if seed_a in used_shows or seed_b in used_shows:
-        continue
-    crawl_ids = build_crawl(seed_a, seed_b, excluded=used_shows)
-    gallery_crawl.append({
-        "list_count": co_occ[tuple(sorted([seed_a, seed_b]))],
-        "shows": [
-            {
-                "show_id":     sid,
-                "title":       shows[sid].get("display_title") or shows[sid]["show_title"],
-                "venue_name":  venues[shows[sid]["venue_id"]]["venue_name"],
-                "neighborhood": venues[shows[sid]["venue_id"]]["neighborhood"],
-            }
-            for sid in crawl_ids
-        ],
-    })
-    used_shows.update(crawl_ids)
-
-print(f"  Gallery crawl 1: {len(gallery_crawl[0]['shows'])} shows, "
-      f"{gallery_crawl[0]['list_count']} lists" if gallery_crawl else "  No crawl data")
-
 # ── Per-month top-5 (needed for returning_favorites) ──────────────────────
 
 print("Computing per-month top-5 for returning_favorites…")
@@ -353,6 +284,76 @@ for ym in MONTHS:
     closing_this_month.sort(key=lambda x: -x["seen_count"])
     closing_this_month = closing_this_month[:10]
     closing_this_month.sort(key=lambda x: x["end_date"])
+
+    # ── Gallery Crawl (per-month co-occurrence) ──
+    month_lists = [l for l in saved_lists_raw if l["created_at"][:7] == ym]
+
+    month_co_occ = defaultdict(int)
+    lists_with_overlap = 0
+    for lst in month_lists:
+        raw_ids = parse_list(lst["shows"])
+        valid_ids = []
+        for sid in raw_ids:
+            sid_str = str(int(sid)) if isinstance(sid, (int, float)) else str(sid)
+            if sid_str not in shows:
+                continue
+            title = shows[sid_str].get("display_title") or shows[sid_str]["show_title"]
+            if "title tbd" in title.lower():
+                continue
+            valid_ids.append(sid_str)
+        valid_ids = list(dict.fromkeys(valid_ids))
+        if len(valid_ids) >= 2:
+            lists_with_overlap += 1
+            for a, b in combinations(valid_ids, 2):
+                month_co_occ[tuple(sorted([a, b]))] += 1
+
+    gallery_crawl = None
+    if lists_with_overlap >= 5 and month_co_occ:
+        month_cooc_shows = {sid for pair in month_co_occ for sid in pair}
+
+        def build_month_crawl(seed_a, seed_b, excluded, max_size=5, min_avg=2.0):
+            crawl = [seed_a, seed_b]
+            crawl_set = {seed_a, seed_b}
+            for _ in range(max_size - 2):
+                best_show, best_avg = None, 0.0
+                for candidate in month_cooc_shows:
+                    if candidate in crawl_set or candidate in excluded:
+                        continue
+                    scores = [month_co_occ.get(tuple(sorted([candidate, s])), 0) for s in crawl]
+                    avg = sum(scores) / len(scores)
+                    if avg > best_avg:
+                        best_avg = avg
+                        best_show = candidate
+                if best_show is None or best_avg < min_avg:
+                    break
+                crawl.append(best_show)
+                crawl_set.add(best_show)
+            return crawl
+
+        sorted_month_pairs = sorted(month_co_occ, key=lambda p: month_co_occ[p], reverse=True)
+        gallery_crawl = []
+        used = set()
+        for seed_a, seed_b in sorted_month_pairs:
+            if len(gallery_crawl) >= 2:
+                break
+            if seed_a in used or seed_b in used:
+                continue
+            crawl_ids = build_month_crawl(seed_a, seed_b, excluded=used)
+            gallery_crawl.append({
+                "list_count": month_co_occ[tuple(sorted([seed_a, seed_b]))],
+                "shows": [
+                    {
+                        "show_id":      sid,
+                        "title":        shows[sid].get("display_title") or shows[sid]["show_title"],
+                        "venue_name":   venues[shows[sid]["venue_id"]]["venue_name"],
+                        "neighborhood": venues[shows[sid]["venue_id"]]["neighborhood"],
+                    }
+                    for sid in crawl_ids
+                ],
+            })
+            used.update(crawl_ids)
+        if not gallery_crawl:
+            gallery_crawl = None
 
     # ── Assemble payload ──
     payload = {

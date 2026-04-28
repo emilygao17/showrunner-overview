@@ -1196,25 +1196,13 @@
   ],
   "gallery_crawl": [
     {
-      "list_count": 15,
+      "list_count": 3,
       "shows": [
         {
-          "show_id": "38325",
-          "title": "Nicole Eisenman",
-          "venue_name": "David Zwirner",
+          "show_id": "35928",
+          "title": "Chloe Wise",
+          "venue_name": "Almine Rech",
           "neighborhood": "Tribeca"
-        },
-        {
-          "show_id": "38378",
-          "title": "Jordan Casteel",
-          "venue_name": "Casey Kaplan",
-          "neighborhood": "Chelsea"
-        },
-        {
-          "show_id": "35518",
-          "title": "David Byrne",
-          "venue_name": "Pace Gallery",
-          "neighborhood": "Chelsea"
         },
         {
           "show_id": "35930",
@@ -1223,45 +1211,33 @@
           "neighborhood": "Tribeca"
         },
         {
-          "show_id": "37952",
-          "title": "Richard Prince",
-          "venue_name": "Gagosian",
-          "neighborhood": "Chelsea"
+          "show_id": "35650",
+          "title": "Group Show",
+          "venue_name": "Craig Starr Gallery",
+          "neighborhood": "Upper East Side"
         }
       ]
     },
     {
-      "list_count": 13,
+      "list_count": 3,
       "shows": [
         {
-          "show_id": "36247",
+          "show_id": "36088",
           "title": "Sasha Gordon",
           "venue_name": "David Zwirner",
           "neighborhood": "Chelsea"
         },
         {
-          "show_id": "36828",
-          "title": "Nathaniel Mary Quinn",
-          "venue_name": "Gagosian",
+          "show_id": "36118",
+          "title": "Robert Longo",
+          "venue_name": "Pace Gallery",
           "neighborhood": "Chelsea"
         },
         {
-          "show_id": "35928",
-          "title": "Chloe Wise",
-          "venue_name": "Almine Rech",
-          "neighborhood": "Tribeca"
-        },
-        {
-          "show_id": "36615",
-          "title": "Chloe Wise",
-          "venue_name": "Almine Rech",
-          "neighborhood": "Tribeca"
-        },
-        {
-          "show_id": "36653",
-          "title": "Elizabeth Glaessner",
-          "venue_name": "P\u00b7P\u00b7O\u00b7W",
-          "neighborhood": "Tribeca"
+          "show_id": "36279",
+          "title": "Shara Hughes",
+          "venue_name": "David Kordansky Gallery",
+          "neighborhood": "Chelsea"
         }
       ]
     }

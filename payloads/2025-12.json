@@ -2119,20 +2119,8 @@
   ],
   "gallery_crawl": [
     {
-      "list_count": 15,
+      "list_count": 5,
       "shows": [
-        {
-          "show_id": "38325",
-          "title": "Nicole Eisenman",
-          "venue_name": "David Zwirner",
-          "neighborhood": "Tribeca"
-        },
-        {
-          "show_id": "38378",
-          "title": "Jordan Casteel",
-          "venue_name": "Casey Kaplan",
-          "neighborhood": "Chelsea"
-        },
         {
           "show_id": "35518",
           "title": "David Byrne",
@@ -2140,51 +2128,57 @@
           "neighborhood": "Chelsea"
         },
         {
-          "show_id": "35930",
-          "title": "Katherine Bradford",
-          "venue_name": "CANADA",
+          "show_id": "38325",
+          "title": "Nicole Eisenman",
+          "venue_name": "David Zwirner",
           "neighborhood": "Tribeca"
         },
         {
-          "show_id": "37952",
-          "title": "Richard Prince",
-          "venue_name": "Gagosian",
+          "show_id": "38810",
+          "title": "Chiharu Shiota",
+          "venue_name": "Templon",
+          "neighborhood": "Chelsea"
+        },
+        {
+          "show_id": "38383",
+          "title": "Stephen Shore",
+          "venue_name": "303 Gallery",
+          "neighborhood": "Chelsea"
+        },
+        {
+          "show_id": "38838",
+          "title": "Yongjae Kim",
+          "venue_name": "Anna Zorina Gallery",
           "neighborhood": "Chelsea"
         }
       ]
     },
     {
-      "list_count": 13,
+      "list_count": 3,
       "shows": [
         {
-          "show_id": "36247",
-          "title": "Sasha Gordon",
-          "venue_name": "David Zwirner",
+          "show_id": "38502",
+          "title": "Bing Lu",
+          "venue_name": "Gallery 60 NYC",
+          "neighborhood": "Murray Hill"
+        },
+        {
+          "show_id": "39459",
+          "title": "Wang Guangle",
+          "venue_name": "Pace Gallery",
           "neighborhood": "Chelsea"
         },
         {
-          "show_id": "36828",
-          "title": "Nathaniel Mary Quinn",
-          "venue_name": "Gagosian",
+          "show_id": "37703",
+          "title": "calder. mir\u00f3: prints and drawings, 1967-1976",
+          "venue_name": "Kahan Gallery",
+          "neighborhood": "Upper East Side"
+        },
+        {
+          "show_id": "38170",
+          "title": "Tamiko Kawata",
+          "venue_name": "Alison Bradley Projects",
           "neighborhood": "Chelsea"
-        },
-        {
-          "show_id": "35928",
-          "title": "Chloe Wise",
-          "venue_name": "Almine Rech",
-          "neighborhood": "Tribeca"
-        },
-        {
-          "show_id": "36615",
-          "title": "Chloe Wise",
-          "venue_name": "Almine Rech",
-          "neighborhood": "Tribeca"
-        },
-        {
-          "show_id": "36653",
-          "title": "Elizabeth Glaessner",
-          "venue_name": "P\u00b7P\u00b7O\u00b7W",
-          "neighborhood": "Tribeca"
         }
       ]
     }

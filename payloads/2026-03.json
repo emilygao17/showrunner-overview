@@ -3971,72 +3971,72 @@
   ],
   "gallery_crawl": [
     {
-      "list_count": 15,
+      "list_count": 4,
       "shows": [
         {
-          "show_id": "38325",
-          "title": "Nicole Eisenman",
-          "venue_name": "David Zwirner",
+          "show_id": "41135",
+          "title": "Melissa Brown",
+          "venue_name": "Derek Eller Gallery",
           "neighborhood": "Tribeca"
         },
         {
-          "show_id": "38378",
-          "title": "Jordan Casteel",
-          "venue_name": "Casey Kaplan",
-          "neighborhood": "Chelsea"
-        },
-        {
-          "show_id": "35518",
-          "title": "David Byrne",
-          "venue_name": "Pace Gallery",
-          "neighborhood": "Chelsea"
-        },
-        {
-          "show_id": "35930",
-          "title": "Katherine Bradford",
-          "venue_name": "CANADA",
+          "show_id": "41582",
+          "title": "traces of motion",
+          "venue_name": "Elza Kayal Gallery",
           "neighborhood": "Tribeca"
         },
         {
-          "show_id": "37952",
-          "title": "Richard Prince",
-          "venue_name": "Gagosian",
+          "show_id": "43482",
+          "title": "camilla iliefski & eva zethraeus: shimmering real",
+          "venue_name": "HB381",
+          "neighborhood": "Tribeca"
+        },
+        {
+          "show_id": "46423",
+          "title": "Judith Godwin",
+          "venue_name": "Berry Campbell Gallery",
+          "neighborhood": "Chelsea"
+        },
+        {
+          "show_id": "43436",
+          "title": "Tracy Burtz",
+          "venue_name": "The Painting Center",
           "neighborhood": "Chelsea"
         }
       ]
     },
     {
-      "list_count": 13,
+      "list_count": 4,
       "shows": [
         {
-          "show_id": "36247",
-          "title": "Sasha Gordon",
-          "venue_name": "David Zwirner",
+          "show_id": "41543",
+          "title": "\u00c9douard Vuillard",
+          "venue_name": "Skarstedt Gallery",
           "neighborhood": "Chelsea"
         },
         {
-          "show_id": "36828",
-          "title": "Nathaniel Mary Quinn",
-          "venue_name": "Gagosian",
+          "show_id": "43520",
+          "title": "Robert Mapplethorpe",
+          "venue_name": "Gladstone",
           "neighborhood": "Chelsea"
         },
         {
-          "show_id": "35928",
-          "title": "Chloe Wise",
-          "venue_name": "Almine Rech",
-          "neighborhood": "Tribeca"
+          "show_id": "41141",
+          "title": "Anish Kapoor",
+          "venue_name": "Lisson",
+          "neighborhood": "Chelsea"
         },
         {
-          "show_id": "36615",
-          "title": "Chloe Wise",
-          "venue_name": "Almine Rech",
-          "neighborhood": "Tribeca"
+          "show_id": "45960",
+          "title": "Chuck Close",
+          "venue_name": "Pace Gallery",
+          "neighborhood": "Chelsea"
         },
         {
-          "show_id": "36653",
-          "title": "Elizabeth Glaessner",
-          "venue_name": "P\u00b7P\u00b7O\u00b7W",
-          "neighborhood": "Tribeca"
+          "show_id": "43456",
+          "title": "Katharina Wulff",
+          "venue_name": "Greene Naftali Gallery",
+          "neighborhood": "Chelsea"
         }
       ]
     }
