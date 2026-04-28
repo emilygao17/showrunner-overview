@@ -3948,50 +3948,76 @@
       "seen_count": 3
     }
   ],
-  "gallery_crawl": {
-    "neighborhood_a": "Chelsea",
-    "neighborhood_b": "Tribeca",
-    "list_count": 47,
-    "paired_shows": [
-      {
-        "show_a": {
-          "show_id": "40195",
-          "title": "Nicolas Party",
-          "venue_name": "Karma"
+  "gallery_crawl": [
+    {
+      "list_count": 15,
+      "shows": [
+        {
+          "show_id": "38325",
+          "title": "Nicole Eisenman",
+          "venue_name": "David Zwirner",
+          "neighborhood": "Tribeca"
         },
-        "show_b": {
-          "show_id": "40449",
-          "title": "\u00e1ngeles agrela / june canedo de souza / \u00e6men eded\u00e9en / samantha joy groff / teresa murta / daniel pit\u00edn",
-          "venue_name": "Nicodim Gallery"
+        {
+          "show_id": "38378",
+          "title": "Jordan Casteel",
+          "venue_name": "Casey Kaplan",
+          "neighborhood": "Chelsea"
         },
-        "pair_count": 3
-      },
-      {
-        "show_a": {
-          "show_id": "40195",
-          "title": "Nicolas Party",
-          "venue_name": "Karma"
+        {
+          "show_id": "35518",
+          "title": "David Byrne",
+          "venue_name": "Pace Gallery",
+          "neighborhood": "Chelsea"
         },
-        "show_b": {
-          "show_id": "39548",
-          "title": "Yi Liu",
-          "venue_name": "SHRINE"
+        {
+          "show_id": "35930",
+          "title": "Katherine Bradford",
+          "venue_name": "CANADA",
+          "neighborhood": "Tribeca"
         },
-        "pair_count": 3
-      },
-      {
-        "show_a": {
-          "show_id": "40195",
-          "title": "Nicolas Party",
-          "venue_name": "Karma"
+        {
+          "show_id": "37952",
+          "title": "Richard Prince",
+          "venue_name": "Gagosian",
+          "neighborhood": "Chelsea"
+        }
+      ]
+    },
+    {
+      "list_count": 13,
+      "shows": [
+        {
+          "show_id": "36247",
+          "title": "Sasha Gordon",
+          "venue_name": "David Zwirner",
+          "neighborhood": "Chelsea"
         },
-        "show_b": {
-          "show_id": "39758",
-          "title": "John Kelly",
-          "venue_name": "P\u00b7P\u00b7O\u00b7W"
+        {
+          "show_id": "36828",
+          "title": "Nathaniel Mary Quinn",
+          "venue_name": "Gagosian",
+          "neighborhood": "Chelsea"
         },
-        "pair_count": 3
-      }
-    ]
-  }
+        {
+          "show_id": "35928",
+          "title": "Chloe Wise",
+          "venue_name": "Almine Rech",
+          "neighborhood": "Tribeca"
+        },
+        {
+          "show_id": "36615",
+          "title": "Chloe Wise",
+          "venue_name": "Almine Rech",
+          "neighborhood": "Tribeca"
+        },
+        {
+          "show_id": "36653",
+          "title": "Elizabeth Glaessner",
+          "venue_name": "P\u00b7P\u00b7O\u00b7W",
+          "neighborhood": "Tribeca"
+        }
+      ]
+    }
+  ]
 }

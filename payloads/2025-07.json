@@ -5381,50 +5381,76 @@
       "seen_count": 4
     }
   ],
-  "gallery_crawl": {
-    "neighborhood_a": "Chelsea",
-    "neighborhood_b": "Tribeca",
-    "list_count": 27,
-    "paired_shows": [
-      {
-        "show_a": {
-          "show_id": "35273",
-          "title": "fugue states",
-          "venue_name": "Morgan Presents"
+  "gallery_crawl": [
+    {
+      "list_count": 15,
+      "shows": [
+        {
+          "show_id": "38325",
+          "title": "Nicole Eisenman",
+          "venue_name": "David Zwirner",
+          "neighborhood": "Tribeca"
         },
-        "show_b": {
-          "show_id": "35281",
-          "title": "Dustin Yellin",
-          "venue_name": "Almine Rech"
+        {
+          "show_id": "38378",
+          "title": "Jordan Casteel",
+          "venue_name": "Casey Kaplan",
+          "neighborhood": "Chelsea"
         },
-        "pair_count": 3
-      },
-      {
-        "show_a": {
-          "show_id": "35499",
-          "title": "softly radiant, half-buried",
-          "venue_name": "Marianne Boesky Gallery"
+        {
+          "show_id": "35518",
+          "title": "David Byrne",
+          "venue_name": "Pace Gallery",
+          "neighborhood": "Chelsea"
         },
-        "show_b": {
-          "show_id": "35281",
-          "title": "Dustin Yellin",
-          "venue_name": "Almine Rech"
+        {
+          "show_id": "35930",
+          "title": "Katherine Bradford",
+          "venue_name": "CANADA",
+          "neighborhood": "Tribeca"
         },
-        "pair_count": 3
-      },
-      {
-        "show_a": {
-          "show_id": "35253",
-          "title": "dialogue with youth",
-          "venue_name": "Harper's Books"
+        {
+          "show_id": "37952",
+          "title": "Richard Prince",
+          "venue_name": "Gagosian",
+          "neighborhood": "Chelsea"
+        }
+      ]
+    },
+    {
+      "list_count": 13,
+      "shows": [
+        {
+          "show_id": "36247",
+          "title": "Sasha Gordon",
+          "venue_name": "David Zwirner",
+          "neighborhood": "Chelsea"
         },
-        "show_b": {
-          "show_id": "35281",
-          "title": "Dustin Yellin",
-          "venue_name": "Almine Rech"
+        {
+          "show_id": "36828",
+          "title": "Nathaniel Mary Quinn",
+          "venue_name": "Gagosian",
+          "neighborhood": "Chelsea"
         },
-        "pair_count": 3
-      }
-    ]
-  }
+        {
+          "show_id": "35928",
+          "title": "Chloe Wise",
+          "venue_name": "Almine Rech",
+          "neighborhood": "Tribeca"
+        },
+        {
+          "show_id": "36615",
+          "title": "Chloe Wise",
+          "venue_name": "Almine Rech",
+          "neighborhood": "Tribeca"
+        },
+        {
+          "show_id": "36653",
+          "title": "Elizabeth Glaessner",
+          "venue_name": "P\u00b7P\u00b7O\u00b7W",
+          "neighborhood": "Tribeca"
+        }
+      ]
+    }
+  ]
 }

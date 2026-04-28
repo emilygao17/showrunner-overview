@@ -14,6 +14,7 @@ import json
 import ast
 import os
 from collections import defaultdict
+from itertools import combinations
 from datetime import datetime, date
 import calendar
 
@@ -135,6 +136,75 @@ def show_card(show_id, seen_count, save_count):
         "short_description": trunc(s.get("short_description", "")),
     }
 
+
+# ── Gallery Crawl (all-time co-occurrence) ────────────────────────────────
+
+print("Computing gallery crawl co-occurrences…")
+
+co_occ = defaultdict(int)   # (show_id_a, show_id_b) sorted → count
+
+for lst in saved_lists_raw:
+    raw_ids = parse_list(lst["shows"])
+    valid_ids = []
+    for sid in raw_ids:
+        sid_str = str(int(sid)) if isinstance(sid, (int, float)) else str(sid)
+        if sid_str not in shows:
+            continue
+        title = shows[sid_str].get("display_title") or shows[sid_str]["show_title"]
+        if "title tbd" in title.lower():
+            continue
+        valid_ids.append(sid_str)
+    valid_ids = list(dict.fromkeys(valid_ids))   # deduplicate, preserve order
+    for a, b in combinations(valid_ids, 2):
+        co_occ[tuple(sorted([a, b]))] += 1
+
+all_cooc_shows = {sid for pair in co_occ for sid in pair}
+
+def build_crawl(seed_a, seed_b, excluded, max_size=5, min_avg=2.0):
+    crawl = [seed_a, seed_b]
+    crawl_set = {seed_a, seed_b}
+    for _ in range(max_size - 2):
+        best_show, best_avg = None, 0.0
+        for candidate in all_cooc_shows:
+            if candidate in crawl_set or candidate in excluded:
+                continue
+            scores = [co_occ.get(tuple(sorted([candidate, s])), 0) for s in crawl]
+            avg = sum(scores) / len(scores)
+            if avg > best_avg:
+                best_avg = avg
+                best_show = candidate
+        if best_show is None or best_avg < min_avg:
+            break
+        crawl.append(best_show)
+        crawl_set.add(best_show)
+    return crawl
+
+sorted_pairs = sorted(co_occ, key=lambda p: co_occ[p], reverse=True)
+
+gallery_crawl = []
+used_shows = set()
+for seed_a, seed_b in sorted_pairs:
+    if len(gallery_crawl) >= 2:
+        break
+    if seed_a in used_shows or seed_b in used_shows:
+        continue
+    crawl_ids = build_crawl(seed_a, seed_b, excluded=used_shows)
+    gallery_crawl.append({
+        "list_count": co_occ[tuple(sorted([seed_a, seed_b]))],
+        "shows": [
+            {
+                "show_id":     sid,
+                "title":       shows[sid].get("display_title") or shows[sid]["show_title"],
+                "venue_name":  venues[shows[sid]["venue_id"]]["venue_name"],
+                "neighborhood": venues[shows[sid]["venue_id"]]["neighborhood"],
+            }
+            for sid in crawl_ids
+        ],
+    })
+    used_shows.update(crawl_ids)
+
+print(f"  Gallery crawl 1: {len(gallery_crawl[0]['shows'])} shows, "
+      f"{gallery_crawl[0]['list_count']} lists" if gallery_crawl else "  No crawl data")
 
 # ── Per-month top-5 (needed for returning_favorites) ──────────────────────
 
@@ -283,71 +353,6 @@ for ym in MONTHS:
     closing_this_month.sort(key=lambda x: -x["seen_count"])
     closing_this_month = closing_this_month[:10]
     closing_this_month.sort(key=lambda x: x["end_date"])
-
-    # ── Gallery Crawl ──
-    # Filter saved lists created this month
-    lists_this_month = [l for l in saved_lists_raw if l["created_at"][:7] == ym]
-
-    def list_hood_shows(lst):
-        """Return {neighborhood: [show_id, ...]} for NYC shows in this list."""
-        raw_ids = parse_list(lst["shows"])
-        hood_shows = defaultdict(list)
-        for sid in raw_ids:
-            sid_str = str(int(sid)) if isinstance(sid, (int, float)) else str(sid)
-            if sid_str in shows:
-                hood = venues[shows[sid_str]["venue_id"]].get("neighborhood", "")
-                if hood:
-                    hood_shows[hood].append(sid_str)
-        return dict(hood_shows)
-
-    # Count neighborhood pairs across all lists this month
-    pair_tally = defaultdict(int)
-    for lst in lists_this_month:
-        hs = list_hood_shows(lst)
-        hoods = list(hs.keys())
-        for i in range(len(hoods)):
-            for j in range(i + 1, len(hoods)):
-                pair = tuple(sorted([hoods[i], hoods[j]]))
-                pair_tally[pair] += 1
-
-    gallery_crawl = None
-    if pair_tally:
-        top_pair = max(pair_tally, key=lambda p: pair_tally[p])
-        hood_a, hood_b = top_pair
-        list_count = pair_tally[top_pair]
-
-        # Count show-level pairs within lists containing both neighborhoods
-        show_pair_tally = defaultdict(int)
-        for lst in lists_this_month:
-            hs = list_hood_shows(lst)
-            if hood_a in hs and hood_b in hs:
-                for sa in hs[hood_a]:
-                    for sb in hs[hood_b]:
-                        show_pair_tally[(sa, sb)] += 1
-
-        top_show_pairs = sorted(show_pair_tally, key=lambda p: show_pair_tally[p], reverse=True)[:3]
-        paired_shows = []
-        for sa, sb in top_show_pairs:
-            paired_shows.append({
-                "show_a": {
-                    "show_id":   sa,
-                    "title":     shows[sa].get("display_title") or shows[sa]["show_title"],
-                    "venue_name": venues[shows[sa]["venue_id"]]["venue_name"],
-                },
-                "show_b": {
-                    "show_id":   sb,
-                    "title":     shows[sb].get("display_title") or shows[sb]["show_title"],
-                    "venue_name": venues[shows[sb]["venue_id"]]["venue_name"],
-                },
-                "pair_count": show_pair_tally[(sa, sb)],
-            })
-
-        gallery_crawl = {
-            "neighborhood_a": hood_a,
-            "neighborhood_b": hood_b,
-            "list_count":     list_count,
-            "paired_shows":   paired_shows,
-        }
 
     # ── Assemble payload ──
     payload = {
