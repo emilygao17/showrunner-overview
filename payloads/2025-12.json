@@ -2116,5 +2116,51 @@
       "end_date": "2025-12-31",
       "seen_count": 3
     }
-  ]
+  ],
+  "gallery_crawl": {
+    "neighborhood_a": "Chelsea",
+    "neighborhood_b": "Tribeca",
+    "list_count": 25,
+    "paired_shows": [
+      {
+        "show_a": {
+          "show_id": "35518",
+          "title": "David Byrne",
+          "venue_name": "Pace Gallery"
+        },
+        "show_b": {
+          "show_id": "38325",
+          "title": "Nicole Eisenman",
+          "venue_name": "David Zwirner"
+        },
+        "pair_count": 5
+      },
+      {
+        "show_a": {
+          "show_id": "38378",
+          "title": "Jordan Casteel",
+          "venue_name": "Casey Kaplan"
+        },
+        "show_b": {
+          "show_id": "38325",
+          "title": "Nicole Eisenman",
+          "venue_name": "David Zwirner"
+        },
+        "pair_count": 3
+      },
+      {
+        "show_a": {
+          "show_id": "38364",
+          "title": "Friedrich Kunath",
+          "venue_name": "Pace Gallery"
+        },
+        "show_b": {
+          "show_id": "38325",
+          "title": "Nicole Eisenman",
+          "venue_name": "David Zwirner"
+        },
+        "pair_count": 3
+      }
+    ]
+  }
 }

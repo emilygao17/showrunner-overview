@@ -5380,5 +5380,51 @@
       "end_date": "2025-07-31",
       "seen_count": 4
     }
-  ]
+  ],
+  "gallery_crawl": {
+    "neighborhood_a": "Chelsea",
+    "neighborhood_b": "Tribeca",
+    "list_count": 27,
+    "paired_shows": [
+      {
+        "show_a": {
+          "show_id": "35273",
+          "title": "fugue states",
+          "venue_name": "Morgan Presents"
+        },
+        "show_b": {
+          "show_id": "35281",
+          "title": "Dustin Yellin",
+          "venue_name": "Almine Rech"
+        },
+        "pair_count": 3
+      },
+      {
+        "show_a": {
+          "show_id": "35499",
+          "title": "softly radiant, half-buried",
+          "venue_name": "Marianne Boesky Gallery"
+        },
+        "show_b": {
+          "show_id": "35281",
+          "title": "Dustin Yellin",
+          "venue_name": "Almine Rech"
+        },
+        "pair_count": 3
+      },
+      {
+        "show_a": {
+          "show_id": "35253",
+          "title": "dialogue with youth",
+          "venue_name": "Harper's Books"
+        },
+        "show_b": {
+          "show_id": "35281",
+          "title": "Dustin Yellin",
+          "venue_name": "Almine Rech"
+        },
+        "pair_count": 3
+      }
+    ]
+  }
 }

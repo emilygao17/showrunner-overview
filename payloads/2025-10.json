@@ -2170,5 +2170,51 @@
       "end_date": "2025-10-31",
       "seen_count": 2
     }
-  ]
+  ],
+  "gallery_crawl": {
+    "neighborhood_a": "Chelsea",
+    "neighborhood_b": "Tribeca",
+    "list_count": 31,
+    "paired_shows": [
+      {
+        "show_a": {
+          "show_id": "36247",
+          "title": "Sasha Gordon",
+          "venue_name": "David Zwirner"
+        },
+        "show_b": {
+          "show_id": "35930",
+          "title": "Katherine Bradford",
+          "venue_name": "CANADA"
+        },
+        "pair_count": 4
+      },
+      {
+        "show_a": {
+          "show_id": "36828",
+          "title": "Nathaniel Mary Quinn",
+          "venue_name": "Gagosian"
+        },
+        "show_b": {
+          "show_id": "35930",
+          "title": "Katherine Bradford",
+          "venue_name": "CANADA"
+        },
+        "pair_count": 3
+      },
+      {
+        "show_a": {
+          "show_id": "36247",
+          "title": "Sasha Gordon",
+          "venue_name": "David Zwirner"
+        },
+        "show_b": {
+          "show_id": "38066",
+          "title": "Ben Styer",
+          "venue_name": "SHRINE"
+        },
+        "pair_count": 3
+      }
+    ]
+  }
 }

@@ -3543,5 +3543,51 @@
       "end_date": "2025-09-27",
       "seen_count": 1
     }
-  ]
+  ],
+  "gallery_crawl": {
+    "neighborhood_a": "Chelsea",
+    "neighborhood_b": "Tribeca",
+    "list_count": 48,
+    "paired_shows": [
+      {
+        "show_a": {
+          "show_id": "36247",
+          "title": "Sasha Gordon",
+          "venue_name": "David Zwirner"
+        },
+        "show_b": {
+          "show_id": "35928",
+          "title": "Chloe Wise",
+          "venue_name": "Almine Rech"
+        },
+        "pair_count": 6
+      },
+      {
+        "show_a": {
+          "show_id": "36247",
+          "title": "Sasha Gordon",
+          "venue_name": "David Zwirner"
+        },
+        "show_b": {
+          "show_id": "36615",
+          "title": "Chloe Wise",
+          "venue_name": "Almine Rech"
+        },
+        "pair_count": 6
+      },
+      {
+        "show_a": {
+          "show_id": "36828",
+          "title": "Nathaniel Mary Quinn",
+          "venue_name": "Gagosian"
+        },
+        "show_b": {
+          "show_id": "35928",
+          "title": "Chloe Wise",
+          "venue_name": "Almine Rech"
+        },
+        "pair_count": 5
+      }
+    ]
+  }
 }

@@ -108,6 +108,11 @@ for r in wts_raw:
 
 print(f"  Want-to-see entries (NYC): {sum(save_counts.values())}")
 
+with open(f"{DATA_DIR}/saved_lists_rows.csv") as f:
+    saved_lists_raw = list(csv.DictReader(f))
+
+print(f"  Saved lists: {len(saved_lists_raw)}")
+
 
 
 # ── Build show card dict ───────────────────────────────────────────────────
@@ -279,6 +284,71 @@ for ym in MONTHS:
     closing_this_month = closing_this_month[:10]
     closing_this_month.sort(key=lambda x: x["end_date"])
 
+    # ── Gallery Crawl ──
+    # Filter saved lists created this month
+    lists_this_month = [l for l in saved_lists_raw if l["created_at"][:7] == ym]
+
+    def list_hood_shows(lst):
+        """Return {neighborhood: [show_id, ...]} for NYC shows in this list."""
+        raw_ids = parse_list(lst["shows"])
+        hood_shows = defaultdict(list)
+        for sid in raw_ids:
+            sid_str = str(int(sid)) if isinstance(sid, (int, float)) else str(sid)
+            if sid_str in shows:
+                hood = venues[shows[sid_str]["venue_id"]].get("neighborhood", "")
+                if hood:
+                    hood_shows[hood].append(sid_str)
+        return dict(hood_shows)
+
+    # Count neighborhood pairs across all lists this month
+    pair_tally = defaultdict(int)
+    for lst in lists_this_month:
+        hs = list_hood_shows(lst)
+        hoods = list(hs.keys())
+        for i in range(len(hoods)):
+            for j in range(i + 1, len(hoods)):
+                pair = tuple(sorted([hoods[i], hoods[j]]))
+                pair_tally[pair] += 1
+
+    gallery_crawl = None
+    if pair_tally:
+        top_pair = max(pair_tally, key=lambda p: pair_tally[p])
+        hood_a, hood_b = top_pair
+        list_count = pair_tally[top_pair]
+
+        # Count show-level pairs within lists containing both neighborhoods
+        show_pair_tally = defaultdict(int)
+        for lst in lists_this_month:
+            hs = list_hood_shows(lst)
+            if hood_a in hs and hood_b in hs:
+                for sa in hs[hood_a]:
+                    for sb in hs[hood_b]:
+                        show_pair_tally[(sa, sb)] += 1
+
+        top_show_pairs = sorted(show_pair_tally, key=lambda p: show_pair_tally[p], reverse=True)[:3]
+        paired_shows = []
+        for sa, sb in top_show_pairs:
+            paired_shows.append({
+                "show_a": {
+                    "show_id":   sa,
+                    "title":     shows[sa].get("display_title") or shows[sa]["show_title"],
+                    "venue_name": venues[shows[sa]["venue_id"]]["venue_name"],
+                },
+                "show_b": {
+                    "show_id":   sb,
+                    "title":     shows[sb].get("display_title") or shows[sb]["show_title"],
+                    "venue_name": venues[shows[sb]["venue_id"]]["venue_name"],
+                },
+                "pair_count": show_pair_tally[(sa, sb)],
+            })
+
+        gallery_crawl = {
+            "neighborhood_a": hood_a,
+            "neighborhood_b": hood_b,
+            "list_count":     list_count,
+            "paired_shows":   paired_shows,
+        }
+
     # ── Assemble payload ──
     payload = {
         "month":              ym,
@@ -292,6 +362,7 @@ for ym in MONTHS:
         "neighborhoods":      neighborhoods,
         "returning_favorites": returning_favorites,
         "closing_this_month": closing_this_month,
+        "gallery_crawl":      gallery_crawl,
     }
 
     out_path = f"{OUTPUT_DIR}/{ym}.json"

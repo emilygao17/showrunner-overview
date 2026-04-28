@@ -3279,5 +3279,51 @@
       "end_date": "2026-02-28",
       "seen_count": 2
     }
-  ]
+  ],
+  "gallery_crawl": {
+    "neighborhood_a": "Chelsea",
+    "neighborhood_b": "Tribeca",
+    "list_count": 38,
+    "paired_shows": [
+      {
+        "show_a": {
+          "show_id": "41218",
+          "title": "F\u00e9lix Gonz\u00e1lez-Torres",
+          "venue_name": "Hauser & Wirth"
+        },
+        "show_b": {
+          "show_id": "41310",
+          "title": "Cathleen Clarke",
+          "venue_name": "Margot Samel"
+        },
+        "pair_count": 3
+      },
+      {
+        "show_a": {
+          "show_id": "41218",
+          "title": "F\u00e9lix Gonz\u00e1lez-Torres",
+          "venue_name": "Hauser & Wirth"
+        },
+        "show_b": {
+          "show_id": "40337",
+          "title": "Kurt Kauper",
+          "venue_name": "ORTUZAR"
+        },
+        "pair_count": 3
+      },
+      {
+        "show_a": {
+          "show_id": "40357",
+          "title": "Glenn Ligon",
+          "venue_name": "Hauser & Wirth"
+        },
+        "show_b": {
+          "show_id": "41320",
+          "title": "Doron Langberg",
+          "venue_name": "Jeffrey Deitch"
+        },
+        "pair_count": 3
+      }
+    ]
+  }
 }

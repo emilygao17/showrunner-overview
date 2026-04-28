@@ -5184,5 +5184,51 @@
       "end_date": "2025-11-30",
       "seen_count": 2
     }
-  ]
+  ],
+  "gallery_crawl": {
+    "neighborhood_a": "Chelsea",
+    "neighborhood_b": "Tribeca",
+    "list_count": 69,
+    "paired_shows": [
+      {
+        "show_a": {
+          "show_id": "37952",
+          "title": "Richard Prince",
+          "venue_name": "Gagosian"
+        },
+        "show_b": {
+          "show_id": "38325",
+          "title": "Nicole Eisenman",
+          "venue_name": "David Zwirner"
+        },
+        "pair_count": 10
+      },
+      {
+        "show_a": {
+          "show_id": "37952",
+          "title": "Richard Prince",
+          "venue_name": "Gagosian"
+        },
+        "show_b": {
+          "show_id": "35930",
+          "title": "Katherine Bradford",
+          "venue_name": "CANADA"
+        },
+        "pair_count": 8
+      },
+      {
+        "show_a": {
+          "show_id": "38378",
+          "title": "Jordan Casteel",
+          "venue_name": "Casey Kaplan"
+        },
+        "show_b": {
+          "show_id": "38325",
+          "title": "Nicole Eisenman",
+          "venue_name": "David Zwirner"
+        },
+        "pair_count": 8
+      }
+    ]
+  }
 }

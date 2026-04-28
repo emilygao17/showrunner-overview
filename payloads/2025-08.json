@@ -1193,5 +1193,51 @@
       "end_date": "2025-08-31",
       "seen_count": 4
     }
-  ]
+  ],
+  "gallery_crawl": {
+    "neighborhood_a": "Chelsea",
+    "neighborhood_b": "Tribeca",
+    "list_count": 18,
+    "paired_shows": [
+      {
+        "show_a": {
+          "show_id": "36247",
+          "title": "Sasha Gordon",
+          "venue_name": "David Zwirner"
+        },
+        "show_b": {
+          "show_id": "35928",
+          "title": "Chloe Wise",
+          "venue_name": "Almine Rech"
+        },
+        "pair_count": 2
+      },
+      {
+        "show_a": {
+          "show_id": "36247",
+          "title": "Sasha Gordon",
+          "venue_name": "David Zwirner"
+        },
+        "show_b": {
+          "show_id": "36653",
+          "title": "Elizabeth Glaessner",
+          "venue_name": "P\u00b7P\u00b7O\u00b7W"
+        },
+        "pair_count": 2
+      },
+      {
+        "show_a": {
+          "show_id": "36264",
+          "title": "Yuan Fang",
+          "venue_name": "Skarstedt"
+        },
+        "show_b": {
+          "show_id": "36194",
+          "title": "Elizabeth Glaessner",
+          "venue_name": "P\u00b7P\u00b7O\u00b7W"
+        },
+        "pair_count": 2
+      }
+    ]
+  }
 }
