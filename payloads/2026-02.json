@@ -233,6 +233,111 @@
       "short_description": "Il Lee, a prominent abstract artist, utilizes ballpoint pens to create dynamic compositions that invite viewers into a transformative dialogue, continuing the legacy of abstract ar\u2026"
     }
   ],
+  "top_5_views": [
+    {
+      "show_id": "40088",
+      "title": "Rob Pruitt",
+      "venue_name": "303 Gallery",
+      "neighborhood": "Chelsea",
+      "gallery_tier": "Blue Chip",
+      "seen_count": 7,
+      "save_count": 1,
+      "mediums": [
+        "Paintings",
+        "Videos"
+      ],
+      "artists": [
+        "Rob Pruitt"
+      ],
+      "end_date": "2026-02-28",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/514420252bde46d097e1c4d13231060a_mobile.jpg",
+      "short_description": "303 Gallery presents Rob Pruitt's third solo exhibition, featuring time-based works that explore color gradients and capture fleeting moments. Daily changing titles reflect the evo\u2026",
+      "view_count": 79
+    },
+    {
+      "show_id": "40357",
+      "title": "Glenn Ligon",
+      "venue_name": "Hauser & Wirth",
+      "neighborhood": "Chelsea",
+      "gallery_tier": "Intermediate",
+      "seen_count": 2,
+      "save_count": 6,
+      "mediums": [
+        "Drawings",
+        "Multimedia"
+      ],
+      "artists": [
+        "Glenn Ligon"
+      ],
+      "end_date": "2026-04-04",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/e6fa20ff35214fd18e7735737b9b53d1_mobile.jpg",
+      "short_description": "Glenn Ligon's exhibition, \"Late at night, early in the morning, at noon,\" features new and historic works exploring language, abstraction, and the color blue, reflecting on emotion\u2026",
+      "view_count": 78
+    },
+    {
+      "show_id": "38009",
+      "title": "Group Show",
+      "venue_name": "Craig Starr Gallery",
+      "neighborhood": "Upper East Side",
+      "gallery_tier": "Blue Chip",
+      "seen_count": 5,
+      "save_count": 1,
+      "mediums": [
+        "Paintings",
+        "Drawings",
+        "Installation"
+      ],
+      "artists": [
+        "Stanley Whitney",
+        "Henri Matisse"
+      ],
+      "end_date": "2026-03-14",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/3ff069872fb94c97ae1369146b90bc08_mobile.jpg",
+      "short_description": "Craig Starr Gallery presents an exhibition featuring Stanley Whitney's previously unexhibited works alongside pieces by Henri Matisse. Both artists emphasize color as a structural\u2026",
+      "view_count": 64
+    },
+    {
+      "show_id": "40375",
+      "title": "nightswimming",
+      "venue_name": "Broadway",
+      "neighborhood": "Tribeca",
+      "gallery_tier": "Intermediate",
+      "seen_count": 1,
+      "save_count": 1,
+      "mediums": [
+        "Paintings",
+        "Sculptures",
+        "Photography"
+      ],
+      "artists": [
+        "Group Exhibition"
+      ],
+      "end_date": "2026-02-21",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/9dc00ec7390843689187621eeff78e24_mobile.jpg",
+      "short_description": "The exhibition \"Nightswimming,\" curated by Erica Samuels at Broadway, features works that explore themes of memory and introspection, inspired by R.E.M.'s song. Artists investigate\u2026",
+      "view_count": 54
+    },
+    {
+      "show_id": "40195",
+      "title": "Nicolas Party",
+      "venue_name": "Karma",
+      "neighborhood": "Chelsea",
+      "gallery_tier": "Intermediate",
+      "seen_count": 0,
+      "save_count": 0,
+      "mediums": [
+        "Paintings",
+        "Installation"
+      ],
+      "artists": [
+        "Nicolas Party"
+      ],
+      "end_date": "2026-02-13",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/e0dbf7448b4642cd985b9fae4abe22e4_mobile.jpg",
+      "short_description": "Nicolas Party's exhibition, \"Dead Fish,\" features oil-on-copper and pastel artworks that reinterpret historical themes and engage with traditional painting techniques, blending pas\u2026",
+      "view_count": 41
+    }
+  ],
   "map_checkins": [
     {
       "timestamp": "2026-02-01 03:09:23.844584+00",
@@ -3297,16 +3402,16 @@
           "neighborhood": "Lower East Side"
         },
         {
-          "show_id": "40106",
-          "title": "Seth Cameron",
-          "venue_name": "Entrance",
-          "neighborhood": "Lower East Side"
+          "show_id": "41020",
+          "title": "unbridled: horsin' around",
+          "venue_name": "Latitude Gallery",
+          "neighborhood": "Tribeca"
         },
         {
-          "show_id": "40095",
-          "title": "Melody Tuttle",
-          "venue_name": "Hyacinth Gallery",
-          "neighborhood": "Lower East Side"
+          "show_id": "39527",
+          "title": "Ling Jian",
+          "venue_name": "Eli Klein Gallery",
+          "neighborhood": "West Village"
         },
         {
           "show_id": "40370",

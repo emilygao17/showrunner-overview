@@ -119,6 +119,118 @@
     }
   ],
   "top_5_saved": [],
+  "top_5_views": [
+    {
+      "show_id": "36188",
+      "title": "Hank Willis Thomas",
+      "venue_name": "Jack Shainman Gallery",
+      "neighborhood": "Tribeca",
+      "gallery_tier": "Blue Chip",
+      "seen_count": 5,
+      "save_count": 0,
+      "mediums": [
+        "Sculptures",
+        "Photography",
+        "Installation",
+        "Videos",
+        "Multimedia"
+      ],
+      "artists": [
+        "Hank Willis Thomas"
+      ],
+      "end_date": "2025-11-01",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/bd16c25e1c484846ba591d9139ed54f4_original.jpg",
+      "short_description": "Jack Shainman Gallery presents \"I AM MANY,\" an exhibition by Hank Willis Thomas showcasing large-scale sculptures and mixed-media works that explore historical legacies and contemp\u2026",
+      "view_count": 52
+    },
+    {
+      "show_id": "35930",
+      "title": "Katherine Bradford",
+      "venue_name": "CANADA",
+      "neighborhood": "Tribeca",
+      "gallery_tier": "Intermediate",
+      "seen_count": 4,
+      "save_count": 0,
+      "mediums": [
+        "Paintings"
+      ],
+      "artists": [
+        "Katherine Bradford"
+      ],
+      "end_date": "2025-12-13",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/bb640f2d0a2644e89c07682e3689b443_mobile.jpg",
+      "short_description": "Katherine Bradford's upcoming art show features her vibrant, abstract canvases exploring themes of identity and vulnerability through buoyant characters in dreamy settings. Her uni\u2026",
+      "view_count": 19
+    },
+    {
+      "show_id": "2000036",
+      "title": "Fifteen",
+      "venue_name": "48 Ludlow Street",
+      "neighborhood": "Lower East Side",
+      "gallery_tier": "Emerging",
+      "seen_count": 0,
+      "save_count": 0,
+      "mediums": [],
+      "artists": [
+        "Zohreh Ahmad",
+        "Natalia Cardenas",
+        "Massimiliano Malago",
+        "Luiza Furia",
+        "May Shek",
+        "Nik Bentel",
+        "Bond-Ny",
+        "Helene Helleu",
+        "Branna Pintens",
+        "Samuel De Gunzburg",
+        "Nico Barrera",
+        "James Piacentini",
+        "Resham Mantri",
+        "Oscar Caballero"
+      ],
+      "end_date": "2025-11-01",
+      "featured_image": "https://showrunner-public.s3.us-east-2.amazonaws.com/fifteen_new_york.jpeg",
+      "short_description": "\u201cFIFTEEN\u201d showcases a diverse group of artists united by a spirit of optimism, emphasizing creativity and community as acts of resistance and renewal.",
+      "view_count": 12
+    },
+    {
+      "show_id": "37556",
+      "title": "Friedrich Kunath",
+      "venue_name": "Pace",
+      "neighborhood": "Chelsea",
+      "gallery_tier": "Blue Chip",
+      "seen_count": 0,
+      "save_count": 0,
+      "mediums": [
+        "Paintings"
+      ],
+      "artists": [
+        "Friedrich Kunath"
+      ],
+      "end_date": "2025-12-20",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/41ab4efe7c674eb1a054039020def359.jpg",
+      "short_description": "Pace is hosting Friedrich Kunath's first solo exhibition in the city since 2019 and his debut with the gallery, following representation since May 2025.",
+      "view_count": 11
+    },
+    {
+      "show_id": "35928",
+      "title": "Chloe Wise",
+      "venue_name": "Almine Rech",
+      "neighborhood": "Tribeca",
+      "gallery_tier": "Intermediate",
+      "seen_count": 3,
+      "save_count": 0,
+      "mediums": [
+        "Paintings"
+      ],
+      "artists": [
+        "Chloe Wise"
+      ],
+      "end_date": "2025-10-25",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/22dae237e2a6422192afcf39402d0aed.jpg",
+      "short_description": "Chloe Wise's fifth solo exhibition, \"Myth Information,\" runs from September 18 to October 25, 2025, exploring perceptions of reality and the unknown through her captivating paintin\u2026",
+      "view_count": 11
+    }
+  ],
   "map_checkins": [
     {
       "timestamp": "2025-10-01 16:35:04.06853+00",
@@ -2200,10 +2312,10 @@
           "neighborhood": "Chelsea"
         },
         {
-          "show_id": "36529",
-          "title": "Ohad Meromi",
-          "venue_name": "56 Henry",
-          "neighborhood": "Lower East Side"
+          "show_id": "36828",
+          "title": "Nathaniel Mary Quinn",
+          "venue_name": "Gagosian",
+          "neighborhood": "Chelsea"
         }
       ]
     },
@@ -2223,16 +2335,16 @@
           "neighborhood": "Murray Hill"
         },
         {
-          "show_id": "37449",
-          "title": "Robert Rauschenberg",
-          "venue_name": "Guggenheim Museum",
-          "neighborhood": "Upper East Side"
-        },
-        {
           "show_id": "35908",
           "title": "Christian Marclay",
           "venue_name": "Brooklyn Museum",
           "neighborhood": "Central Brooklyn"
+        },
+        {
+          "show_id": "37449",
+          "title": "Robert Rauschenberg",
+          "venue_name": "Guggenheim Museum",
+          "neighborhood": "Upper East Side"
         },
         {
           "show_id": "37665",

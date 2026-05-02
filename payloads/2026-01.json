@@ -234,6 +234,135 @@
       "short_description": "Kiang Malingue gallery presents \"From Being Jealous of a Dog\u2019s Vein,\" a group exhibition curated by Brook Hsu, exploring diverse art forms and the nature of storytelling through an\u2026"
     }
   ],
+  "top_5_views": [
+    {
+      "show_id": "38009",
+      "title": "Group Show",
+      "venue_name": "Craig Starr Gallery",
+      "neighborhood": "Upper East Side",
+      "gallery_tier": "Blue Chip",
+      "seen_count": 2,
+      "save_count": 1,
+      "mediums": [
+        "Paintings",
+        "Drawings",
+        "Installation"
+      ],
+      "artists": [
+        "Stanley Whitney",
+        "Henri Matisse"
+      ],
+      "end_date": "2026-03-14",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/3ff069872fb94c97ae1369146b90bc08_mobile.jpg",
+      "short_description": "Craig Starr Gallery presents an exhibition featuring Stanley Whitney's previously unexhibited works alongside pieces by Henri Matisse. Both artists emphasize color as a structural\u2026",
+      "view_count": 97
+    },
+    {
+      "show_id": "40088",
+      "title": "Rob Pruitt",
+      "venue_name": "303 Gallery",
+      "neighborhood": "Chelsea",
+      "gallery_tier": "Blue Chip",
+      "seen_count": 5,
+      "save_count": 1,
+      "mediums": [
+        "Paintings",
+        "Videos"
+      ],
+      "artists": [
+        "Rob Pruitt"
+      ],
+      "end_date": "2026-02-28",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/514420252bde46d097e1c4d13231060a_mobile.jpg",
+      "short_description": "303 Gallery presents Rob Pruitt's third solo exhibition, featuring time-based works that explore color gradients and capture fleeting moments. Daily changing titles reflect the evo\u2026",
+      "view_count": 93
+    },
+    {
+      "show_id": "39893",
+      "title": "influencers",
+      "venue_name": "Cristin Tierney",
+      "neighborhood": "Tribeca",
+      "gallery_tier": "Intermediate",
+      "seen_count": 4,
+      "save_count": 0,
+      "mediums": [
+        "Videos"
+      ],
+      "artists": [
+        "Diane Burko",
+        "Yayoi Kusama",
+        "Abby Leigh",
+        "Wangechi Mutu",
+        "Judy Pfaff",
+        "Amy Sillman",
+        "Sara Siestreem",
+        "Audra Skuodas",
+        "Lynette Yiadom-Boakye"
+      ],
+      "end_date": "2026-02-14",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/c6812f1475d8485b9c480229032d2dce_mobile.jpg",
+      "short_description": "Cristin Tierney Gallery presents \"Influencers,\" a group exhibition exploring the concept of influence in art through mentorship and idea exchange, featuring both established and em\u2026",
+      "view_count": 80
+    },
+    {
+      "show_id": "38325",
+      "title": "Nicole Eisenman",
+      "venue_name": "David Zwirner",
+      "neighborhood": "Tribeca",
+      "gallery_tier": "Blue Chip",
+      "seen_count": 4,
+      "save_count": 1,
+      "mediums": [
+        "Paintings",
+        "Sculptures",
+        "Videos",
+        "Multimedia"
+      ],
+      "artists": [
+        "Nicole Eisenman"
+      ],
+      "end_date": "2026-01-10",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/4fed0a5ebc8d4293a9d929700cd90d3e_mobile.jpg",
+      "short_description": "Nicole Eisenman's upcoming exhibition \"STY\" at 52 Walker showcases her new sculptures, video elements, and paintings, exploring contemporary life and historical tensions within an\u2026",
+      "view_count": 73
+    },
+    {
+      "show_id": "39909",
+      "title": "nightswimming",
+      "venue_name": "Broadway",
+      "neighborhood": "Tribeca",
+      "gallery_tier": "Intermediate",
+      "seen_count": 6,
+      "save_count": 0,
+      "mediums": [
+        "Paintings",
+        "Sculptures",
+        "Photography"
+      ],
+      "artists": [
+        "Katherine Bradford",
+        "Matthew Cerletty",
+        "Jane Corrigan",
+        "Ann Craven",
+        "Woody De Othello",
+        "Jessie Henson",
+        "Mary Heilmann",
+        "Sheree Hovsepian",
+        "Rashid Johnson",
+        "Sally Mann",
+        "Eddie Martinez",
+        "Joel Mesler",
+        "Sam Moyer",
+        "Angel Otero",
+        "Emmi Whitehorse",
+        "Matthew Wong"
+      ],
+      "end_date": "2026-02-21",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/f6e3782eb9f543a4b194d90eb73a00d5_mobile.jpg",
+      "short_description": "Broadway presents \"Nightswimming,\" a group exhibition curated by Erica Samuels, exploring themes of memory and introspection through diverse artworks. The show reflects a nocturnal\u2026",
+      "view_count": 71
+    }
+  ],
   "map_checkins": [
     {
       "timestamp": "2026-01-01 12:57:35.893713+00",
@@ -4006,16 +4135,16 @@
           "neighborhood": "Chelsea"
         },
         {
-          "show_id": "40449",
-          "title": "\u00e1ngeles agrela / june canedo de souza / \u00e6men eded\u00e9en / samantha joy groff / teresa murta / daniel pit\u00edn",
-          "venue_name": "Nicodim Gallery",
-          "neighborhood": "Tribeca"
-        },
-        {
           "show_id": "40195",
           "title": "Nicolas Party",
           "venue_name": "Karma",
           "neighborhood": "Chelsea"
+        },
+        {
+          "show_id": "40449",
+          "title": "\u00e1ngeles agrela / june canedo de souza / \u00e6men eded\u00e9en / samantha joy groff / teresa murta / daniel pit\u00edn",
+          "venue_name": "Nicodim Gallery",
+          "neighborhood": "Tribeca"
         }
       ]
     }

@@ -90,7 +90,7 @@
     margin: 0 auto;
     padding: 24px 20px 48px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
     gap: var(--gap);
   }
 
@@ -103,7 +103,8 @@
   }
 
   .card-full  { grid-column: 1 / -1; }
-  .card-third { grid-column: span 1; }
+  .card-half  { grid-column: span 3; }
+  .card-third { grid-column: span 2; }
 
   .card-label {
     font-size: 10px;
@@ -465,7 +466,7 @@
       grid-template-columns: 1fr;
       padding: 16px 12px 48px;
     }
-    .card-full, .card-third { grid-column: 1; }
+    .card-full, .card-half, .card-third { grid-column: 1 / -1; }
     header { padding: 0 16px; }
     .month-nav { max-width: calc(100vw - 140px); }
     .stats-hero .month-title { font-size: 24px; }
@@ -586,7 +587,7 @@ function renderTop5(shows) {
       </div>
     </div>`).join('');
   return `
-  <div class="card">
+  <div class="card card-third">
     <div class="card-label">Top 5 Most Visited</div>
     <div class="show-list">${rows}</div>
   </div>`;
@@ -594,7 +595,7 @@ function renderTop5(shows) {
 
 function renderTop5Saved(shows) {
   if (!shows || !shows.length) return `
-  <div class="card">
+  <div class="card card-third">
     <div class="card-label">Top 5 Want to See</div>
     <div class="empty-state">No saves recorded this month.</div>
   </div>`;
@@ -613,8 +614,35 @@ function renderTop5Saved(shows) {
       </div>
     </div>`).join('');
   return `
-  <div class="card">
+  <div class="card card-third">
     <div class="card-label">Top 5 Want to See</div>
+    <div class="show-list">${rows}</div>
+  </div>`;
+}
+
+function renderTop5Views(shows) {
+  if (!shows || !shows.length) return `
+  <div class="card card-third">
+    <div class="card-label">Most Popular Shows This Month</div>
+    <div class="empty-state">No view data this month.</div>
+  </div>`;
+  const rows = shows.map((s, i) => `
+    <div class="show-row">
+      <div class="show-rank">${i + 1}</div>
+      ${imgOrPlaceholder(s.featured_image, 'show-thumb', s.title)}
+      <div class="show-info">
+        <div class="show-title">${s.title}</div>
+        <div class="show-venue">${s.venue_name} · ${s.neighborhood}</div>
+        ${s.mediums && s.mediums.length ? `<div class="show-medium">${s.mediums.join(', ')}</div>` : ''}
+      </div>
+      <div>
+        <div class="show-count">${s.view_count}</div>
+        <div class="show-count-lbl">impressions</div>
+      </div>
+    </div>`).join('');
+  return `
+  <div class="card card-third">
+    <div class="card-label">Most Popular Shows This Month</div>
     <div class="show-list">${rows}</div>
   </div>`;
 }
@@ -631,7 +659,7 @@ function renderNeighborhoods(hoods) {
       <div class="hood-count">${h.checkin_count}</div>
     </div>`).join('');
   return `
-  <div class="card">
+  <div class="card card-half">
     <div class="card-label">Neighborhoods</div>
     <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">Showrunner gallery check-ins by neighborhood</div>
     <div class="hood-list">${rows}</div>
@@ -640,7 +668,7 @@ function renderNeighborhoods(hoods) {
 
 function renderGalleryCrawl(crawls) {
   if (!crawls || !crawls.length) return `
-  <div class="card">
+  <div class="card card-half">
     <div class="card-label">The Gallery Crawl</div>
     <div class="empty-state">Not enough list data.</div>
   </div>`;
@@ -657,7 +685,7 @@ function renderGalleryCrawl(crawls) {
     </div>`;
   }).join('');
   return `
-  <div class="card">
+  <div class="card card-half">
     <div class="card-label">The Gallery Crawl</div>
     <div class="crawl-intro">Shows people keep planning together.</div>
     ${groups}
@@ -950,6 +978,7 @@ async function loadMonth(ym) {
     renderSotm(data.show_of_the_month),
     renderTop5(data.top_5_seen),
     renderTop5Saved(data.top_5_saved),
+    renderTop5Views(data.top_5_views),
     renderNeighborhoods(data.neighborhoods),
     renderGalleryCrawl(data.gallery_crawl),
     renderMap(),

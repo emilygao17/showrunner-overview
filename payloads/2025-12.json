@@ -129,6 +129,113 @@
     }
   ],
   "top_5_saved": [],
+  "top_5_views": [
+    {
+      "show_id": "38325",
+      "title": "Nicole Eisenman",
+      "venue_name": "David Zwirner",
+      "neighborhood": "Tribeca",
+      "gallery_tier": "Blue Chip",
+      "seen_count": 1,
+      "save_count": 1,
+      "mediums": [
+        "Paintings",
+        "Sculptures",
+        "Videos",
+        "Multimedia"
+      ],
+      "artists": [
+        "Nicole Eisenman"
+      ],
+      "end_date": "2026-01-10",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/4fed0a5ebc8d4293a9d929700cd90d3e_mobile.jpg",
+      "short_description": "Nicole Eisenman's upcoming exhibition \"STY\" at 52 Walker showcases her new sculptures, video elements, and paintings, exploring contemporary life and historical tensions within an\u2026",
+      "view_count": 112
+    },
+    {
+      "show_id": "38378",
+      "title": "Jordan Casteel",
+      "venue_name": "Casey Kaplan",
+      "neighborhood": "Chelsea",
+      "gallery_tier": "Blue Chip",
+      "seen_count": 3,
+      "save_count": 1,
+      "mediums": [
+        "Paintings"
+      ],
+      "artists": [
+        "Jordan Casteel"
+      ],
+      "end_date": "2026-01-10",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/1b4f976701be472398ea2cce5f285208_mobile.jpg",
+      "short_description": "Jordan Casteel's exhibition explores themes of resilience and community through portraiture and garden imagery, reflecting on personal and collective experiences rooted in nature a\u2026",
+      "view_count": 92
+    },
+    {
+      "show_id": "38364",
+      "title": "Friedrich Kunath",
+      "venue_name": "Pace Gallery",
+      "neighborhood": "Chelsea",
+      "gallery_tier": "Blue Chip",
+      "seen_count": 2,
+      "save_count": 0,
+      "mediums": [
+        "Paintings",
+        "Sculptures",
+        "Drawings",
+        "Installation",
+        "Videos"
+      ],
+      "artists": [
+        "Friedrich Kunath"
+      ],
+      "end_date": "2025-12-20",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/9164f7428cec497095ca19b6f37cf7e6_mobile.jpg",
+      "short_description": "Pace gallery presents Friedrich Kunath's new solo exhibition, \"Aimless Love,\" featuring paintings and a sculpture that explore themes of memory and connection. A related monograph\u2026",
+      "view_count": 81
+    },
+    {
+      "show_id": "35930",
+      "title": "Katherine Bradford",
+      "venue_name": "CANADA",
+      "neighborhood": "Tribeca",
+      "gallery_tier": "Intermediate",
+      "seen_count": 0,
+      "save_count": 0,
+      "mediums": [
+        "Paintings"
+      ],
+      "artists": [
+        "Katherine Bradford"
+      ],
+      "end_date": "2025-12-13",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/bb640f2d0a2644e89c07682e3689b443_mobile.jpg",
+      "short_description": "Katherine Bradford's upcoming art show features her vibrant, abstract canvases exploring themes of identity and vulnerability through buoyant characters in dreamy settings. Her uni\u2026",
+      "view_count": 79
+    },
+    {
+      "show_id": "38009",
+      "title": "Group Show",
+      "venue_name": "Craig Starr Gallery",
+      "neighborhood": "Upper East Side",
+      "gallery_tier": "Blue Chip",
+      "seen_count": 2,
+      "save_count": 1,
+      "mediums": [
+        "Paintings",
+        "Drawings",
+        "Installation"
+      ],
+      "artists": [
+        "Stanley Whitney",
+        "Henri Matisse"
+      ],
+      "end_date": "2026-03-14",
+      "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/3ff069872fb94c97ae1369146b90bc08_mobile.jpg",
+      "short_description": "Craig Starr Gallery presents an exhibition featuring Stanley Whitney's previously unexhibited works alongside pieces by Henri Matisse. Both artists emphasize color as a structural\u2026",
+      "view_count": 65
+    }
+  ],
   "map_checkins": [
     {
       "timestamp": "2025-12-01 19:00:51.237262+00",
@@ -2169,16 +2276,16 @@
           "neighborhood": "Chelsea"
         },
         {
-          "show_id": "37703",
-          "title": "calder. mir\u00f3: prints and drawings, 1967-1976",
-          "venue_name": "Kahan Gallery",
-          "neighborhood": "Upper East Side"
-        },
-        {
           "show_id": "38170",
           "title": "Tamiko Kawata",
           "venue_name": "Alison Bradley Projects",
           "neighborhood": "Chelsea"
+        },
+        {
+          "show_id": "37703",
+          "title": "calder. mir\u00f3: prints and drawings, 1967-1976",
+          "venue_name": "Kahan Gallery",
+          "neighborhood": "Upper East Side"
         }
       ]
     }

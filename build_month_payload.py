@@ -114,6 +114,13 @@ with open(f"{DATA_DIR}/saved_lists_rows.csv") as f:
 
 print(f"  Saved lists: {len(saved_lists_raw)}")
 
+with open(f"{DATA_DIR}/show_views_rows.csv") as f:
+    views_raw = list(csv.DictReader(f))
+
+# Filter to NYC shows only
+views_nyc = [r for r in views_raw if r["show_id"] in shows]
+print(f"  Show views (NYC): {len(views_nyc)} / {len(views_raw)}")
+
 
 
 # ── Build show card dict ───────────────────────────────────────────────────
@@ -191,6 +198,17 @@ for ym in MONTHS:
     top_5_saved = [
         show_card(sid, seen_tally.get(sid, 0), wts_tally[sid])
         for sid in top5_saved_ids
+    ]
+
+    # ── Top 5 by show views this month ──
+    views_tally = defaultdict(int)
+    for r in views_nyc:
+        if r["created_at"][:7] == ym:
+            views_tally[r["show_id"]] += 1
+    top5_views_ids = sorted(views_tally, key=lambda sid: views_tally[sid], reverse=True)[:5]
+    top_5_views = [
+        {**show_card(sid, seen_tally.get(sid, 0), save_counts[sid]), "view_count": views_tally[sid]}
+        for sid in top5_views_ids
     ]
 
     # ── Show of the month ──
@@ -364,6 +382,7 @@ for ym in MONTHS:
         "show_of_the_month":  show_of_the_month,
         "top_5_seen":         top_5_seen,
         "top_5_saved":        top_5_saved,
+        "top_5_views":        top_5_views,
         "map_checkins":       map_checkins,
         "neighborhoods":      neighborhoods,
         "returning_favorites": returning_favorites,

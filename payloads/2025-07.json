@@ -126,6 +126,7 @@
     }
   ],
   "top_5_saved": [],
+  "top_5_views": [],
   "map_checkins": [
     {
       "timestamp": "2025-07-02 01:43:56.750459+00",
@@ -5433,15 +5434,21 @@
           "neighborhood": "Tribeca"
         },
         {
-          "show_id": "35682",
-          "title": "guest of a guest",
-          "venue_name": "The Hole",
+          "show_id": "35263",
+          "title": "ever so present ii: between home and elsewhere",
+          "venue_name": "Gagosian",
+          "neighborhood": "Upper East Side"
+        },
+        {
+          "show_id": "34651",
+          "title": "life\u2014a group show",
+          "venue_name": "Artists Space",
           "neighborhood": "Tribeca"
         },
         {
-          "show_id": "35371",
-          "title": "soft structures, curated my jen wroblewski",
-          "venue_name": "Jane Lombard Gallery",
+          "show_id": "35296",
+          "title": "Varda Caivano",
+          "venue_name": "Mendes Wood DM",
           "neighborhood": "Tribeca"
         }
       ]
