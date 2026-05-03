@@ -20,7 +20,8 @@
     ],
     "end_date": "2026-04-04",
     "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/e6fa20ff35214fd18e7735737b9b53d1_mobile.jpg",
-    "short_description": "Glenn Ligon's exhibition, \"Late at night, early in the morning, at noon,\" features new and historic works exploring language, abstraction, and the color blue, reflecting on emotion\u2026"
+    "short_description": "Glenn Ligon's exhibition, \"Late at night, early in the morning, at noon,\" features new and historic works exploring language, abstraction, and the color blue, reflecting on emotion\u2026",
+    "view_count": 36
   },
   "top_5_seen": [
     {
@@ -4135,16 +4136,16 @@
           "neighborhood": "Chelsea"
         },
         {
-          "show_id": "40195",
-          "title": "Nicolas Party",
-          "venue_name": "Karma",
-          "neighborhood": "Chelsea"
-        },
-        {
           "show_id": "40449",
           "title": "\u00e1ngeles agrela / june canedo de souza / \u00e6men eded\u00e9en / samantha joy groff / teresa murta / daniel pit\u00edn",
           "venue_name": "Nicodim Gallery",
           "neighborhood": "Tribeca"
+        },
+        {
+          "show_id": "40195",
+          "title": "Nicolas Party",
+          "venue_name": "Karma",
+          "neighborhood": "Chelsea"
         }
       ]
     }

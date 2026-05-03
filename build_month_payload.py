@@ -222,7 +222,10 @@ for ym in MONTHS:
         eligible = list(seen_tally.keys())   # fallback: all seen shows
 
     sotm_id  = max(eligible, key=score)
-    show_of_the_month = show_card(sotm_id, seen_tally[sotm_id], save_counts[sotm_id])
+    show_of_the_month = {
+        **show_card(sotm_id, seen_tally[sotm_id], save_counts[sotm_id]),
+        "view_count": views_tally.get(sotm_id, 0),
+    }
 
     # ── Map check-ins ──
     map_checkins = []

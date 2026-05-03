@@ -20,7 +20,8 @@
     ],
     "end_date": "2026-02-13",
     "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/ee1347ac71ec474b9928089d4b17d967_mobile.jpg",
-    "short_description": "The upcoming exhibition \"Observatory\" at Luxembourg + Co. showcases artists' interpretations of space, reflecting on its significance amidst historical contexts such as Surrealism\u2026"
+    "short_description": "The upcoming exhibition \"Observatory\" at Luxembourg + Co. showcases artists' interpretations of space, reflecting on its significance amidst historical contexts such as Surrealism\u2026",
+    "view_count": 27
   },
   "top_5_seen": [
     {
@@ -2241,15 +2242,15 @@
           "neighborhood": "Tribeca"
         },
         {
-          "show_id": "38810",
-          "title": "Chiharu Shiota",
-          "venue_name": "Templon",
-          "neighborhood": "Chelsea"
-        },
-        {
           "show_id": "38383",
           "title": "Stephen Shore",
           "venue_name": "303 Gallery",
+          "neighborhood": "Chelsea"
+        },
+        {
+          "show_id": "38810",
+          "title": "Chiharu Shiota",
+          "venue_name": "Templon",
           "neighborhood": "Chelsea"
         },
         {

@@ -19,7 +19,8 @@
     ],
     "end_date": "2025-11-01",
     "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/2247e31f38e345029061d7d93ff4810c.jpg",
-    "short_description": "David Zwirner presents \"Haze,\" featuring New York artist Sasha Gordon's hyperrealistic paintings that explore self-identity through technical precision and vibrant colors, unveilin\u2026"
+    "short_description": "David Zwirner presents \"Haze,\" featuring New York artist Sasha Gordon's hyperrealistic paintings that explore self-identity through technical precision and vibrant colors, unveilin\u2026",
+    "view_count": 6
   },
   "top_5_seen": [
     {
@@ -2306,15 +2307,15 @@
           "neighborhood": "Chelsea"
         },
         {
-          "show_id": "36299",
-          "title": "Gabrielle Garland",
-          "venue_name": "Miles McEnery Gallery",
-          "neighborhood": "Chelsea"
-        },
-        {
           "show_id": "36828",
           "title": "Nathaniel Mary Quinn",
           "venue_name": "Gagosian",
+          "neighborhood": "Chelsea"
+        },
+        {
+          "show_id": "36299",
+          "title": "Gabrielle Garland",
+          "venue_name": "Miles McEnery Gallery",
           "neighborhood": "Chelsea"
         }
       ]
@@ -2335,16 +2336,16 @@
           "neighborhood": "Murray Hill"
         },
         {
-          "show_id": "35908",
-          "title": "Christian Marclay",
-          "venue_name": "Brooklyn Museum",
-          "neighborhood": "Central Brooklyn"
-        },
-        {
           "show_id": "37449",
           "title": "Robert Rauschenberg",
           "venue_name": "Guggenheim Museum",
           "neighborhood": "Upper East Side"
+        },
+        {
+          "show_id": "35908",
+          "title": "Christian Marclay",
+          "venue_name": "Brooklyn Museum",
+          "neighborhood": "Central Brooklyn"
         },
         {
           "show_id": "37665",

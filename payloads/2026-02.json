@@ -22,7 +22,8 @@
     ],
     "end_date": "2026-04-18",
     "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/6011a74200c14700a9204ccd43eb7fb9_mobile.jpg",
-    "short_description": "The \"Gathering Wool\" exhibition showcases Louise Bourgeois's exploration of abstraction through late and previously unseen works, highlighting her consistent themes of psychologica\u2026"
+    "short_description": "The \"Gathering Wool\" exhibition showcases Louise Bourgeois's exploration of abstraction through late and previously unseen works, highlighting her consistent themes of psychologica\u2026",
+    "view_count": 9
   },
   "top_5_seen": [
     {
@@ -3402,22 +3403,22 @@
           "neighborhood": "Lower East Side"
         },
         {
-          "show_id": "41020",
-          "title": "unbridled: horsin' around",
-          "venue_name": "Latitude Gallery",
+          "show_id": "40761",
+          "title": "Guillaume Linard Osorio",
+          "venue_name": "Carvalho",
+          "neighborhood": "North Brooklyn"
+        },
+        {
+          "show_id": "40749",
+          "title": "David Ambrose",
+          "venue_name": "Tibor De Nagy Gallery",
+          "neighborhood": "Lower East Side"
+        },
+        {
+          "show_id": "38825",
+          "title": "Ezra Johnson",
+          "venue_name": "Freight + Volume",
           "neighborhood": "Tribeca"
-        },
-        {
-          "show_id": "39527",
-          "title": "Ling Jian",
-          "venue_name": "Eli Klein Gallery",
-          "neighborhood": "West Village"
-        },
-        {
-          "show_id": "40370",
-          "title": "Lee Gihun",
-          "venue_name": "The Hole",
-          "neighborhood": "SoHo-NoHo"
         }
       ]
     },
@@ -3437,10 +3438,10 @@
           "neighborhood": "Chelsea"
         },
         {
-          "show_id": "38825",
-          "title": "Ezra Johnson",
-          "venue_name": "Freight + Volume",
-          "neighborhood": "Tribeca"
+          "show_id": "38719",
+          "title": "Louise Bourgeois",
+          "venue_name": "Hauser & Wirth",
+          "neighborhood": "Chelsea"
         }
       ]
     }

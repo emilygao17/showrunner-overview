@@ -563,6 +563,7 @@ function renderSotm(show) {
     ${tagsHtml(show.mediums)}
     ${tagsHtml(show.artists)}
     <div class="sotm-meta">
+      ${show.view_count ? `<span><strong>${show.view_count}</strong> impressions</span>` : ''}
       <span><strong>${show.seen_count}</strong> check-ins</span>
       ${show.save_count ? `<span><strong>${show.save_count}</strong> saves</span>` : ''}
       ${show.end_date ? `<span>Closes ${fmtDate(show.end_date)}</span>` : ''}

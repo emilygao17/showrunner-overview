@@ -21,7 +21,8 @@
     ],
     "end_date": "2026-03-08",
     "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/a1bbdcb9449a4cb584103f00f8cb968c_mobile.jpg",
-    "short_description": "Torkwase Dyson's immersive sound pavilion, *Akua*, opens at Brooklyn Bridge Park from May 6, 2025, to March 8, 2026, exploring themes of breath, memory, and migration through layer\u2026"
+    "short_description": "Torkwase Dyson's immersive sound pavilion, *Akua*, opens at Brooklyn Bridge Park from May 6, 2025, to March 8, 2026, exploring themes of breath, memory, and migration through layer\u2026",
+    "view_count": 0
   },
   "top_5_seen": [
     {
@@ -5434,21 +5435,21 @@
           "neighborhood": "Tribeca"
         },
         {
-          "show_id": "35263",
-          "title": "ever so present ii: between home and elsewhere",
-          "venue_name": "Gagosian",
-          "neighborhood": "Upper East Side"
-        },
-        {
-          "show_id": "34651",
-          "title": "life\u2014a group show",
-          "venue_name": "Artists Space",
-          "neighborhood": "Tribeca"
-        },
-        {
           "show_id": "35296",
           "title": "Varda Caivano",
           "venue_name": "Mendes Wood DM",
+          "neighborhood": "Tribeca"
+        },
+        {
+          "show_id": "35346",
+          "title": "Kati Heck",
+          "venue_name": "Bortolami",
+          "neighborhood": "Tribeca"
+        },
+        {
+          "show_id": "35224",
+          "title": "Carrie Yamaoka",
+          "venue_name": "anonymous gallery",
           "neighborhood": "Tribeca"
         }
       ]
