@@ -460,6 +460,111 @@
     font-size: 16px;
   }
 
+  /* ── View toggle button ── */
+  .view-toggle {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.35);
+    color: rgba(255,255,255,0.7);
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.15s;
+    margin-left: 8px;
+  }
+  .view-toggle:hover { border-color: #fff; color: #fff; }
+  .view-toggle.active { background: #fff; border-color: #fff; color: var(--ink); }
+
+  /* ── Story Mode ── */
+  :root { --sq: min(calc(100vh - 96px), calc(100vw - 40px), 700px); }
+
+  body.story-mode main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  body.story-mode .card,
+  body.story-mode .card-full,
+  body.story-mode .card-half,
+  body.story-mode .card-third {
+    width: var(--sq);
+    height: var(--sq);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    flex-shrink: 0;
+  }
+
+  /* Card label stays, reduce bottom margin */
+  body.story-mode .card-label { margin-bottom: 8px; }
+
+  /* Stats hero */
+  body.story-mode .stats-hero { justify-content: center; }
+  body.story-mode .stats-hero .month-title { font-size: 24px; margin-bottom: 12px; }
+  body.story-mode .stat-num { font-size: 22px; }
+
+  /* SOTM */
+  body.story-mode .sotm-image { width: 160px; height: 120px; margin-bottom: 10px; }
+  body.story-mode .sotm-title { font-size: 15px; margin-bottom: 3px; }
+  body.story-mode .sotm-venue { font-size: 11px; margin-bottom: 6px; }
+  body.story-mode .sotm-desc {
+    font-size: 11px;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  body.story-mode .tag { font-size: 10px; padding: 2px 8px; }
+  body.story-mode .tag-row { gap: 4px; margin-bottom: 8px; }
+  body.story-mode .sotm-meta { font-size: 10px; gap: 10px; flex-wrap: wrap; }
+
+  /* Top 5 lists */
+  body.story-mode .show-list { flex: 1; overflow-y: auto; min-height: 0; }
+  body.story-mode .show-row { padding: 7px 0; gap: 8px; }
+  body.story-mode .show-thumb { width: 36px; height: 36px; }
+  body.story-mode .show-rank { font-size: 14px; width: 18px; }
+  body.story-mode .show-title { font-size: 11px; }
+  body.story-mode .show-venue { font-size: 10px; }
+  body.story-mode .show-medium { font-size: 10px; }
+  body.story-mode .show-count { font-size: 14px; }
+  body.story-mode .show-count-lbl { font-size: 9px; }
+
+  /* Map */
+  body.story-mode #map-container { flex: 1; height: auto; min-height: 0; border-radius: 6px; margin-top: 4px; }
+  body.story-mode .week-nav { margin-bottom: 8px; }
+
+  /* Neighborhoods */
+  body.story-mode .hood-list { flex: 1; overflow-y: auto; min-height: 0; gap: 8px; }
+  body.story-mode .hood-name { font-size: 11px; width: 100px; }
+  body.story-mode .hood-count { font-size: 11px; }
+
+  /* Gallery Crawl */
+  body.story-mode .crawl-intro { font-size: 11px; margin-bottom: 10px; }
+  body.story-mode .crawl-pairs { flex: 1; overflow-y: auto; min-height: 0; }
+  body.story-mode .crawl-show-title { font-size: 11px; }
+  body.story-mode .crawl-show-meta { font-size: 10px; }
+  body.story-mode .crawl-based-on { font-size: 9px; margin-bottom: 5px; }
+  body.story-mode .crawl-group { padding-bottom: 10px; margin-bottom: 10px; }
+
+  /* Closing */
+  body.story-mode .closing-list { flex: 1; overflow-y: auto; min-height: 0; }
+  body.story-mode .closing-row { padding: 7px 0; gap: 8px; }
+  body.story-mode .closing-title { font-size: 11px; }
+  body.story-mode .closing-venue { font-size: 10px; }
+  body.story-mode .closing-date { font-size: 10px; width: 46px; }
+  body.story-mode .closing-seen { font-size: 11px; }
+
   /* ── Mobile ── */
   @media (max-width: 680px) {
     main {
@@ -479,6 +584,7 @@
 <header>
   <div class="logo">Showrunner</div>
   <nav class="month-nav" id="month-nav"></nav>
+  <button class="view-toggle" id="view-toggle">Story view</button>
 </header>
 
 <main id="main">
@@ -989,8 +1095,17 @@ async function loadMonth(ym) {
   initMap(data.map_checkins, data.month);
 }
 
+// ── View toggle ────────────────────────────────────────────────────────────
+const viewToggle = document.getElementById('view-toggle');
+viewToggle.addEventListener('click', () => {
+  const isStory = document.body.classList.toggle('story-mode');
+  viewToggle.textContent = isStory ? 'Magazine view' : 'Story view';
+  viewToggle.classList.toggle('active', isStory);
+  // Re-init map if it exists so it resizes correctly
+  if (currentMap) currentMap.resize();
+});
+
 // ── Init ───────────────────────────────────────────────────────────────────
-// Default to most recent month that has data (Oct 2025)
 loadMonth(MONTHS[MONTHS.length - 1].ym);
 </script>
 </body>
