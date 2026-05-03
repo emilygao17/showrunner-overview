@@ -587,7 +587,7 @@ function renderTop5(shows) {
       </div>
     </div>`).join('');
   return `
-  <div class="card card-third">
+  <div class="card card-half">
     <div class="card-label">Top 5 Most Visited</div>
     <div class="show-list">${rows}</div>
   </div>`;
@@ -595,7 +595,7 @@ function renderTop5(shows) {
 
 function renderTop5Saved(shows) {
   if (!shows || !shows.length) return `
-  <div class="card card-third">
+  <div class="card card-half">
     <div class="card-label">Top 5 Want to See</div>
     <div class="empty-state">No saves recorded this month.</div>
   </div>`;
@@ -614,7 +614,7 @@ function renderTop5Saved(shows) {
       </div>
     </div>`).join('');
   return `
-  <div class="card card-third">
+  <div class="card card-half">
     <div class="card-label">Top 5 Want to See</div>
     <div class="show-list">${rows}</div>
   </div>`;
@@ -622,7 +622,7 @@ function renderTop5Saved(shows) {
 
 function renderTop5Views(shows) {
   if (!shows || !shows.length) return `
-  <div class="card card-third">
+  <div class="card card-full">
     <div class="card-label">Most Popular Shows This Month</div>
     <div class="empty-state">No view data this month.</div>
   </div>`;
@@ -641,7 +641,7 @@ function renderTop5Views(shows) {
       </div>
     </div>`).join('');
   return `
-  <div class="card card-third">
+  <div class="card card-full">
     <div class="card-label">Most Popular Shows This Month</div>
     <div class="show-list">${rows}</div>
   </div>`;
@@ -976,9 +976,9 @@ async function loadMonth(ym) {
   main.innerHTML = [
     renderStats(data),
     renderSotm(data.show_of_the_month),
+    renderTop5Views(data.top_5_views),
     renderTop5(data.top_5_seen),
     renderTop5Saved(data.top_5_saved),
-    renderTop5Views(data.top_5_views),
     renderNeighborhoods(data.neighborhoods),
     renderGalleryCrawl(data.gallery_crawl),
     renderMap(),
