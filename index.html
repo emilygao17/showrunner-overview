@@ -507,10 +507,73 @@
   /* Card label stays, reduce bottom margin */
   body.story-mode .card-label { margin-bottom: 8px; }
 
-  /* Stats hero */
-  body.story-mode .stats-hero { justify-content: center; }
-  body.story-mode .stats-hero .month-title { font-size: 24px; margin-bottom: 12px; }
-  body.story-mode .stat-num { font-size: 22px; }
+  /* Stats hero — cover slide */
+  body.story-mode .stats-hero { padding: 0; position: relative; }
+  body.story-mode .stats-magazine { display: none; }
+  body.story-mode .stats-cover { display: flex; }
+
+  /* Cover slide base (hidden in magazine mode) */
+  .stats-cover { display: none; }
+  .stats-cover {
+    flex: 1;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #0a0a0a;
+    align-items: center;
+    justify-content: center;
+  }
+  .cover-grid {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .cover-cell {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .cover-cell-empty { background: #1e1e1e; }
+  .cover-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10,10,10,0.72);
+  }
+  .cover-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 32px;
+    gap: 14px;
+    color: #fff;
+  }
+  .cover-wordmark {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    opacity: 0.55;
+  }
+  .cover-title {
+    font-size: 48px;
+    font-weight: 900;
+    font-stretch: condensed;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+  .cover-stat {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.65;
+    letter-spacing: 0.01em;
+  }
 
   /* SOTM */
   body.story-mode .sotm-image { width: 160px; height: 120px; margin-bottom: 10px; }
@@ -648,12 +711,49 @@ function tagsHtml(arr) {
 }
 
 // ── Render helpers ─────────────────────────────────────────────────────────
+const MONTH_FULL = {
+  '01':'January','02':'February','03':'March','04':'April','05':'May','06':'June',
+  '07':'July','08':'August','09':'September','10':'October','11':'November','12':'December',
+};
+
 function renderStats(d) {
+  // Collect up to 9 images for the cover grid (top_5_views first, then top_5_seen)
+  const seenUrls = new Set();
+  const coverImgs = [];
+  for (const s of [...(d.top_5_views || []), ...(d.top_5_seen || [])]) {
+    if (coverImgs.length >= 9) break;
+    if (s.featured_image && !seenUrls.has(s.featured_image)) {
+      seenUrls.add(s.featured_image);
+      coverImgs.push(s.featured_image);
+    }
+  }
+  while (coverImgs.length < 9) coverImgs.push('');
+
+  const [, mo] = d.month.split('-');
+  const coverTitle = `${MONTH_FULL[mo]} Roundup`;
+  const statLine = `${d.total_checkins.toLocaleString()} visits across ${d.total_shows_seen.toLocaleString()} exhibitions`;
+
+  const gridCells = coverImgs.map(url => url
+    ? `<img class="cover-cell" src="${url}" alt="" loading="lazy">`
+    : `<div class="cover-cell cover-cell-empty"></div>`
+  ).join('');
+
   return `
   <div class="card stats-hero">
-    <div class="month-title">${d.label}</div>
-    <div class="stats-row">
-      <div class="stat-num">${d.total_checkins.toLocaleString()} visits across ${d.total_shows_seen.toLocaleString()} exhibitions</div>
+    <div class="stats-magazine">
+      <div class="month-title">${d.label}</div>
+      <div class="stats-row">
+        <div class="stat-num">${statLine}</div>
+      </div>
+    </div>
+    <div class="stats-cover">
+      <div class="cover-grid">${gridCells}</div>
+      <div class="cover-overlay"></div>
+      <div class="cover-content">
+        <div class="cover-wordmark">Showrunner</div>
+        <div class="cover-title">${coverTitle}</div>
+        <div class="cover-stat">${statLine}</div>
+      </div>
     </div>
   </div>`;
 }
