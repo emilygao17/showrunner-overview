@@ -1197,15 +1197,22 @@ async function loadMonth(ym) {
 
 // ── View toggle ────────────────────────────────────────────────────────────
 const viewToggle = document.getElementById('view-toggle');
-viewToggle.addEventListener('click', () => {
-  const isStory = document.body.classList.toggle('story-mode');
+
+function applyView(isStory) {
+  document.body.classList.toggle('story-mode', isStory);
   viewToggle.textContent = isStory ? 'Magazine view' : 'Story view';
   viewToggle.classList.toggle('active', isStory);
-  // Re-init map if it exists so it resizes correctly
   if (currentMap) currentMap.resize();
+}
+
+viewToggle.addEventListener('click', () => {
+  const isStory = !document.body.classList.contains('story-mode');
+  applyView(isStory);
+  localStorage.setItem('showrunner-view', isStory ? 'story' : 'magazine');
 });
 
 // ── Init ───────────────────────────────────────────────────────────────────
+applyView(localStorage.getItem('showrunner-view') === 'story');
 loadMonth(MONTHS[MONTHS.length - 1].ym);
 </script>
 </body>
