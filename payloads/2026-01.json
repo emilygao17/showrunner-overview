@@ -4078,6 +4078,218 @@
       "seen_count": 3
     }
   ],
+  "closing_next_month": [
+    {
+      "show_id": "37642",
+      "title": "monet and venice",
+      "venue_name": "Brooklyn Museum",
+      "neighborhood": "Central Brooklyn",
+      "end_date": "2026-02-01",
+      "view_count": 18
+    },
+    {
+      "show_id": "38667",
+      "title": "Trisha Donnelly",
+      "venue_name": "Drawing Center",
+      "neighborhood": "Tribeca",
+      "end_date": "2026-02-01",
+      "view_count": 6
+    },
+    {
+      "show_id": "38706",
+      "title": "Anish Kapoor",
+      "venue_name": "Jewish Museum",
+      "neighborhood": "Upper East Side",
+      "end_date": "2026-02-01",
+      "view_count": 11
+    },
+    {
+      "show_id": "38797",
+      "title": "voice of space: ufos and paranormal phenomena",
+      "venue_name": "Drawing Center",
+      "neighborhood": "Tribeca",
+      "end_date": "2026-02-01",
+      "view_count": 13
+    },
+    {
+      "show_id": "39279",
+      "title": "ice pops forever",
+      "venue_name": "Tappeto Volante Projects",
+      "neighborhood": "Central Brooklyn",
+      "end_date": "2026-02-01",
+      "view_count": 4
+    },
+    {
+      "show_id": "39301",
+      "title": "Fitzhugh Karol",
+      "venue_name": "Entrance",
+      "neighborhood": "Central Brooklyn",
+      "end_date": "2026-02-01",
+      "view_count": 1
+    },
+    {
+      "show_id": "39579",
+      "title": "ice pops forever",
+      "venue_name": "Tappeto Volante",
+      "neighborhood": "Central Brooklyn",
+      "end_date": "2026-02-01",
+      "view_count": 10
+    },
+    {
+      "show_id": "39785",
+      "title": "Aaron Krach",
+      "venue_name": "Essex Flowers",
+      "neighborhood": "Lower East Side",
+      "end_date": "2026-02-01",
+      "view_count": 5
+    },
+    {
+      "show_id": "40053",
+      "title": "encapsulate in transcendence",
+      "venue_name": "Transmitter",
+      "neighborhood": "North Brooklyn",
+      "end_date": "2026-02-01",
+      "view_count": 1
+    },
+    {
+      "show_id": "39586",
+      "title": "Benedikt Gahl",
+      "venue_name": "Duane Thomas Gallery",
+      "neighborhood": "Tribeca",
+      "end_date": "2026-02-03",
+      "view_count": 5
+    }
+  ],
+  "mediums_stats": [
+    {
+      "label": "Paintings",
+      "views": 2626,
+      "shows": 424,
+      "views_per_show": 6.2,
+      "highest_intensity": false
+    },
+    {
+      "label": "Sculptures",
+      "views": 1769,
+      "shows": 271,
+      "views_per_show": 6.5,
+      "highest_intensity": false
+    },
+    {
+      "label": "Installation",
+      "views": 895,
+      "shows": 142,
+      "views_per_show": 6.3,
+      "highest_intensity": false
+    },
+    {
+      "label": "Drawings",
+      "views": 812,
+      "shows": 147,
+      "views_per_show": 5.5,
+      "highest_intensity": false
+    },
+    {
+      "label": "Multimedia",
+      "views": 719,
+      "shows": 132,
+      "views_per_show": 5.4,
+      "highest_intensity": false
+    },
+    {
+      "label": "Photography",
+      "views": 711,
+      "shows": 140,
+      "views_per_show": 5.1,
+      "highest_intensity": false
+    },
+    {
+      "label": "Videos",
+      "views": 646,
+      "shows": 74,
+      "views_per_show": 8.7,
+      "highest_intensity": true
+    },
+    {
+      "label": "Design",
+      "views": 200,
+      "shows": 44,
+      "views_per_show": 4.5,
+      "highest_intensity": false
+    }
+  ],
+  "subject_matters_stats": [
+    {
+      "label": "Material Experimentation",
+      "views": 2176,
+      "shows": 371,
+      "views_per_show": 5.9,
+      "highest_intensity": false
+    },
+    {
+      "label": "Societal Critique",
+      "views": 1679,
+      "shows": 267,
+      "views_per_show": 6.3,
+      "highest_intensity": false
+    },
+    {
+      "label": "Nature",
+      "views": 1569,
+      "shows": 293,
+      "views_per_show": 5.4,
+      "highest_intensity": false
+    },
+    {
+      "label": "Otherworldly",
+      "views": 1300,
+      "shows": 197,
+      "views_per_show": 6.6,
+      "highest_intensity": false
+    },
+    {
+      "label": "Interior Spaces",
+      "views": 1136,
+      "shows": 141,
+      "views_per_show": 8.1,
+      "highest_intensity": true
+    },
+    {
+      "label": "Political Commentary",
+      "views": 1070,
+      "shows": 165,
+      "views_per_show": 6.5,
+      "highest_intensity": false
+    },
+    {
+      "label": "Architecture",
+      "views": 1005,
+      "shows": 149,
+      "views_per_show": 6.7,
+      "highest_intensity": false
+    },
+    {
+      "label": "Mental Health",
+      "views": 955,
+      "shows": 143,
+      "views_per_show": 6.7,
+      "highest_intensity": false
+    },
+    {
+      "label": "Mysticism",
+      "views": 898,
+      "shows": 143,
+      "views_per_show": 6.3,
+      "highest_intensity": false
+    },
+    {
+      "label": "Portraits",
+      "views": 856,
+      "shows": 132,
+      "views_per_show": 6.5,
+      "highest_intensity": false
+    }
+  ],
   "gallery_crawl": [
     {
       "list_count": 5,
@@ -4086,31 +4298,36 @@
           "show_id": "40088",
           "title": "Rob Pruitt",
           "venue_name": "303 Gallery",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/514420252bde46d097e1c4d13231060a_mobile.jpg"
         },
         {
           "show_id": "40357",
           "title": "Glenn Ligon",
           "venue_name": "Hauser & Wirth",
-          "neighborhood": "Chelsea"
-        },
-        {
-          "show_id": "39816",
-          "title": "Stephanie Temma Hier",
-          "venue_name": "Anton Kern Gallery",
-          "neighborhood": "Murray Hill"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/e6fa20ff35214fd18e7735737b9b53d1_mobile.jpg"
         },
         {
           "show_id": "40334",
           "title": "Jon Burgerman",
           "venue_name": "A Hug From The Art World",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/5e005f5bc71f41ad8c1ca7d973cc3c62_mobile.jpg"
+        },
+        {
+          "show_id": "39816",
+          "title": "Stephanie Temma Hier",
+          "venue_name": "Anton Kern Gallery",
+          "neighborhood": "Murray Hill",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/artrabbit/shows//events/stephanie-temma-hier-swan-song/0_mobile.jpg"
         },
         {
           "show_id": "39521",
           "title": "Sterling Ruby",
           "venue_name": "Spr\u00fcth Magers",
-          "neighborhood": "Upper East Side"
+          "neighborhood": "Upper East Side",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/92387eff85f448568fdd178762fa8348_mobile.jpg"
         }
       ]
     },
@@ -4121,31 +4338,36 @@
           "show_id": "39877",
           "title": "feet pics",
           "venue_name": "Ruby/Dakota",
-          "neighborhood": "East Village"
+          "neighborhood": "East Village",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/176f6a29c5a54908b5f099c165b9d683_mobile.jpg"
         },
         {
           "show_id": "39891",
           "title": "Emily Ferguson",
           "venue_name": "Half Gallery",
-          "neighborhood": "East Village"
+          "neighborhood": "East Village",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/b139c09619a54d22a688f33c780d1fd8_mobile.jpg"
         },
         {
           "show_id": "40437",
           "title": "Katelyn Ledford",
           "venue_name": "Fredericks & Freiser",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/artrabbit/shows//events/katelyn-ledford-verso/0_mobile.jpg"
         },
         {
           "show_id": "40195",
           "title": "Nicolas Party",
           "venue_name": "Karma",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/e0dbf7448b4642cd985b9fae4abe22e4_mobile.jpg"
         },
         {
           "show_id": "40449",
           "title": "\u00e1ngeles agrela / june canedo de souza / \u00e6men eded\u00e9en / samantha joy groff / teresa murta / daniel pit\u00edn",
           "venue_name": "Nicodim Gallery",
-          "neighborhood": "Tribeca"
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/artrabbit/shows//events/group-show-nicodim-gallery-ny/0_mobile.jpg"
         }
       ]
     }

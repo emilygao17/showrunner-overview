@@ -3386,6 +3386,218 @@
       "seen_count": 2
     }
   ],
+  "closing_next_month": [
+    {
+      "show_id": "37392",
+      "title": "Coco Fusco",
+      "venue_name": "El Museo del Barrio",
+      "neighborhood": "Upper East Side",
+      "end_date": "2026-03-01",
+      "view_count": 5
+    },
+    {
+      "show_id": "39786",
+      "title": "excerpt",
+      "venue_name": "HAIR+NAILS",
+      "neighborhood": "Lower East Side",
+      "end_date": "2026-03-01",
+      "view_count": 6
+    },
+    {
+      "show_id": "39824",
+      "title": "Libby Rosa",
+      "venue_name": "Ortega y Gasset Projects",
+      "neighborhood": "Central Brooklyn",
+      "end_date": "2026-03-01",
+      "view_count": 8
+    },
+    {
+      "show_id": "39872",
+      "title": "excerpt",
+      "venue_name": "Hair + Nails",
+      "neighborhood": "Lower East Side",
+      "end_date": "2026-03-01",
+      "view_count": 7
+    },
+    {
+      "show_id": "39977",
+      "title": "everything is a rectangle until it isn\u2019t",
+      "venue_name": "FREMIN GALLERY",
+      "neighborhood": "Chelsea",
+      "end_date": "2026-03-01",
+      "view_count": 4
+    },
+    {
+      "show_id": "40027",
+      "title": "Matlok Griffiths",
+      "venue_name": "Gordon Robichaux",
+      "neighborhood": "East Village",
+      "end_date": "2026-03-01",
+      "view_count": 7
+    },
+    {
+      "show_id": "40043",
+      "title": "chubb fellows & friends",
+      "venue_name": "New York Academy of Art",
+      "neighborhood": "Tribeca",
+      "end_date": "2026-03-01",
+      "view_count": 43
+    },
+    {
+      "show_id": "40081",
+      "title": "Anya Klepikov",
+      "venue_name": "Ortega y Gasset",
+      "neighborhood": "Central Brooklyn",
+      "end_date": "2026-03-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "40118",
+      "title": "Eve Fowler",
+      "venue_name": "Gordon Robichaux",
+      "neighborhood": "East Village",
+      "end_date": "2026-03-01",
+      "view_count": 5
+    },
+    {
+      "show_id": "40214",
+      "title": "Robert Natkin",
+      "venue_name": "Findlay Galleries",
+      "neighborhood": "Murray Hill",
+      "end_date": "2026-03-01",
+      "view_count": 0
+    }
+  ],
+  "mediums_stats": [
+    {
+      "label": "Paintings",
+      "views": 2018,
+      "shows": 421,
+      "views_per_show": 4.8,
+      "highest_intensity": false
+    },
+    {
+      "label": "Sculptures",
+      "views": 1261,
+      "shows": 258,
+      "views_per_show": 4.9,
+      "highest_intensity": false
+    },
+    {
+      "label": "Drawings",
+      "views": 793,
+      "shows": 142,
+      "views_per_show": 5.6,
+      "highest_intensity": false
+    },
+    {
+      "label": "Installation",
+      "views": 685,
+      "shows": 150,
+      "views_per_show": 4.6,
+      "highest_intensity": false
+    },
+    {
+      "label": "Multimedia",
+      "views": 661,
+      "shows": 144,
+      "views_per_show": 4.6,
+      "highest_intensity": false
+    },
+    {
+      "label": "Photography",
+      "views": 655,
+      "shows": 148,
+      "views_per_show": 4.4,
+      "highest_intensity": false
+    },
+    {
+      "label": "Videos",
+      "views": 441,
+      "shows": 76,
+      "views_per_show": 5.8,
+      "highest_intensity": true
+    },
+    {
+      "label": "Design",
+      "views": 152,
+      "shows": 39,
+      "views_per_show": 3.9,
+      "highest_intensity": false
+    }
+  ],
+  "subject_matters_stats": [
+    {
+      "label": "Material Experimentation",
+      "views": 1810,
+      "shows": 399,
+      "views_per_show": 4.5,
+      "highest_intensity": false
+    },
+    {
+      "label": "Societal Critique",
+      "views": 1302,
+      "shows": 270,
+      "views_per_show": 4.8,
+      "highest_intensity": false
+    },
+    {
+      "label": "Nature",
+      "views": 1269,
+      "shows": 279,
+      "views_per_show": 4.5,
+      "highest_intensity": false
+    },
+    {
+      "label": "Political Commentary",
+      "views": 981,
+      "shows": 175,
+      "views_per_show": 5.6,
+      "highest_intensity": true
+    },
+    {
+      "label": "Otherworldly",
+      "views": 863,
+      "shows": 180,
+      "views_per_show": 4.8,
+      "highest_intensity": false
+    },
+    {
+      "label": "Architecture",
+      "views": 728,
+      "shows": 141,
+      "views_per_show": 5.2,
+      "highest_intensity": false
+    },
+    {
+      "label": "Interior Spaces",
+      "views": 708,
+      "shows": 137,
+      "views_per_show": 5.2,
+      "highest_intensity": false
+    },
+    {
+      "label": "Portraits",
+      "views": 679,
+      "shows": 136,
+      "views_per_show": 5.0,
+      "highest_intensity": false
+    },
+    {
+      "label": "Mental Health",
+      "views": 659,
+      "shows": 157,
+      "views_per_show": 4.2,
+      "highest_intensity": false
+    },
+    {
+      "label": "Gender Identity",
+      "views": 533,
+      "shows": 103,
+      "views_per_show": 5.2,
+      "highest_intensity": false
+    }
+  ],
   "gallery_crawl": [
     {
       "list_count": 3,
@@ -3394,31 +3606,36 @@
           "show_id": "2000057",
           "title": "Jimi Franklin",
           "venue_name": "Rectangle Room",
-          "neighborhood": "Lower East Side"
+          "neighborhood": "Lower East Side",
+          "featured_image": "https://api.showrunner.co/storage/v1/object/public/gallery-show-images/2000020-50/57.jpg"
         },
         {
           "show_id": "39946",
           "title": "Akea Brionne",
           "venue_name": "Lyles & King",
-          "neighborhood": "Lower East Side"
+          "neighborhood": "Lower East Side",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/7863a602cc3d4f55a685ca59e91caf96_mobile.jpg"
         },
         {
-          "show_id": "40761",
-          "title": "Guillaume Linard Osorio",
-          "venue_name": "Carvalho",
-          "neighborhood": "North Brooklyn"
+          "show_id": "38535",
+          "title": "Eny Lee Parker",
+          "venue_name": "Hannah Traore",
+          "neighborhood": "Lower East Side",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/45f4c5970a4746bb8ce8b6cb8fc10eb3_mobile.jpg"
         },
         {
-          "show_id": "40749",
-          "title": "David Ambrose",
-          "venue_name": "Tibor De Nagy Gallery",
-          "neighborhood": "Lower East Side"
+          "show_id": "39901",
+          "title": "Jane Hilton",
+          "venue_name": "Palo Gallery",
+          "neighborhood": "East Village",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/aa62c5b4110c442181275ac3922f78c7_mobile.jpg"
         },
         {
-          "show_id": "39829",
-          "title": "threshold of vision",
-          "venue_name": "Nathalie Karg Gallery",
-          "neighborhood": "Tribeca"
+          "show_id": "40299",
+          "title": "closer",
+          "venue_name": "The Empty Circle",
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/d6fd4041a78541e58d0cbbdc118e6008_mobile.jpg"
         }
       ]
     },
@@ -3429,19 +3646,22 @@
           "show_id": "38316",
           "title": "Park Hyunki",
           "venue_name": "Gallery Hyundai New York Project Space",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://api.showrunner.co/storage/v1/object/public/gallery-show-images/2000020-50/2_Park%20Hyunki_Pass%20Through%20the%20City_16mm_02.jpeg"
         },
         {
           "show_id": "39820",
           "title": "William Eggleston",
           "venue_name": "David Zwirner",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/5d50457529254ca4966438201f10127e_mobile.jpg"
         },
         {
           "show_id": "38719",
           "title": "Louise Bourgeois",
           "venue_name": "Hauser & Wirth",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/6011a74200c14700a9204ccd43eb7fb9_mobile.jpg"
         }
       ]
     }

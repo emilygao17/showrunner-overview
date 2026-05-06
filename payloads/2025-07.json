@@ -5383,6 +5383,90 @@
       "seen_count": 4
     }
   ],
+  "closing_next_month": [
+    {
+      "show_id": "33613",
+      "title": "Dustin Yellin",
+      "venue_name": "Almine Rech",
+      "neighborhood": "Tribeca",
+      "end_date": "2025-08-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "33670",
+      "title": "Carmen Herrera",
+      "venue_name": "Lisson Gallery",
+      "neighborhood": "Chelsea",
+      "end_date": "2025-08-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "33726",
+      "title": "William Kentridge",
+      "venue_name": "Hauser & Wirth",
+      "neighborhood": "Chelsea",
+      "end_date": "2025-08-01",
+      "view_count": 1
+    },
+    {
+      "show_id": "33751",
+      "title": "Francis Picabia",
+      "venue_name": "Hauser & Wirth",
+      "neighborhood": "Chelsea",
+      "end_date": "2025-08-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "33828",
+      "title": "Sam Moyer",
+      "venue_name": "Hill Art Foundation",
+      "neighborhood": "Chelsea",
+      "end_date": "2025-08-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "33873",
+      "title": "In\u00e8s Longevial",
+      "venue_name": "Almine Rech",
+      "neighborhood": "Tribeca",
+      "end_date": "2025-08-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "34098",
+      "title": "interlayered",
+      "venue_name": "DC Moore Gallery",
+      "neighborhood": "Chelsea",
+      "end_date": "2025-08-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "34149",
+      "title": "Leiko Ikemura",
+      "venue_name": "Lisson",
+      "neighborhood": "Chelsea",
+      "end_date": "2025-08-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "34261",
+      "title": "Rosemarie Tr\u00f6ckel",
+      "venue_name": "Gladstone Gallery",
+      "neighborhood": "Chelsea",
+      "end_date": "2025-08-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "34429",
+      "title": "ewe studio",
+      "venue_name": "Ateliers Courbet",
+      "neighborhood": "Chelsea",
+      "end_date": "2025-08-01",
+      "view_count": 0
+    }
+  ],
+  "mediums_stats": [],
+  "subject_matters_stats": [],
   "gallery_crawl": [
     {
       "list_count": 5,
@@ -5391,31 +5475,36 @@
           "show_id": "34741",
           "title": "Koichi Sato",
           "venue_name": "56 Henry",
-          "neighborhood": "Lower East Side"
+          "neighborhood": "Lower East Side",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/88db4bc1cb5442b195c42ddb1ad12db3.jpg"
         },
         {
           "show_id": "35281",
           "title": "Dustin Yellin",
           "venue_name": "Almine Rech",
-          "neighborhood": "Tribeca"
-        },
-        {
-          "show_id": "35499",
-          "title": "softly radiant, half-buried",
-          "venue_name": "Marianne Boesky Gallery",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/8cf290d307c54c5e836df023d02b20d8.jpg"
         },
         {
           "show_id": "34956",
           "title": "Susumu Kamijo",
           "venue_name": "Venus Over Manhattan",
-          "neighborhood": "SoHo-NoHo"
+          "neighborhood": "SoHo-NoHo",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/924390400d5e454690c66e8c77cd7454.jpg"
+        },
+        {
+          "show_id": "35499",
+          "title": "softly radiant, half-buried",
+          "venue_name": "Marianne Boesky Gallery",
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/2df76d9953904f689d41805efe164cdf.jpg"
         },
         {
           "show_id": "35253",
           "title": "dialogue with youth",
           "venue_name": "Harper's Books",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/305378ee75e742cb84cf347789456016.jpg"
         }
       ]
     },
@@ -5426,31 +5515,36 @@
           "show_id": "35307",
           "title": "Nova Jiang",
           "venue_name": "Chapter NY",
-          "neighborhood": "Tribeca"
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/ff31b47a44b8441e97ce017543da2e1c.jpg"
         },
         {
           "show_id": "35456",
           "title": "Marisa Adesman",
           "venue_name": "Anat Ebgi",
-          "neighborhood": "Tribeca"
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/3b91f850b1894410842ae848a17e2d7c.jpg"
         },
         {
           "show_id": "34554",
           "title": "Summer Group Show",
           "venue_name": "Timothy Taylor",
-          "neighborhood": "Tribeca"
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/4e17bc9da0e141a592349f63f9afcc06.jpg"
         },
         {
-          "show_id": "35296",
-          "title": "Varda Caivano",
-          "venue_name": "Mendes Wood DM",
-          "neighborhood": "Tribeca"
+          "show_id": "34893",
+          "title": "Mariann Metsis",
+          "venue_name": "Margot Samel",
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/be3be224e8764bd7831b8668c4b74504.jpg"
         },
         {
           "show_id": "35346",
           "title": "Kati Heck",
           "venue_name": "Bortolami",
-          "neighborhood": "Tribeca"
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/b64debec01ab4e80b4a93d04986ec734.jpg"
         }
       ]
     }

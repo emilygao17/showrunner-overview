@@ -2225,6 +2225,218 @@
       "seen_count": 3
     }
   ],
+  "closing_next_month": [
+    {
+      "show_id": "38619",
+      "title": "once we were human, a retrospective",
+      "venue_name": "Eleventh Hour Art",
+      "neighborhood": "Central Brooklyn",
+      "end_date": "2026-01-01",
+      "view_count": 11
+    },
+    {
+      "show_id": "38710",
+      "title": "Sophie Haulman",
+      "venue_name": "Eleventh Hour Art",
+      "neighborhood": "Central Brooklyn",
+      "end_date": "2026-01-01",
+      "view_count": 2
+    },
+    {
+      "show_id": "39460",
+      "title": "Sophie Haulman",
+      "venue_name": "Eleventh Hour Art",
+      "neighborhood": "Central Brooklyn",
+      "end_date": "2026-01-01",
+      "view_count": 1
+    },
+    {
+      "show_id": "37364",
+      "title": "Akiko Hirai",
+      "venue_name": "Guild Gallery",
+      "neighborhood": "Tribeca",
+      "end_date": "2026-01-02",
+      "view_count": 3
+    },
+    {
+      "show_id": "38814",
+      "title": "favorite things",
+      "venue_name": "Forum Gallery",
+      "neighborhood": "Murray Hill",
+      "end_date": "2026-01-02",
+      "view_count": 8
+    },
+    {
+      "show_id": "39622",
+      "title": "The Light Within",
+      "venue_name": "Artseeker Gallery",
+      "neighborhood": "South Brooklyn",
+      "end_date": "2026-01-02",
+      "view_count": 0
+    },
+    {
+      "show_id": "39651",
+      "title": "Keiko Narahashi",
+      "venue_name": "Carvalho",
+      "neighborhood": "North Brooklyn",
+      "end_date": "2026-01-02",
+      "view_count": 3
+    },
+    {
+      "show_id": "36019",
+      "title": "Generations",
+      "venue_name": "Asia Society",
+      "neighborhood": "Upper East Side",
+      "end_date": "2026-01-03",
+      "view_count": 2
+    },
+    {
+      "show_id": "36757",
+      "title": "Dustin Pittman",
+      "venue_name": "The Gallery at Soho Grand",
+      "neighborhood": "Tribeca",
+      "end_date": "2026-01-03",
+      "view_count": 1
+    },
+    {
+      "show_id": "38281",
+      "title": "Seonna Hong",
+      "venue_name": "Hashimoto Contemporary",
+      "neighborhood": "Lower East Side",
+      "end_date": "2026-01-03",
+      "view_count": 7
+    }
+  ],
+  "mediums_stats": [
+    {
+      "label": "Paintings",
+      "views": 1990,
+      "shows": 361,
+      "views_per_show": 5.5,
+      "highest_intensity": false
+    },
+    {
+      "label": "Sculptures",
+      "views": 1212,
+      "shows": 212,
+      "views_per_show": 5.7,
+      "highest_intensity": false
+    },
+    {
+      "label": "Installation",
+      "views": 720,
+      "shows": 142,
+      "views_per_show": 5.1,
+      "highest_intensity": false
+    },
+    {
+      "label": "Drawings",
+      "views": 654,
+      "shows": 126,
+      "views_per_show": 5.2,
+      "highest_intensity": false
+    },
+    {
+      "label": "Multimedia",
+      "views": 621,
+      "shows": 124,
+      "views_per_show": 5.0,
+      "highest_intensity": false
+    },
+    {
+      "label": "Photography",
+      "views": 443,
+      "shows": 106,
+      "views_per_show": 4.2,
+      "highest_intensity": false
+    },
+    {
+      "label": "Videos",
+      "views": 435,
+      "shows": 68,
+      "views_per_show": 6.4,
+      "highest_intensity": true
+    },
+    {
+      "label": "Design",
+      "views": 223,
+      "shows": 49,
+      "views_per_show": 4.6,
+      "highest_intensity": false
+    }
+  ],
+  "subject_matters_stats": [
+    {
+      "label": "Material Experimentation",
+      "views": 1651,
+      "shows": 322,
+      "views_per_show": 5.1,
+      "highest_intensity": false
+    },
+    {
+      "label": "Societal Critique",
+      "views": 1313,
+      "shows": 237,
+      "views_per_show": 5.5,
+      "highest_intensity": false
+    },
+    {
+      "label": "Nature",
+      "views": 1059,
+      "shows": 238,
+      "views_per_show": 4.4,
+      "highest_intensity": false
+    },
+    {
+      "label": "Otherworldly",
+      "views": 910,
+      "shows": 177,
+      "views_per_show": 5.1,
+      "highest_intensity": false
+    },
+    {
+      "label": "Mental Health",
+      "views": 823,
+      "shows": 139,
+      "views_per_show": 5.9,
+      "highest_intensity": false
+    },
+    {
+      "label": "Political Commentary",
+      "views": 740,
+      "shows": 154,
+      "views_per_show": 4.8,
+      "highest_intensity": false
+    },
+    {
+      "label": "Interior Spaces",
+      "views": 709,
+      "shows": 115,
+      "views_per_show": 6.2,
+      "highest_intensity": false
+    },
+    {
+      "label": "Feminism",
+      "views": 693,
+      "shows": 90,
+      "views_per_show": 7.7,
+      "highest_intensity": true
+    },
+    {
+      "label": "Architecture",
+      "views": 686,
+      "shows": 119,
+      "views_per_show": 5.8,
+      "highest_intensity": false
+    },
+    {
+      "label": "Portraits",
+      "views": 686,
+      "shows": 111,
+      "views_per_show": 6.2,
+      "highest_intensity": false
+    }
+  ],
   "gallery_crawl": [
     {
       "list_count": 5,
@@ -2233,31 +2445,36 @@
           "show_id": "35518",
           "title": "David Byrne",
           "venue_name": "Pace Gallery",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/5f7ef4475f0040c9b80e07a39b7709b1_mobile.jpg"
         },
         {
           "show_id": "38325",
           "title": "Nicole Eisenman",
           "venue_name": "David Zwirner",
-          "neighborhood": "Tribeca"
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/4fed0a5ebc8d4293a9d929700cd90d3e_mobile.jpg"
         },
         {
           "show_id": "38383",
           "title": "Stephen Shore",
           "venue_name": "303 Gallery",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/5183e941670e46a8a00ce25321d39aab_mobile.jpg"
         },
         {
           "show_id": "38810",
           "title": "Chiharu Shiota",
           "venue_name": "Templon",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/06eeeb2e18b64a14b968f741f211ac6a_mobile.jpg"
         },
         {
           "show_id": "38838",
           "title": "Yongjae Kim",
           "venue_name": "Anna Zorina Gallery",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/046f507816b64fc0a0d97d4a009ae24a_mobile.jpg"
         }
       ]
     },
@@ -2268,19 +2485,22 @@
           "show_id": "38502",
           "title": "Bing Lu",
           "venue_name": "Gallery 60 NYC",
-          "neighborhood": "Murray Hill"
+          "neighborhood": "Murray Hill",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/d55d1905aabb47ec9e61aac5d8cc197f_mobile.jpg"
         },
         {
           "show_id": "39459",
           "title": "Wang Guangle",
           "venue_name": "Pace Gallery",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/450fcc7e22ac475e8d6615a398737cfd_mobile.jpg"
         },
         {
           "show_id": "39675",
           "title": "Laura Newman",
           "venue_name": "Satchel Projects",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/85afd0d501bb4677a92512c8615a1141_mobile.jpg"
         }
       ]
     }

@@ -2284,6 +2284,218 @@
       "seen_count": 2
     }
   ],
+  "closing_next_month": [
+    {
+      "show_id": "35513",
+      "title": "John Zurier",
+      "venue_name": "Peter Blum Gallery",
+      "neighborhood": "Tribeca",
+      "end_date": "2025-11-01",
+      "view_count": 1
+    },
+    {
+      "show_id": "35738",
+      "title": "Betinna",
+      "venue_name": "Ulrik",
+      "neighborhood": "Tribeca",
+      "end_date": "2025-11-01",
+      "view_count": 1
+    },
+    {
+      "show_id": "35739",
+      "title": "Hadi Falapishi",
+      "venue_name": "Andrew Kreps",
+      "neighborhood": "Tribeca",
+      "end_date": "2025-11-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "35799",
+      "title": "Myles Gable",
+      "venue_name": "The Meeting",
+      "neighborhood": "West Village",
+      "end_date": "2025-11-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "35860",
+      "title": "Xiyadie",
+      "venue_name": "Bortolami",
+      "neighborhood": "Tribeca",
+      "end_date": "2025-11-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "35951",
+      "title": "Paulo Pasta",
+      "venue_name": "David Nolan Gallery",
+      "neighborhood": "Upper East Side",
+      "end_date": "2025-11-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "36060",
+      "title": "Naotaka Hiro",
+      "venue_name": "Bortolami",
+      "neighborhood": "Tribeca",
+      "end_date": "2025-11-01",
+      "view_count": 1
+    },
+    {
+      "show_id": "36062",
+      "title": "Rafa\u0142 Topolewski",
+      "venue_name": "GRIMM",
+      "neighborhood": "Tribeca",
+      "end_date": "2025-11-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "36075",
+      "title": "Bonnie Lucas",
+      "venue_name": "ILY2",
+      "neighborhood": "Lower East Side",
+      "end_date": "2025-11-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "36121",
+      "title": "Judy Ledgerwood",
+      "venue_name": "GRAY New York",
+      "neighborhood": "Upper East Side",
+      "end_date": "2025-11-01",
+      "view_count": 0
+    }
+  ],
+  "mediums_stats": [
+    {
+      "label": "Paintings",
+      "views": 272,
+      "shows": 125,
+      "views_per_show": 2.2,
+      "highest_intensity": false
+    },
+    {
+      "label": "Sculptures",
+      "views": 167,
+      "shows": 58,
+      "views_per_show": 2.9,
+      "highest_intensity": false
+    },
+    {
+      "label": "Installation",
+      "views": 134,
+      "shows": 47,
+      "views_per_show": 2.9,
+      "highest_intensity": false
+    },
+    {
+      "label": "Videos",
+      "views": 131,
+      "shows": 35,
+      "views_per_show": 3.7,
+      "highest_intensity": true
+    },
+    {
+      "label": "Multimedia",
+      "views": 122,
+      "shows": 41,
+      "views_per_show": 3.0,
+      "highest_intensity": false
+    },
+    {
+      "label": "Photography",
+      "views": 117,
+      "shows": 35,
+      "views_per_show": 3.3,
+      "highest_intensity": false
+    },
+    {
+      "label": "Drawings",
+      "views": 57,
+      "shows": 31,
+      "views_per_show": 1.8,
+      "highest_intensity": false
+    },
+    {
+      "label": "Design",
+      "views": 16,
+      "shows": 9,
+      "views_per_show": 1.8,
+      "highest_intensity": false
+    }
+  ],
+  "subject_matters_stats": [
+    {
+      "label": "Societal Critique",
+      "views": 247,
+      "shows": 93,
+      "views_per_show": 2.7,
+      "highest_intensity": false
+    },
+    {
+      "label": "Material Experimentation",
+      "views": 232,
+      "shows": 90,
+      "views_per_show": 2.6,
+      "highest_intensity": false
+    },
+    {
+      "label": "Political Commentary",
+      "views": 164,
+      "shows": 55,
+      "views_per_show": 3.0,
+      "highest_intensity": false
+    },
+    {
+      "label": "Gender Identity",
+      "views": 154,
+      "shows": 40,
+      "views_per_show": 3.9,
+      "highest_intensity": true
+    },
+    {
+      "label": "Otherworldly",
+      "views": 147,
+      "shows": 58,
+      "views_per_show": 2.5,
+      "highest_intensity": false
+    },
+    {
+      "label": "Nature",
+      "views": 132,
+      "shows": 68,
+      "views_per_show": 1.9,
+      "highest_intensity": false
+    },
+    {
+      "label": "Sexuality",
+      "views": 132,
+      "shows": 41,
+      "views_per_show": 3.2,
+      "highest_intensity": false
+    },
+    {
+      "label": "Mental Health",
+      "views": 131,
+      "shows": 58,
+      "views_per_show": 2.3,
+      "highest_intensity": false
+    },
+    {
+      "label": "Black Experience",
+      "views": 116,
+      "shows": 32,
+      "views_per_show": 3.6,
+      "highest_intensity": false
+    },
+    {
+      "label": "Mysticism",
+      "views": 109,
+      "shows": 48,
+      "views_per_show": 2.3,
+      "highest_intensity": false
+    }
+  ],
   "gallery_crawl": [
     {
       "list_count": 8,
@@ -2292,31 +2504,36 @@
           "show_id": "37228",
           "title": "Ana Benaroya",
           "venue_name": "The FLAG Art Foundation",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/93930510eb7149acbd5495cd783d5af3_mobile.jpg"
         },
         {
           "show_id": "37268",
           "title": "Sarah Theresa Lee",
           "venue_name": "Ricco/Maresca",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/2fcbe1bbfa664ea08a8ba1d3f1329148.jpg"
         },
         {
           "show_id": "36247",
           "title": "Sasha Gordon",
           "venue_name": "David Zwirner",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/2247e31f38e345029061d7d93ff4810c.jpg"
         },
         {
           "show_id": "36299",
           "title": "Gabrielle Garland",
           "venue_name": "Miles McEnery Gallery",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/53535c3a1bc54edf9a5c7e4e626e495e.jpg"
         },
         {
-          "show_id": "36529",
-          "title": "Ohad Meromi",
-          "venue_name": "56 Henry",
-          "neighborhood": "Lower East Side"
+          "show_id": "36828",
+          "title": "Nathaniel Mary Quinn",
+          "venue_name": "Gagosian",
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/d24b468260e74581b41a9f25a9761561.jpg"
         }
       ]
     },
@@ -2327,31 +2544,36 @@
           "show_id": "35898",
           "title": "Rashid Johnson",
           "venue_name": "Guggenheim Museum",
-          "neighborhood": "Upper East Side"
+          "neighborhood": "Upper East Side",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/fd7e45a3ad3e4e45b906c9d852cb7b8c_mobile.jpg"
         },
         {
           "show_id": "35909",
           "title": "Lisa Yuskavage",
           "venue_name": "Morgan Library",
-          "neighborhood": "Murray Hill"
-        },
-        {
-          "show_id": "37449",
-          "title": "Robert Rauschenberg",
-          "venue_name": "Guggenheim Museum",
-          "neighborhood": "Upper East Side"
+          "neighborhood": "Murray Hill",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/69b90274d49242088f851127538f0b1d_mobile.jpg"
         },
         {
           "show_id": "35908",
           "title": "Christian Marclay",
           "venue_name": "Brooklyn Museum",
-          "neighborhood": "Central Brooklyn"
+          "neighborhood": "Central Brooklyn",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/080e61cd5b114be7ad5de06a884ae637_mobile.jpg"
+        },
+        {
+          "show_id": "37449",
+          "title": "Robert Rauschenberg",
+          "venue_name": "Guggenheim Museum",
+          "neighborhood": "Upper East Side",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/45611f8565ca47fdb6037a58b97cbef0_mobile.jpg"
         },
         {
           "show_id": "37665",
           "title": "Lorna Simpson",
           "venue_name": "The Met",
-          "neighborhood": "Upper East Side"
+          "neighborhood": "Upper East Side",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/1c5a14240f374c98af582bdaa6667530_mobile.jpg"
         }
       ]
     }

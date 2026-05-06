@@ -56,6 +56,20 @@ def first_image(row):
 def trunc(s):
     return s.strip()
 
+# Normalize inconsistent singular/plural data entry in show_medium / show_subject_matter
+LABEL_NORMALIZE = {
+    'Painting':   'Paintings',
+    'Drawing':    'Drawings',
+    'Sculpture':  'Sculptures',
+    'Photograph': 'Photographs',
+    'Print':      'Prints',
+    'Video':      'Videos',
+}
+
+def normalize_label(s):
+    s = s.strip()
+    return LABEL_NORMALIZE.get(s, s)
+
 def month_bounds(ym):
     """Return (first_day, last_day) as date objects for a 'YYYY-MM' string."""
     y, m = int(ym[:4]), int(ym[5:7])
@@ -119,6 +133,11 @@ with open(f"{DATA_DIR}/show_views_rows.csv") as f:
 # Filter to NYC shows only
 views_nyc = [r for r in views_raw if r["show_id"] in shows]
 print(f"  Show views (NYC): {len(views_nyc)} / {len(views_raw)}")
+
+# All-time view counts per show
+all_views_tally = defaultdict(int)
+for r in views_nyc:
+    all_views_tally[r["show_id"]] += 1
 
 
 
@@ -305,6 +324,72 @@ for ym in MONTHS:
     closing_this_month = closing_this_month[:10]
     closing_this_month.sort(key=lambda x: x["end_date"])
 
+    # ── Closing next month ──
+    next_y = first_day.year + (1 if first_day.month == 12 else 0)
+    next_m = 1 if first_day.month == 12 else first_day.month + 1
+    next_first = date(next_y, next_m, 1)
+    next_last  = date(next_y, next_m, calendar.monthrange(next_y, next_m)[1])
+
+    closing_next_month = []
+    for sid, s in shows.items():
+        end_str = s.get("end_date", "").strip()
+        if not end_str:
+            continue
+        try:
+            end_d = date.fromisoformat(end_str)
+        except ValueError:
+            continue
+        if not (next_first <= end_d <= next_last):
+            continue
+        title = s.get("display_title") or s["show_title"]
+        if "title tbd" in title.lower():
+            continue
+        closing_next_month.append({
+            "show_id":      sid,
+            "title":        title,
+            "venue_name":   venues[s["venue_id"]]["venue_name"],
+            "neighborhood": venues[s["venue_id"]]["neighborhood"],
+            "end_date":     end_str,
+            "view_count":   all_views_tally.get(sid, 0),
+        })
+
+    closing_next_month.sort(key=lambda x: x["end_date"])
+    closing_next_month = closing_next_month[:10]
+
+    # ── Medium / Subject Matter table stats ──
+    def build_table_stats(field):
+        m_views = defaultdict(int)
+        m_shows = defaultdict(set)
+        for sid, vc in views_tally.items():
+            if vc == 0:
+                continue
+            s = shows.get(sid)
+            if not s:
+                continue
+            for label in parse_list(s.get(field, "")):
+                label = normalize_label(label)
+                m_views[label] += vc
+                m_shows[label].add(sid)
+        rows = []
+        for label, total_views in m_views.items():
+            sc = len(m_shows[label])
+            rows.append({
+                "label": label,
+                "views": total_views,
+                "shows": sc,
+                "views_per_show": round(total_views / sc, 1),
+                "highest_intensity": False,
+            })
+        rows.sort(key=lambda x: -x["views"])
+        rows = rows[:10]
+        if rows:
+            max_row = max(rows, key=lambda x: x["views_per_show"])
+            max_row["highest_intensity"] = True
+        return rows
+
+    mediums_stats = build_table_stats("show_medium")
+    subject_matters_stats = build_table_stats("show_subject_matter")
+
     # ── Gallery Crawl (per-month co-occurrence) ──
     month_lists = [l for l in saved_lists_raw if l["created_at"][:7] == ym]
 
@@ -363,10 +448,11 @@ for ym in MONTHS:
                 "list_count": month_co_occ[tuple(sorted([seed_a, seed_b]))],
                 "shows": [
                     {
-                        "show_id":      sid,
-                        "title":        shows[sid].get("display_title") or shows[sid]["show_title"],
-                        "venue_name":   venues[shows[sid]["venue_id"]]["venue_name"],
-                        "neighborhood": venues[shows[sid]["venue_id"]]["neighborhood"],
+                        "show_id":        sid,
+                        "title":          shows[sid].get("display_title") or shows[sid]["show_title"],
+                        "venue_name":     venues[shows[sid]["venue_id"]]["venue_name"],
+                        "neighborhood":   venues[shows[sid]["venue_id"]]["neighborhood"],
+                        "featured_image": first_image(shows[sid]),
                     }
                     for sid in crawl_ids
                 ],
@@ -389,7 +475,10 @@ for ym in MONTHS:
         "neighborhoods":      neighborhoods,
         "returning_favorites": returning_favorites,
         "closing_this_month": closing_this_month,
-        "gallery_crawl":      gallery_crawl,
+        "closing_next_month":    closing_next_month,
+        "mediums_stats":         mediums_stats,
+        "subject_matters_stats": subject_matters_stats,
+        "gallery_crawl":         gallery_crawl,
     }
 
     out_path = f"{OUTPUT_DIR}/{ym}.json"

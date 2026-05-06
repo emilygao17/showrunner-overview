@@ -3546,6 +3546,90 @@
       "seen_count": 1
     }
   ],
+  "closing_next_month": [
+    {
+      "show_id": "37099",
+      "title": "Group Exhibition",
+      "venue_name": "Helm Contemporary",
+      "neighborhood": "Tribeca",
+      "end_date": "2025-10-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "37160",
+      "title": "counterfactuals: an interactive eventuality",
+      "venue_name": "David Krut Projects",
+      "neighborhood": "Chelsea",
+      "end_date": "2025-10-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "37309",
+      "title": "growtesque",
+      "venue_name": "Plein Ventures",
+      "neighborhood": "Tribeca",
+      "end_date": "2025-10-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "36300",
+      "title": "Karen Barbour",
+      "venue_name": "Harkawik",
+      "neighborhood": "Tribeca",
+      "end_date": "2025-10-02",
+      "view_count": 0
+    },
+    {
+      "show_id": "36360",
+      "title": "Maud Madsen",
+      "venue_name": "Half Gallery",
+      "neighborhood": "East Village",
+      "end_date": "2025-10-02",
+      "view_count": 1
+    },
+    {
+      "show_id": "36373",
+      "title": "Angela China",
+      "venue_name": "Half Gallery",
+      "neighborhood": "East Village",
+      "end_date": "2025-10-02",
+      "view_count": 0
+    },
+    {
+      "show_id": "36562",
+      "title": "Maud Madsen",
+      "venue_name": "Half Gallery",
+      "neighborhood": "East Village",
+      "end_date": "2025-10-02",
+      "view_count": 0
+    },
+    {
+      "show_id": "37303",
+      "title": "counterfactuals: an interactive eventuality",
+      "venue_name": "David Krut Projects",
+      "neighborhood": "Chelsea",
+      "end_date": "2025-10-02",
+      "view_count": 0
+    },
+    {
+      "show_id": "36401",
+      "title": "Ed Bereal",
+      "venue_name": "Gratin",
+      "neighborhood": "Lower East Side",
+      "end_date": "2025-10-03",
+      "view_count": 0
+    },
+    {
+      "show_id": "36471",
+      "title": "Logan T. Sibrel",
+      "venue_name": "Auxier Kline",
+      "neighborhood": "Lower East Side",
+      "end_date": "2025-10-03",
+      "view_count": 0
+    }
+  ],
+  "mediums_stats": [],
+  "subject_matters_stats": [],
   "gallery_crawl": [
     {
       "list_count": 9,
@@ -3554,31 +3638,36 @@
           "show_id": "36247",
           "title": "Sasha Gordon",
           "venue_name": "David Zwirner",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/2247e31f38e345029061d7d93ff4810c.jpg"
         },
         {
           "show_id": "36828",
           "title": "Nathaniel Mary Quinn",
           "venue_name": "Gagosian",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/d24b468260e74581b41a9f25a9761561.jpg"
         },
         {
           "show_id": "35928",
           "title": "Chloe Wise",
           "venue_name": "Almine Rech",
-          "neighborhood": "Tribeca"
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/22dae237e2a6422192afcf39402d0aed.jpg"
         },
         {
           "show_id": "36615",
           "title": "Chloe Wise",
           "venue_name": "Almine Rech",
-          "neighborhood": "Tribeca"
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/22dae237e2a6422192afcf39402d0aed.jpg"
         },
         {
           "show_id": "36279",
           "title": "Shara Hughes",
           "venue_name": "David Kordansky Gallery",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/f9174527e9964d2b983d235e059c158d_original.jpg"
         }
       ]
     },
@@ -3589,19 +3678,22 @@
           "show_id": "36090",
           "title": "R\u00e1ul De Nieves",
           "venue_name": "Pioneer Works",
-          "neighborhood": "Central Brooklyn"
+          "neighborhood": "Central Brooklyn",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/930f2c9c5fe74f779762cdce2fedaf96.jpg"
         },
         {
           "show_id": "36432",
           "title": "Kristian Touborg",
           "venue_name": "Carvalho",
-          "neighborhood": "North Brooklyn"
+          "neighborhood": "North Brooklyn",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/d0250631fb634dd8986e695ab248e265_original.jpg"
         },
         {
           "show_id": "36485",
           "title": "Adebunmi Gbadebo",
           "venue_name": "Nicola Vassell",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/b395c4affe8a48f6bb737ba3cb127609.jpg"
         }
       ]
     }

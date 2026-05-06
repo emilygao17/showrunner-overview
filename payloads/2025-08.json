@@ -1196,6 +1196,90 @@
       "seen_count": 4
     }
   ],
+  "closing_next_month": [
+    {
+      "show_id": "35836",
+      "title": "overhang 2",
+      "venue_name": "Essex Flowers",
+      "neighborhood": "Lower East Side",
+      "end_date": "2025-09-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "36047",
+      "title": "abstracting the personal",
+      "venue_name": "Carter Burden Gallery",
+      "neighborhood": "Chelsea",
+      "end_date": "2025-09-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "36050",
+      "title": "five and under",
+      "venue_name": "ARCADIA CONTEMPORARY",
+      "neighborhood": "SoHo-NoHo",
+      "end_date": "2025-09-01",
+      "view_count": 1
+    },
+    {
+      "show_id": "36271",
+      "title": "Jialu Gao",
+      "venue_name": "Crossing Art",
+      "neighborhood": "Chelsea",
+      "end_date": "2025-09-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "33333",
+      "title": "Robert Morris",
+      "venue_name": "Castelli Gallery",
+      "neighborhood": "Midtown",
+      "end_date": "2025-09-02",
+      "view_count": 0
+    },
+    {
+      "show_id": "36182",
+      "title": "Jorge Torrealba",
+      "venue_name": "One Art Space",
+      "neighborhood": "Tribeca",
+      "end_date": "2025-09-02",
+      "view_count": 0
+    },
+    {
+      "show_id": "36288",
+      "title": "oops! unfortunately...",
+      "venue_name": "A Space Gallery",
+      "neighborhood": "North Brooklyn",
+      "end_date": "2025-09-02",
+      "view_count": 0
+    },
+    {
+      "show_id": "36412",
+      "title": "oops ! unfortunately\u2026",
+      "venue_name": "A Space Gallery",
+      "neighborhood": "North Brooklyn",
+      "end_date": "2025-09-03",
+      "view_count": 0
+    },
+    {
+      "show_id": "36026",
+      "title": "summer group show 2025",
+      "venue_name": "Modern Fine Art",
+      "neighborhood": "Upper East Side",
+      "end_date": "2025-09-04",
+      "view_count": 0
+    },
+    {
+      "show_id": "36313",
+      "title": "a cough led us off course, astray\u2026",
+      "venue_name": "Emily Harvey Foundation",
+      "neighborhood": "SoHo-NoHo",
+      "end_date": "2025-09-04",
+      "view_count": 0
+    }
+  ],
+  "mediums_stats": [],
+  "subject_matters_stats": [],
   "gallery_crawl": [
     {
       "list_count": 3,
@@ -1204,19 +1288,22 @@
           "show_id": "35928",
           "title": "Chloe Wise",
           "venue_name": "Almine Rech",
-          "neighborhood": "Tribeca"
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/22dae237e2a6422192afcf39402d0aed.jpg"
         },
         {
           "show_id": "35930",
           "title": "Katherine Bradford",
           "venue_name": "CANADA",
-          "neighborhood": "Tribeca"
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/bb640f2d0a2644e89c07682e3689b443_mobile.jpg"
         },
         {
           "show_id": "35650",
           "title": "Group Show",
           "venue_name": "Craig Starr Gallery",
-          "neighborhood": "Upper East Side"
+          "neighborhood": "Upper East Side",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/d6122721c3b0408081e0e23f29a81ffe.jpg"
         }
       ]
     },
@@ -1227,19 +1314,22 @@
           "show_id": "36088",
           "title": "Sasha Gordon",
           "venue_name": "David Zwirner",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/2247e31f38e345029061d7d93ff4810c.jpg"
         },
         {
           "show_id": "36118",
           "title": "Robert Longo",
           "venue_name": "Pace Gallery",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/eddedc499117444d83cf8c4b542bcc5c.jpg"
         },
         {
           "show_id": "36279",
           "title": "Shara Hughes",
           "venue_name": "David Kordansky Gallery",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/f9174527e9964d2b983d235e059c158d_original.jpg"
         }
       ]
     }

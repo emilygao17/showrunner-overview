@@ -333,26 +333,45 @@
   }
   .crawl-show-row {
     display: flex;
-    align-items: baseline;
-    gap: 6px;
-    padding: 4px 0;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
     border-bottom: 1px solid var(--border);
   }
   .crawl-show-row:last-child { border-bottom: none; }
+  .crawl-thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    object-fit: cover;
+    background: #F1EFE8;
+    display: block;
+  }
+  .crawl-show-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
   .crawl-show-title {
     font-size: 12px;
     font-weight: 700;
-    flex: 1;
-    min-width: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    flex: 1;
+    min-width: 0;
   }
   .crawl-show-meta {
     font-size: 11px;
     color: var(--muted);
     white-space: nowrap;
     flex-shrink: 0;
+    text-align: right;
   }
 
   /* ── Returning favorites ── */
@@ -513,6 +532,18 @@
     flex-direction: column;
     padding: 24px;
     flex-shrink: 0;
+    position: relative;
+  }
+  body.story-mode .card:not(.stats-hero)::before {
+    content: var(--story-month-label, '');
+    position: absolute;
+    top: 22px;
+    right: 24px;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+    pointer-events: none;
   }
 
   /* Card label stays, reduce bottom margin */
@@ -667,7 +698,7 @@
 
   /* Map */
   body.story-mode #map-container { flex: 1; height: auto; min-height: 0; border-radius: 6px; margin-top: 4px; }
-  body.story-mode .week-nav { margin-bottom: 8px; }
+  body.story-mode .week-nav { display: none; }
 
   /* Neighborhoods */
   body.story-mode .hood-list {
@@ -687,13 +718,19 @@
     flex-direction: column;
     overflow: hidden;
     min-height: 0;
-    justify-content: space-between;
+    gap: 16px;
+    justify-content: flex-start;
   }
-  body.story-mode .crawl-show-title { font-size: 15px; font-weight: 700; }
-  body.story-mode .crawl-show-meta { font-size: 13px; }
-  body.story-mode .crawl-based-on { font-size: 11px; margin-bottom: 6px; }
+  body.story-mode .crawl-show-title { font-size: 13px; font-weight: 700; }
+  body.story-mode .crawl-show-meta { font-size: 12px; text-align: right; }
+  body.story-mode .crawl-based-on { font-size: 11px; margin-bottom: 4px; }
   body.story-mode .crawl-group { padding-bottom: 0; margin-bottom: 0; border-bottom: none; }
-  body.story-mode .crawl-show-row { padding: 8px 0; }
+  body.story-mode .crawl-show-row { padding: 4px 0; gap: 10px; }
+  body.story-mode .crawl-thumb { width: 34px; height: 34px; border-radius: 5px; }
+
+  /* Closing – story mode hides both closing cards */
+  body.story-mode .card-closing-this { display: none !important; }
+  body.story-mode .card-closing-next { display: none !important; }
 
   /* Closing */
   body.story-mode .closing-list {
@@ -729,6 +766,51 @@
   body.story-mode .returning-title { font-size: 16px; font-weight: 700; }
   body.story-mode .returning-venue { font-size: 13px; margin-bottom: 4px; }
   body.story-mode .returning-month-tag { font-size: 12px; padding: 3px 10px; }
+
+  /* Table view cards (story-only) */
+  .card-table-view { display: none !important; }
+  body.story-mode .card-table-view { display: flex !important; flex-direction: column; }
+  .table-card-subtitle {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 14px;
+    flex-shrink: 0;
+  }
+  .table-view {
+    width: 100%;
+    border-collapse: collapse;
+    flex: 1;
+  }
+  .table-view thead th {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0 0 8px;
+    border-bottom: 2px solid var(--ink);
+    color: var(--ink);
+    text-align: left;
+  }
+  .table-view thead th:not(:first-child) { text-align: right; }
+  .table-view tbody td {
+    font-size: 16px;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--ink);
+    text-align: left;
+  }
+  .table-view tbody td:not(:first-child) { text-align: right; }
+  .table-intensity-label {
+    display: block;
+    font-size: 9px;
+    font-weight: 400;
+    color: var(--label);
+    margin-top: 1px;
+  }
+  .table-intensity-value {
+    font-weight: 700;
+    color: var(--label);
+  }
 
   /* ── Mobile ── */
   @media (max-width: 680px) {
@@ -970,7 +1052,7 @@ function renderNeighborhoods(hoods) {
       <div class="hood-bar-wrap">
         <div class="hood-bar" style="width:${Math.round(h.checkin_count / max * 100)}%"></div>
       </div>
-      <div class="hood-count">${h.checkin_count}</div>
+      <div class="hood-count">${h.checkin_count} <span style="font-weight:400;font-size:0.8em;color:var(--muted)">visits</span></div>
     </div>`).join('');
   return `
   <div class="card card-half">
@@ -987,17 +1069,26 @@ function renderGalleryCrawl(crawls) {
     <div class="empty-state">Not enough list data.</div>
   </div>`;
   const groups = crawls.map(c => {
-    const rows = c.shows.map(s => `
+    const rows = c.shows.map(s => {
+      const thumb = s.featured_image
+        ? `<img class="crawl-thumb" src="${s.featured_image}" alt="" loading="lazy">`
+        : `<div class="crawl-thumb"></div>`;
+      return `
       <div class="crawl-show-row">
-        <div class="crawl-show-title">${s.title}</div>
-        <div class="crawl-show-meta">${s.venue_name} · ${s.neighborhood}</div>
-      </div>`).join('');
+        ${thumb}
+        <div class="crawl-show-info">
+          <div class="crawl-show-title">${s.title}</div>
+          <div class="crawl-show-meta">${s.venue_name} · ${s.neighborhood}</div>
+        </div>
+      </div>`;
+    }).join('');
     return `
     <div class="crawl-group">
       <div class="crawl-based-on">Based on ${c.list_count} lists</div>
       ${rows}
     </div>`;
   }).join('');
+
   return `
   <div class="card card-half">
     <img class="story-logo" src="logo.PNG" alt="Showrunner">
@@ -1044,6 +1135,40 @@ function renderMap() {
   </div>`;
 }
 
+function renderTableCard(stats, label, firstColHeader) {
+  if (!stats || !stats.length) return '';
+  const rows = stats.map(item => `
+    <tr>
+      <td>${item.label}</td>
+      <td>${item.views.toLocaleString()}</td>
+      <td>${item.shows}</td>
+      <td>${item.highest_intensity
+        ? `<span class="table-intensity-value">${item.views_per_show}</span><span class="table-intensity-label">highest intensity</span>`
+        : item.views_per_show}</td>
+    </tr>`).join('');
+  return `
+  <div class="card card-full card-table-view">
+    <img class="story-logo" src="logo.PNG" alt="Showrunner">
+    <div class="card-label">${label}</div>
+    <table class="table-view">
+      <thead>
+        <tr>
+          <th>${firstColHeader}</th><th>Impressions</th><th>Shows</th><th>Impr/show</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>
+  </div>`;
+}
+
+function renderMediums(stats, month) {
+  return renderTableCard(stats, 'Most Popular Mediums', 'Medium');
+}
+
+function renderSubjectMatters(stats, month) {
+  return renderTableCard(stats, 'Most Popular Subject Matters', 'Subject matter');
+}
+
 function renderClosing(closing) {
   if (!closing.length) return '';
   const rows = closing.map(c => `
@@ -1056,9 +1181,28 @@ function renderClosing(closing) {
       <div class="closing-seen">${c.seen_count}×</div>
     </div>`).join('');
   return `
-  <div class="card card-full">
+  <div class="card card-full card-closing-this">
     <img class="story-logo" src="logo.PNG" alt="Showrunner">
     <div class="card-label">Closing This Month</div>
+    <div class="closing-list">${rows}</div>
+  </div>`;
+}
+
+function renderClosingNext(closing) {
+  if (!closing || !closing.length) return '';
+  const rows = closing.map(c => `
+    <div class="closing-row">
+      <div class="closing-date">${fmtDate(c.end_date)}</div>
+      <div class="closing-info">
+        <div class="closing-title">${c.title}</div>
+        <div class="closing-venue">${c.venue_name} · ${c.neighborhood}</div>
+      </div>
+      <div class="closing-seen">${c.view_count.toLocaleString()}</div>
+    </div>`).join('');
+  return `
+  <div class="card card-full card-closing-next">
+    <img class="story-logo" src="logo.PNG" alt="Showrunner">
+    <div class="card-label">Closing Next Month</div>
     <div class="closing-list">${rows}</div>
   </div>`;
 }
@@ -1116,17 +1260,30 @@ function buildTooltipHTML(items) {
 function initMap(allCheckins, ym) {
   if (currentMap) { currentMap.remove(); currentMap = null; }
 
+  // Store for view-toggle sync
+  window._mapAllCheckins = allCheckins;
+  window._mapYm = ym;
+
   let currentWeek = 0;
 
   const map = new maplibregl.Map({
     container: 'map-container',
     style: 'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',
-    center: [-73.990, 40.765],
-    zoom: 10.8,
+    center: document.body.classList.contains('story-mode') ? [-73.990, 40.748] : [-73.990, 40.765],
+    zoom: document.body.classList.contains('story-mode') ? 11.5 : 10.8,
     attributionControl: false,
   });
 
   currentMap = map;
+
+  if (document.body.classList.contains('story-mode')) {
+    map.scrollZoom.disable();
+    map.doubleClickZoom.disable();
+    map.touchZoomRotate.disable();
+    map.boxZoom.disable();
+    map.dragPan.disable();
+    map.keyboard.disable();
+  }
 
   // Wire up week buttons
   document.querySelectorAll('.week-btn').forEach(btn => {
@@ -1159,7 +1316,9 @@ function initMap(allCheckins, ym) {
   }
 
   map.on('load', () => {
-    const initFeatures = toFeatures(filterByWeek(allCheckins, ym, 0));
+    const initFeatures = document.body.classList.contains('story-mode')
+      ? toFeatures(allCheckins)
+      : toFeatures(filterByWeek(allCheckins, ym, 0));
 
     map.addSource('checkins', {
       type: 'geojson',
@@ -1205,6 +1364,9 @@ function initMap(allCheckins, ym) {
       type: 'circle',
       source: 'checkins',
       filter: ['!', ['has', 'point_count']],
+      layout: {
+        visibility: document.body.classList.contains('story-mode') ? 'none' : 'visible',
+      },
       paint: {
         'circle-color': '#0A0A0A',
         'circle-radius': ['case', ['boolean', ['feature-state', 'hover'], false], 7, 5],
@@ -1281,7 +1443,7 @@ async function loadMonth(ym) {
 
   let data;
   try {
-    data = await fetch(`payloads/${ym}.json?v=5`).then(r => {
+    data = await fetch(`payloads/${ym}.json?v=9`).then(r => {
       if (!r.ok) throw new Error(r.status);
       return r.json();
     });
@@ -1300,7 +1462,13 @@ async function loadMonth(ym) {
     renderGalleryCrawl(data.gallery_crawl),
     renderMap(),
     renderClosing(data.closing_this_month),
+    renderClosingNext(data.closing_next_month),
+    renderMediums(data.mediums_stats, data.month),
+    renderSubjectMatters(data.subject_matters_stats, data.month),
   ].join('');
+
+  const [yr, mo] = data.month.split('-');
+  document.documentElement.style.setProperty('--story-month-label', `"${MONTH_FULL[mo]} ${yr}"`);
 
   initMap(data.map_checkins, data.month);
 }
@@ -1312,7 +1480,16 @@ function applyView(isStory) {
   document.body.classList.toggle('story-mode', isStory);
   viewToggle.textContent = isStory ? 'Magazine view' : 'Story view';
   viewToggle.classList.toggle('active', isStory);
-  if (currentMap) currentMap.resize();
+  if (currentMap) {
+    currentMap.resize();
+    if (currentMap.isStyleLoaded() && window._mapAllCheckins) {
+      const features = isStory
+        ? toFeatures(window._mapAllCheckins)
+        : toFeatures(filterByWeek(window._mapAllCheckins, window._mapYm, 0));
+      currentMap.getSource('checkins').setData({ type: 'FeatureCollection', features });
+      currentMap.setLayoutProperty('unclustered', 'visibility', isStory ? 'none' : 'visible');
+    }
+  }
 }
 
 viewToggle.addEventListener('click', () => {
@@ -1322,7 +1499,7 @@ viewToggle.addEventListener('click', () => {
 });
 
 // ── Init ───────────────────────────────────────────────────────────────────
-applyView(localStorage.getItem('showrunner-view') === 'story');
+applyView(localStorage.getItem('showrunner-view') !== 'magazine');
 loadMonth(MONTHS[MONTHS.length - 1].ym);
 </script>
 </body>

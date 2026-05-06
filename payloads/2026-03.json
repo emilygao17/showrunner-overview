@@ -4164,6 +4164,218 @@
       "seen_count": 2
     }
   ],
+  "closing_next_month": [
+    {
+      "show_id": "37205",
+      "title": "Stephen Prina",
+      "venue_name": "Museum of Modern Art",
+      "neighborhood": "Midtown",
+      "end_date": "2026-04-01",
+      "view_count": 2
+    },
+    {
+      "show_id": "40330",
+      "title": "\u00c1ngela Ponce",
+      "venue_name": "Instituto Cervantes",
+      "neighborhood": "Murray Hill",
+      "end_date": "2026-04-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "41578",
+      "title": "Kevin Mcnamee-Tweed",
+      "venue_name": "Alexander Berggruen",
+      "neighborhood": "Upper East Side",
+      "end_date": "2026-04-01",
+      "view_count": 12
+    },
+    {
+      "show_id": "43464",
+      "title": "Tajh Rust",
+      "venue_name": "Alexander Berggruen",
+      "neighborhood": "Upper East Side",
+      "end_date": "2026-04-01",
+      "view_count": 9
+    },
+    {
+      "show_id": "44218",
+      "title": "collection in focus | modern european currents",
+      "venue_name": "Solomon R. Guggenheim Museum",
+      "neighborhood": "Upper East Side",
+      "end_date": "2026-04-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "44502",
+      "title": "Glori Tuitt",
+      "venue_name": "Queens Museum",
+      "neighborhood": "",
+      "end_date": "2026-04-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "45109",
+      "title": "Rose B. Simpson",
+      "venue_name": "Museum of Modern Art",
+      "neighborhood": "Midtown",
+      "end_date": "2026-04-01",
+      "view_count": 1
+    },
+    {
+      "show_id": "45137",
+      "title": "Sasha Stiles",
+      "venue_name": "Museum of Modern Art",
+      "neighborhood": "Midtown",
+      "end_date": "2026-04-01",
+      "view_count": 1
+    },
+    {
+      "show_id": "45309",
+      "title": "Philip I Of Castile",
+      "venue_name": "The Metropolitan Museum of Art",
+      "neighborhood": "Upper East Side",
+      "end_date": "2026-04-01",
+      "view_count": 0
+    },
+    {
+      "show_id": "45347",
+      "title": "the sumptuous discovery of gotham a go-go",
+      "venue_name": "Museum of Modern Art",
+      "neighborhood": "Midtown",
+      "end_date": "2026-04-01",
+      "view_count": 2
+    }
+  ],
+  "mediums_stats": [
+    {
+      "label": "Paintings",
+      "views": 1948,
+      "shows": 476,
+      "views_per_show": 4.1,
+      "highest_intensity": true
+    },
+    {
+      "label": "Sculptures",
+      "views": 914,
+      "shows": 271,
+      "views_per_show": 3.4,
+      "highest_intensity": false
+    },
+    {
+      "label": "Multimedia",
+      "views": 681,
+      "shows": 167,
+      "views_per_show": 4.1,
+      "highest_intensity": false
+    },
+    {
+      "label": "Photography",
+      "views": 593,
+      "shows": 170,
+      "views_per_show": 3.5,
+      "highest_intensity": false
+    },
+    {
+      "label": "Drawings",
+      "views": 591,
+      "shows": 153,
+      "views_per_show": 3.9,
+      "highest_intensity": false
+    },
+    {
+      "label": "Installation",
+      "views": 576,
+      "shows": 163,
+      "views_per_show": 3.5,
+      "highest_intensity": false
+    },
+    {
+      "label": "Videos",
+      "views": 386,
+      "shows": 102,
+      "views_per_show": 3.8,
+      "highest_intensity": false
+    },
+    {
+      "label": "Design",
+      "views": 214,
+      "shows": 54,
+      "views_per_show": 4.0,
+      "highest_intensity": false
+    }
+  ],
+  "subject_matters_stats": [
+    {
+      "label": "Material Experimentation",
+      "views": 1586,
+      "shows": 413,
+      "views_per_show": 3.8,
+      "highest_intensity": false
+    },
+    {
+      "label": "Societal Critique",
+      "views": 1213,
+      "shows": 313,
+      "views_per_show": 3.9,
+      "highest_intensity": false
+    },
+    {
+      "label": "Nature",
+      "views": 1142,
+      "shows": 298,
+      "views_per_show": 3.8,
+      "highest_intensity": false
+    },
+    {
+      "label": "Political Commentary",
+      "views": 798,
+      "shows": 185,
+      "views_per_show": 4.3,
+      "highest_intensity": false
+    },
+    {
+      "label": "Otherworldly",
+      "views": 794,
+      "shows": 191,
+      "views_per_show": 4.2,
+      "highest_intensity": false
+    },
+    {
+      "label": "Interior Spaces",
+      "views": 649,
+      "shows": 168,
+      "views_per_show": 3.9,
+      "highest_intensity": false
+    },
+    {
+      "label": "Mental Health",
+      "views": 623,
+      "shows": 172,
+      "views_per_show": 3.6,
+      "highest_intensity": false
+    },
+    {
+      "label": "Architecture",
+      "views": 621,
+      "shows": 145,
+      "views_per_show": 4.3,
+      "highest_intensity": false
+    },
+    {
+      "label": "Portraits",
+      "views": 610,
+      "shows": 139,
+      "views_per_show": 4.4,
+      "highest_intensity": false
+    },
+    {
+      "label": "Black Experience",
+      "views": 536,
+      "shows": 98,
+      "views_per_show": 5.5,
+      "highest_intensity": true
+    }
+  ],
   "gallery_crawl": [
     {
       "list_count": 4,
@@ -4172,31 +4384,36 @@
           "show_id": "41135",
           "title": "Melissa Brown",
           "venue_name": "Derek Eller Gallery",
-          "neighborhood": "Tribeca"
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/3f906d4ae7724656b9d0a6f9e945d77d_mobile.jpg"
         },
         {
           "show_id": "41582",
           "title": "traces of motion",
           "venue_name": "Elza Kayal Gallery",
-          "neighborhood": "Tribeca"
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/artrabbit/shows//events/traces-of-motion/0_mobile.jpg"
         },
         {
           "show_id": "43482",
           "title": "camilla iliefski & eva zethraeus: shimmering real",
           "venue_name": "HB381",
-          "neighborhood": "Tribeca"
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/9054e671d5124685819aac1d34f398ed_mobile.jpg"
         },
         {
-          "show_id": "40269",
-          "title": "Quinha Faria",
-          "venue_name": "Kiang Malingue",
-          "neighborhood": "Lower East Side"
+          "show_id": "43485",
+          "title": "Cortney Andrews",
+          "venue_name": "FIERMAN",
+          "neighborhood": "Lower East Side",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/5d614a4db5054e908d327cb8135ef374_mobile.jpg"
         },
         {
-          "show_id": "46432",
-          "title": "Elisa Jensen",
-          "venue_name": "Astor Weeks",
-          "neighborhood": "Tribeca"
+          "show_id": "41408",
+          "title": "Mai Takeshita",
+          "venue_name": "Alison Bradley Projects",
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/0b468ccd34a949d3ad0492beb1c5ac29_mobile.jpg"
         }
       ]
     },
@@ -4207,31 +4424,36 @@
           "show_id": "41543",
           "title": "\u00c9douard Vuillard",
           "venue_name": "Skarstedt Gallery",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/e961c978ec6b4022b88d4b203ce6f947_mobile.jpg"
         },
         {
           "show_id": "43520",
           "title": "Robert Mapplethorpe",
           "venue_name": "Gladstone",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/214caf3bdb344024b1729b19f299f946_mobile.jpg"
         },
         {
-          "show_id": "43466",
-          "title": "Avery Z. Nelson",
-          "venue_name": "Chozick Family Art Gallery",
-          "neighborhood": "Tribeca"
-        },
-        {
-          "show_id": "45585",
-          "title": "Gabrielle Dunayski",
-          "venue_name": "Anna Zorina Gallery",
-          "neighborhood": "Chelsea"
+          "show_id": "43456",
+          "title": "Katharina Wulff",
+          "venue_name": "Greene Naftali Gallery",
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/856017274627494e9f851f19b0c3e1d7_mobile.jpg"
         },
         {
           "show_id": "45667",
           "title": "Emmet Gowin",
           "venue_name": "Pace",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/90d9a536785f479a89ddf935f34450e5_mobile.jpg"
+        },
+        {
+          "show_id": "45960",
+          "title": "Chuck Close",
+          "venue_name": "Pace Gallery",
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/68711891243f4b239a719721a9734d5b_mobile.jpg"
         }
       ]
     }

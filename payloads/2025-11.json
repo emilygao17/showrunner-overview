@@ -5298,6 +5298,218 @@
       "seen_count": 2
     }
   ],
+  "closing_next_month": [
+    {
+      "show_id": "37959",
+      "title": "Pierre Leguillon",
+      "venue_name": "Emmelines",
+      "neighborhood": "Midtown",
+      "end_date": "2025-12-01",
+      "view_count": 1
+    },
+    {
+      "show_id": "38237",
+      "title": "tour to floor",
+      "venue_name": "Galerie Timonier",
+      "neighborhood": "Tribeca",
+      "end_date": "2025-12-01",
+      "view_count": 5
+    },
+    {
+      "show_id": "38546",
+      "title": "Belynda Henry",
+      "venue_name": "Findlay Galleries",
+      "neighborhood": "Murray Hill",
+      "end_date": "2025-12-02",
+      "view_count": 1
+    },
+    {
+      "show_id": "37492",
+      "title": "living systems",
+      "venue_name": "EFA 3rd Floor Gallery",
+      "neighborhood": "Midtown",
+      "end_date": "2025-12-03",
+      "view_count": 1
+    },
+    {
+      "show_id": "38106",
+      "title": "Daniel Ambrosi",
+      "venue_name": "Robilant+Voena",
+      "neighborhood": "Upper East Side",
+      "end_date": "2025-12-03",
+      "view_count": 4
+    },
+    {
+      "show_id": "35960",
+      "title": "Bing Lu",
+      "venue_name": "Gallery 60 NYC",
+      "neighborhood": "Murray Hill",
+      "end_date": "2025-12-04",
+      "view_count": 2
+    },
+    {
+      "show_id": "37371",
+      "title": "likenesses: speaking with the selves",
+      "venue_name": "Goethe-Institut",
+      "neighborhood": "East Village",
+      "end_date": "2025-12-04",
+      "view_count": 0
+    },
+    {
+      "show_id": "37417",
+      "title": "likenesses: speaking with the selves",
+      "venue_name": "Goethe-Institut",
+      "neighborhood": "East Village",
+      "end_date": "2025-12-04",
+      "view_count": 3
+    },
+    {
+      "show_id": "37941",
+      "title": "Daniel Ambrosi",
+      "venue_name": "Robilant+Voena",
+      "neighborhood": "Upper East Side",
+      "end_date": "2025-12-04",
+      "view_count": 0
+    },
+    {
+      "show_id": "36937",
+      "title": "Christian Hincapi\u00e9",
+      "venue_name": "Mishkin Gallery at Baruch College (CUNY)",
+      "neighborhood": "Murray Hill",
+      "end_date": "2025-12-05",
+      "view_count": 0
+    }
+  ],
+  "mediums_stats": [
+    {
+      "label": "Paintings",
+      "views": 4496,
+      "shows": 502,
+      "views_per_show": 9.0,
+      "highest_intensity": false
+    },
+    {
+      "label": "Sculptures",
+      "views": 2612,
+      "shows": 281,
+      "views_per_show": 9.3,
+      "highest_intensity": false
+    },
+    {
+      "label": "Installation",
+      "views": 1631,
+      "shows": 183,
+      "views_per_show": 8.9,
+      "highest_intensity": false
+    },
+    {
+      "label": "Drawings",
+      "views": 1411,
+      "shows": 151,
+      "views_per_show": 9.3,
+      "highest_intensity": false
+    },
+    {
+      "label": "Multimedia",
+      "views": 1328,
+      "shows": 158,
+      "views_per_show": 8.4,
+      "highest_intensity": false
+    },
+    {
+      "label": "Photography",
+      "views": 1302,
+      "shows": 160,
+      "views_per_show": 8.1,
+      "highest_intensity": false
+    },
+    {
+      "label": "Videos",
+      "views": 1075,
+      "shows": 93,
+      "views_per_show": 11.6,
+      "highest_intensity": true
+    },
+    {
+      "label": "Design",
+      "views": 408,
+      "shows": 68,
+      "views_per_show": 6.0,
+      "highest_intensity": false
+    }
+  ],
+  "subject_matters_stats": [
+    {
+      "label": "Material Experimentation",
+      "views": 3589,
+      "shows": 434,
+      "views_per_show": 8.3,
+      "highest_intensity": false
+    },
+    {
+      "label": "Societal Critique",
+      "views": 3225,
+      "shows": 349,
+      "views_per_show": 9.2,
+      "highest_intensity": false
+    },
+    {
+      "label": "Nature",
+      "views": 2475,
+      "shows": 330,
+      "views_per_show": 7.5,
+      "highest_intensity": false
+    },
+    {
+      "label": "Otherworldly",
+      "views": 2116,
+      "shows": 228,
+      "views_per_show": 9.3,
+      "highest_intensity": false
+    },
+    {
+      "label": "Mental Health",
+      "views": 2065,
+      "shows": 196,
+      "views_per_show": 10.5,
+      "highest_intensity": false
+    },
+    {
+      "label": "Political Commentary",
+      "views": 1906,
+      "shows": 222,
+      "views_per_show": 8.6,
+      "highest_intensity": false
+    },
+    {
+      "label": "Sexuality",
+      "views": 1762,
+      "shows": 143,
+      "views_per_show": 12.3,
+      "highest_intensity": false
+    },
+    {
+      "label": "Portraits",
+      "views": 1699,
+      "shows": 167,
+      "views_per_show": 10.2,
+      "highest_intensity": false
+    },
+    {
+      "label": "Feminism",
+      "views": 1609,
+      "shows": 132,
+      "views_per_show": 12.2,
+      "highest_intensity": false
+    },
+    {
+      "label": "Surrealism",
+      "views": 1567,
+      "shows": 125,
+      "views_per_show": 12.5,
+      "highest_intensity": true
+    }
+  ],
   "gallery_crawl": [
     {
       "list_count": 10,
@@ -5306,31 +5518,36 @@
           "show_id": "37952",
           "title": "Richard Prince",
           "venue_name": "Gagosian",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/834c83b21e8a4f21b004e448981c801b_mobile.jpg"
         },
         {
           "show_id": "38325",
           "title": "Nicole Eisenman",
           "venue_name": "David Zwirner",
-          "neighborhood": "Tribeca"
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/4fed0a5ebc8d4293a9d929700cd90d3e_mobile.jpg"
         },
         {
           "show_id": "35930",
           "title": "Katherine Bradford",
           "venue_name": "CANADA",
-          "neighborhood": "Tribeca"
+          "neighborhood": "Tribeca",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/bb640f2d0a2644e89c07682e3689b443_mobile.jpg"
         },
         {
           "show_id": "37228",
           "title": "Ana Benaroya",
           "venue_name": "The FLAG Art Foundation",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/93930510eb7149acbd5495cd783d5af3_mobile.jpg"
         },
         {
           "show_id": "38378",
           "title": "Jordan Casteel",
           "venue_name": "Casey Kaplan",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/1b4f976701be472398ea2cce5f285208_mobile.jpg"
         }
       ]
     },
@@ -5341,31 +5558,36 @@
           "show_id": "38719",
           "title": "Louise Bourgeois",
           "venue_name": "Hauser & Wirth",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/6011a74200c14700a9204ccd43eb7fb9_mobile.jpg"
         },
         {
           "show_id": "38810",
           "title": "Chiharu Shiota",
           "venue_name": "Templon",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/06eeeb2e18b64a14b968f741f211ac6a_mobile.jpg"
         },
         {
           "show_id": "38431",
           "title": "Alex Da Corte",
           "venue_name": "Matthew Marks",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/50c7c49ed4814c43b5b2c0377ee318a2_mobile.jpg"
         },
         {
           "show_id": "38334",
           "title": "Luc Tuymans",
           "venue_name": "David Zwirner",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/baccb2534e7c4c7aa6ea4ea79121fb46_mobile.jpg"
         },
         {
           "show_id": "38465",
           "title": "Joan Mitchell",
           "venue_name": "David Zwirner",
-          "neighborhood": "Chelsea"
+          "neighborhood": "Chelsea",
+          "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/e50283c6413f442a906f908fe8001994_mobile.jpg"
         }
       ]
     }
