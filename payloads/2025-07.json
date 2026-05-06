@@ -21,7 +21,7 @@
     ],
     "end_date": "2026-03-08",
     "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/a1bbdcb9449a4cb584103f00f8cb968c_mobile.jpg",
-    "short_description": "Torkwase Dyson's immersive sound pavilion, *Akua*, opens at Brooklyn Bridge Park from May 6, 2025, to March 8, 2026, exploring themes of breath, memory, and migration through layer\u2026",
+    "short_description": "Torkwase Dyson's immersive sound pavilion, *Akua*, opens at Brooklyn Bridge Park from May 6, 2025, to March 8, 2026, exploring themes of breath, memory, and migration through layered soundscapes.",
     "view_count": 0
   },
   "top_5_seen": [
@@ -42,7 +42,7 @@
       ],
       "end_date": "2025-07-25",
       "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/6f4ed10bd74e440ebb734b5d476b9841.jpg",
-      "short_description": "Luhring Augustine presents \"Wish Maker,\" a significant exhibition featuring new works by Salman Toor, exploring themes of queer identity, community, and the immigrant experience th\u2026"
+      "short_description": "Luhring Augustine presents \"Wish Maker,\" a significant exhibition featuring new works by Salman Toor, exploring themes of queer identity, community, and the immigrant experience through figurative art. The show spans both gallery locations in New York. Toor's evocative pieces blend art historical references with contemporary issues, examining vulnerability and belonging."
     },
     {
       "show_id": "33880",
@@ -64,7 +64,7 @@
       ],
       "end_date": "2025-08-15",
       "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/f1c9f91ed1ed49bc8c6e4db290246dc6.jpg",
-      "short_description": "Alicja Kwade's solo exhibition \"Telos Tales,\" featuring monumental sculptures and mixed media works, runs from May 7 to August 15, 2025, at Pace Gallery in New York. The show explo\u2026"
+      "short_description": "Alicja Kwade's solo exhibition \"Telos Tales,\" featuring monumental sculptures and mixed media works, runs from May 7 to August 15, 2025, at Pace Gallery in New York. The show explores themes of perception, time, and materiality. A special preview is scheduled for May 6."
     },
     {
       "show_id": "34018",
@@ -82,7 +82,7 @@
       ],
       "end_date": "2025-07-11",
       "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/f3fc5cf6bcd545fda86e75f6bcf7d13a.jpg",
-      "short_description": "Gagosian presents \"Japonisme \u2192 Cognitive Revolution,\" featuring Takashi Murakami's new and recent works inspired by Utagawa Hiroshige's prints and European Impressionism. The exhib\u2026"
+      "short_description": "Gagosian presents \"Japonisme \u2192 Cognitive Revolution,\" featuring Takashi Murakami's new and recent works inspired by Utagawa Hiroshige's prints and European Impressionism. The exhibition highlights the influence of Japonisme on modern art. Extended hours are available on May 12."
     },
     {
       "show_id": "33616",
@@ -101,7 +101,7 @@
       ],
       "end_date": "2025-07-25",
       "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/5f75dedc29b94cf4b4b5d18223d77247.jpg",
-      "short_description": "Luhring Augustine presents \"Wish Maker,\" an exhibition of new works by Salman Toor, exploring themes of vulnerability, queer identity, and cultural complexities through evocative f\u2026"
+      "short_description": "Luhring Augustine presents \"Wish Maker,\" an exhibition of new works by Salman Toor, exploring themes of vulnerability, queer identity, and cultural complexities through evocative figurative art across two gallery locations in New York."
     },
     {
       "show_id": "34661",
@@ -123,7 +123,7 @@
       ],
       "end_date": "2025-07-31",
       "featured_image": "https://d3igblaqhx8i3r.cloudfront.net/4f4f1cbd606d4621b193fc9937137df2.jpg",
-      "short_description": "The Liu Shiming Art Foundation's exhibition \"People Everyday\" showcases over 35 works by Hank Willis Thomas and Liu Shiming, focusing on human form, caregiving, and community acros\u2026"
+      "short_description": "The Liu Shiming Art Foundation's exhibition \"People Everyday\" showcases over 35 works by Hank Willis Thomas and Liu Shiming, focusing on human form, caregiving, and community across cultural contexts."
     }
   ],
   "top_5_saved": [],
@@ -5435,6 +5435,12 @@
           "neighborhood": "Tribeca"
         },
         {
+          "show_id": "34554",
+          "title": "Summer Group Show",
+          "venue_name": "Timothy Taylor",
+          "neighborhood": "Tribeca"
+        },
+        {
           "show_id": "35296",
           "title": "Varda Caivano",
           "venue_name": "Mendes Wood DM",
@@ -5444,12 +5450,6 @@
           "show_id": "35346",
           "title": "Kati Heck",
           "venue_name": "Bortolami",
-          "neighborhood": "Tribeca"
-        },
-        {
-          "show_id": "35224",
-          "title": "Carrie Yamaoka",
-          "venue_name": "anonymous gallery",
           "neighborhood": "Tribeca"
         }
       ]

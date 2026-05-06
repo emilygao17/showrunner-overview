@@ -53,9 +53,8 @@ def first_image(row):
     urls = parse_list(row.get("image_urls", ""))
     return urls[0] if urls else ""
 
-def trunc(s, n=180):
-    s = s.strip()
-    return s[:n].rstrip() + "…" if len(s) > n else s
+def trunc(s):
+    return s.strip()
 
 def month_bounds(ym):
     """Return (first_day, last_day) as date objects for a 'YYYY-MM' string."""

@@ -20,6 +20,7 @@
     --accent: #0A0A0A;
     --green: #1A6B3C;
     --red: #C0392B;
+    --label: #E53E2C;
     --radius: 12px;
     --gap: 16px;
   }
@@ -48,11 +49,10 @@
   }
 
   .logo {
-    font-weight: 900;
-    font-stretch: condensed;
-    font-size: 18px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    height: 32px;
+    width: auto;
+    display: block;
+    filter: invert(1) brightness(2);
   }
 
   .month-nav {
@@ -108,11 +108,18 @@
 
   .card-label {
     font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
+    font-weight: 800;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--muted);
+    color: var(--label);
     margin-bottom: 12px;
+  }
+
+  /* Red bold sans for sub-labels */
+  .crawl-based-on {
+    color: var(--label);
+    font-weight: 800;
+    letter-spacing: 0.12em;
   }
 
   /* ── Stats hero ── */
@@ -190,6 +197,10 @@
     color: var(--muted);
   }
   .sotm-meta strong { color: var(--ink); }
+  /* SOTM wrappers — magazine mode defaults */
+  .sotm-img-wrap { display: block; }
+  .sotm-logo { display: none; }
+  .sotm-body { display: block; }
 
   /* ── Top 5 ── */
   .show-list {
@@ -505,7 +516,7 @@
   }
 
   /* Card label stays, reduce bottom margin */
-  body.story-mode .card-label { margin-bottom: 8px; }
+  body.story-mode .card-label { font-size: 16px; letter-spacing: 0.08em; margin-bottom: 14px; flex-shrink: 0; }
 
   /* Stats hero — cover slide */
   body.story-mode .stats-hero { padding: 0; position: relative; }
@@ -519,114 +530,205 @@
     width: 100%;
     position: relative;
     overflow: hidden;
-    background: #0a0a0a;
+    background: #fff;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 290px;
   }
-  .cover-grid {
+  /* Bottom image strip */
+  .cover-img-row {
     position: absolute;
-    inset: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: stretch;
+    overflow: visible;
   }
-  .cover-cell {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .cover-img-row img {
+    height: 220px;
+    width: auto;
     display: block;
+    flex-shrink: 0;
+    object-fit: cover;
   }
-  .cover-cell-empty { background: #1e1e1e; }
-  .cover-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(10,10,10,0.72);
-  }
+  /* Center content */
   .cover-content {
-    position: relative;
-    z-index: 1;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 32px;
-    gap: 14px;
-    color: #fff;
+    padding: 20px 60px;
+    gap: 12px;
+    color: #111;
   }
-  .cover-wordmark {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    opacity: 0.55;
+  .cover-logo {
+    height: 64px;
+    width: auto;
+    display: block;
+    margin-bottom: 8px;
   }
   .cover-title {
-    font-size: 48px;
-    font-weight: 900;
+    font-size: 40px;
+    font-weight: 300;
     font-stretch: condensed;
     line-height: 1;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    color: #111;
   }
   .cover-stat {
-    font-size: 14px;
-    font-weight: 400;
-    opacity: 0.65;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--label);
     letter-spacing: 0.01em;
+    line-height: 1.3;
   }
 
-  /* SOTM */
-  body.story-mode .sotm-image { width: 160px; height: 120px; margin-bottom: 10px; }
-  body.story-mode .sotm-title { font-size: 15px; margin-bottom: 3px; }
-  body.story-mode .sotm-venue { font-size: 11px; margin-bottom: 6px; }
-  body.story-mode .sotm-desc {
-    font-size: 11px;
-    line-height: 1.4;
-    margin-bottom: 8px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+  /* SOTM — story mode */
+  body.story-mode .sotm-card { padding: 22px 24px 20px; }
+  body.story-mode .sotm-logo {
+    display: block;
+    width: 216px;
+    height: auto;
+    flex-shrink: 0;
+    margin-bottom: 12px;
+  }
+  body.story-mode .sotm-img-wrap {
+    width: 100%;
+    flex: 0 0 38%;
     overflow: hidden;
+    border-radius: 8px;
   }
-  body.story-mode .tag { font-size: 10px; padding: 2px 8px; }
-  body.story-mode .tag-row { gap: 4px; margin-bottom: 8px; }
-  body.story-mode .sotm-meta { font-size: 10px; gap: 10px; flex-wrap: wrap; }
+  body.story-mode .sotm-img-wrap .sotm-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+    margin: 0;
+  }
+  body.story-mode .sotm-body {
+    flex: 1;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    justify-content: flex-start;
+    overflow: hidden;
+    min-height: 0;
+  }
+  body.story-mode .sotm-body .card-label {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+  }
+  body.story-mode .sotm-title { font-size: 26px; font-weight: 800; line-height: 1.1; }
+  body.story-mode .sotm-venue { font-size: 16px; }
+  body.story-mode .sotm-desc {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  body.story-mode .tag { font-size: 13px; padding: 4px 11px; }
+  body.story-mode .tag-row { gap: 5px; }
+  body.story-mode .sotm-meta { font-size: 15px; gap: 12px; flex-wrap: wrap; }
 
-  /* Top 5 lists */
-  body.story-mode .show-list { flex: 1; overflow-y: auto; min-height: 0; }
-  body.story-mode .show-row { padding: 7px 0; gap: 8px; }
-  body.story-mode .show-thumb { width: 36px; height: 36px; }
-  body.story-mode .show-rank { font-size: 14px; width: 18px; }
-  body.story-mode .show-title { font-size: 11px; }
-  body.story-mode .show-venue { font-size: 10px; }
-  body.story-mode .show-medium { font-size: 10px; }
-  body.story-mode .show-count { font-size: 14px; }
-  body.story-mode .show-count-lbl { font-size: 9px; }
+  /* Shared story logo (all non-SOTM cards) */
+  .story-logo { display: none; }
+  body.story-mode .story-logo {
+    display: block;
+    width: 144px;
+    height: auto;
+    flex-shrink: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Top 5 / Most Popular lists */
+  body.story-mode .show-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
+  }
+  body.story-mode .show-row { flex: 1; padding: 0; gap: 14px; align-items: center; }
+  body.story-mode .show-thumb { width: 60px; height: 60px; border-radius: 6px; flex-shrink: 0; }
+  body.story-mode .show-rank { font-size: 22px; width: 26px; }
+  body.story-mode .show-title { font-size: 15px; font-weight: 700; }
+  body.story-mode .show-venue { font-size: 13px; }
+  body.story-mode .show-medium { font-size: 12px; }
+  body.story-mode .show-count { font-size: 22px; }
+  body.story-mode .show-count-lbl { font-size: 11px; }
 
   /* Map */
   body.story-mode #map-container { flex: 1; height: auto; min-height: 0; border-radius: 6px; margin-top: 4px; }
   body.story-mode .week-nav { margin-bottom: 8px; }
 
   /* Neighborhoods */
-  body.story-mode .hood-list { flex: 1; overflow-y: auto; min-height: 0; gap: 8px; }
-  body.story-mode .hood-name { font-size: 11px; width: 100px; }
-  body.story-mode .hood-count { font-size: 11px; }
+  body.story-mode .hood-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  body.story-mode .hood-name { font-size: 15px; font-weight: 700; width: 150px; }
+  body.story-mode .hood-bar-wrap { height: 12px; }
+  body.story-mode .hood-count { font-size: 15px; font-weight: 700; width: 32px; }
 
   /* Gallery Crawl */
-  body.story-mode .crawl-intro { font-size: 11px; margin-bottom: 10px; }
-  body.story-mode .crawl-pairs { flex: 1; overflow-y: auto; min-height: 0; }
-  body.story-mode .crawl-show-title { font-size: 11px; }
-  body.story-mode .crawl-show-meta { font-size: 10px; }
-  body.story-mode .crawl-based-on { font-size: 9px; margin-bottom: 5px; }
-  body.story-mode .crawl-group { padding-bottom: 10px; margin-bottom: 10px; }
+  body.story-mode .crawl-intro { font-size: 13px; margin-bottom: 12px; flex-shrink: 0; }
+  body.story-mode .crawl-pairs {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
+    justify-content: space-between;
+  }
+  body.story-mode .crawl-show-title { font-size: 15px; font-weight: 700; }
+  body.story-mode .crawl-show-meta { font-size: 13px; }
+  body.story-mode .crawl-based-on { font-size: 11px; margin-bottom: 6px; }
+  body.story-mode .crawl-group { padding-bottom: 0; margin-bottom: 0; border-bottom: none; }
+  body.story-mode .crawl-show-row { padding: 8px 0; }
 
   /* Closing */
-  body.story-mode .closing-list { flex: 1; overflow-y: auto; min-height: 0; }
-  body.story-mode .closing-row { padding: 7px 0; gap: 8px; }
-  body.story-mode .closing-title { font-size: 11px; }
-  body.story-mode .closing-venue { font-size: 10px; }
-  body.story-mode .closing-date { font-size: 10px; width: 46px; }
-  body.story-mode .closing-seen { font-size: 11px; }
+  body.story-mode .closing-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
+  }
+  body.story-mode .closing-row { flex: 1; padding: 0; gap: 10px; align-items: center; }
+  body.story-mode .closing-title { font-size: 15px; font-weight: 700; }
+  body.story-mode .closing-venue { font-size: 12px; }
+  body.story-mode .closing-date { font-size: 13px; font-weight: 700; width: 52px; }
+  body.story-mode .closing-seen { font-size: 15px; font-weight: 700; }
+
+  /* Returning Favorites */
+  body.story-mode .returning-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
+  }
+  body.story-mode .returning-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  body.story-mode .returning-item:last-child { border-bottom: none; }
+  body.story-mode .returning-title { font-size: 16px; font-weight: 700; }
+  body.story-mode .returning-venue { font-size: 13px; margin-bottom: 4px; }
+  body.story-mode .returning-month-tag { font-size: 12px; padding: 3px 10px; }
 
   /* ── Mobile ── */
   @media (max-width: 680px) {
@@ -645,7 +747,7 @@
 <body>
 
 <header>
-  <div class="logo">Showrunner</div>
+  <img class="logo" src="logo.PNG" alt="Showrunner">
   <nav class="month-nav" id="month-nav"></nav>
   <button class="view-toggle" id="view-toggle">Story view</button>
 </header>
@@ -717,26 +819,24 @@ const MONTH_FULL = {
 };
 
 function renderStats(d) {
-  // Collect up to 9 images for the cover grid (top_5_views first, then top_5_seen)
+  // Collect up to 7 images for the bottom strip
   const seenUrls = new Set();
   const coverImgs = [];
-  for (const s of [...(d.top_5_views || []), ...(d.top_5_seen || [])]) {
-    if (coverImgs.length >= 9) break;
+  for (const s of [...(d.top_5_views || []), ...(d.top_5_seen || []), ...(d.top_5_saved || [])]) {
+    if (coverImgs.length >= 7) break;
     if (s.featured_image && !seenUrls.has(s.featured_image)) {
       seenUrls.add(s.featured_image);
       coverImgs.push(s.featured_image);
     }
   }
-  while (coverImgs.length < 9) coverImgs.push('');
 
-  const [, mo] = d.month.split('-');
-  const coverTitle = `${MONTH_FULL[mo]} Roundup`;
+  const [yr, mo] = d.month.split('-');
+  const coverTitle = `${MONTH_FULL[mo]} ${yr} Roundup`;
   const statLine = `${d.total_checkins.toLocaleString()} visits across ${d.total_shows_seen.toLocaleString()} exhibitions`;
 
-  const gridCells = coverImgs.map(url => url
-    ? `<img class="cover-cell" src="${url}" alt="" loading="lazy">`
-    : `<div class="cover-cell cover-cell-empty"></div>`
-  ).join('');
+  const imgRow = coverImgs
+    .map(url => `<img src="${url}" alt="" loading="lazy">`)
+    .join('');
 
   return `
   <div class="card stats-hero">
@@ -747,33 +847,37 @@ function renderStats(d) {
       </div>
     </div>
     <div class="stats-cover">
-      <div class="cover-grid">${gridCells}</div>
-      <div class="cover-overlay"></div>
       <div class="cover-content">
-        <div class="cover-wordmark">Showrunner</div>
+        <img class="cover-logo" src="logo.PNG" alt="Showrunner" loading="lazy">
         <div class="cover-title">${coverTitle}</div>
         <div class="cover-stat">${statLine}</div>
       </div>
+      <div class="cover-img-row">${imgRow}</div>
     </div>
   </div>`;
 }
 
 function renderSotm(show) {
   return `
-  <div class="card card-full">
-    <div class="card-label">Show of the Month</div>
-    ${imgOrPlaceholder(show.featured_image, 'sotm-image', show.title)}
-    <div class="sotm-title">${show.title}</div>
-    <div class="sotm-venue">${show.venue_name} · ${show.neighborhood}</div>
-    ${show.short_description ? `<div class="sotm-desc">${show.short_description}</div>` : ''}
-    ${tagsHtml(show.mediums)}
-    ${tagsHtml(show.artists)}
-    <div class="sotm-meta">
-      ${show.view_count ? `<span><strong>${show.view_count}</strong> impressions</span>` : ''}
-      <span><strong>${show.seen_count}</strong> check-ins</span>
-      ${show.save_count ? `<span><strong>${show.save_count}</strong> saves</span>` : ''}
-      ${show.end_date ? `<span>Closes ${fmtDate(show.end_date)}</span>` : ''}
-      ${show.gallery_tier ? `<span>${show.gallery_tier}</span>` : ''}
+  <div class="card card-full sotm-card">
+    <img class="sotm-logo" src="logo.PNG" alt="Showrunner">
+    <div class="sotm-img-wrap">
+      ${imgOrPlaceholder(show.featured_image, 'sotm-image', show.title)}
+    </div>
+    <div class="sotm-body">
+      <div class="card-label">Show of the Month</div>
+      <div class="sotm-title">${show.title}</div>
+      <div class="sotm-venue">${show.venue_name} · ${show.neighborhood}</div>
+      ${show.short_description ? `<div class="sotm-desc">${show.short_description}</div>` : ''}
+      ${tagsHtml(show.mediums)}
+      ${tagsHtml(show.artists)}
+      <div class="sotm-meta">
+        ${show.view_count ? `<span><strong>${show.view_count}</strong> impressions</span>` : ''}
+        <span><strong>${show.seen_count}</strong> check-ins</span>
+        ${show.save_count ? `<span><strong>${show.save_count}</strong> saves</span>` : ''}
+        ${show.end_date ? `<span>Closes ${fmtDate(show.end_date)}</span>` : ''}
+        ${show.gallery_tier ? `<span>${show.gallery_tier}</span>` : ''}
+      </div>
     </div>
   </div>`;
 }
@@ -795,6 +899,7 @@ function renderTop5(shows) {
     </div>`).join('');
   return `
   <div class="card card-half">
+    <img class="story-logo" src="logo.PNG" alt="Showrunner">
     <div class="card-label">Top 5 Most Visited</div>
     <div class="show-list">${rows}</div>
   </div>`;
@@ -822,6 +927,7 @@ function renderTop5Saved(shows) {
     </div>`).join('');
   return `
   <div class="card card-half">
+    <img class="story-logo" src="logo.PNG" alt="Showrunner">
     <div class="card-label">Top 5 Want to See</div>
     <div class="show-list">${rows}</div>
   </div>`;
@@ -849,6 +955,7 @@ function renderTop5Views(shows) {
     </div>`).join('');
   return `
   <div class="card card-full">
+    <img class="story-logo" src="logo.PNG" alt="Showrunner">
     <div class="card-label">Most Popular Shows This Month</div>
     <div class="show-list">${rows}</div>
   </div>`;
@@ -867,8 +974,8 @@ function renderNeighborhoods(hoods) {
     </div>`).join('');
   return `
   <div class="card card-half">
+    <img class="story-logo" src="logo.PNG" alt="Showrunner">
     <div class="card-label">Neighborhoods</div>
-    <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">Showrunner gallery check-ins by neighborhood</div>
     <div class="hood-list">${rows}</div>
   </div>`;
 }
@@ -893,9 +1000,10 @@ function renderGalleryCrawl(crawls) {
   }).join('');
   return `
   <div class="card card-half">
+    <img class="story-logo" src="logo.PNG" alt="Showrunner">
     <div class="card-label">The Gallery Crawl</div>
     <div class="crawl-intro">Shows people keep planning together.</div>
-    ${groups}
+    <div class="crawl-pairs">${groups}</div>
   </div>`;
 }
 
@@ -915,6 +1023,7 @@ function renderReturning(favorites) {
       </div>`).join('');
   return `
   <div class="card">
+    <img class="story-logo" src="logo.PNG" alt="Showrunner">
     <div class="card-label">Returning Favorites</div>
     <div class="returning-list">${inner}</div>
   </div>`;
@@ -923,6 +1032,7 @@ function renderReturning(favorites) {
 function renderMap() {
   return `
   <div class="card card-full">
+    <img class="story-logo" src="logo.PNG" alt="Showrunner">
     <div class="card-label">Check-in Map</div>
     <div class="week-nav" id="week-nav">
       <button class="week-btn active" data-week="0">Week 1</button>
@@ -947,8 +1057,8 @@ function renderClosing(closing) {
     </div>`).join('');
   return `
   <div class="card card-full">
+    <img class="story-logo" src="logo.PNG" alt="Showrunner">
     <div class="card-label">Closing This Month</div>
-    <div style="font-size:12px;color:var(--muted);margin-bottom:12px;">This month's most popular closing shows, by view count</div>
     <div class="closing-list">${rows}</div>
   </div>`;
 }
@@ -1171,7 +1281,7 @@ async function loadMonth(ym) {
 
   let data;
   try {
-    data = await fetch(`payloads/${ym}.json?v=4`).then(r => {
+    data = await fetch(`payloads/${ym}.json?v=5`).then(r => {
       if (!r.ok) throw new Error(r.status);
       return r.json();
     });
