@@ -1,0 +1,17 @@
+{
+  "name": "showrunner-cards",
+  "version": "1.0.0",
+  "description": "Showrunner monthly report API",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "verify:readonly": "node scripts/verifyReadOnly.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
