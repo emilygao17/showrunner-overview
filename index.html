@@ -811,6 +811,22 @@
     font-weight: 700;
     color: var(--label);
   }
+  .table-top-score {
+    font-weight: 700;
+    color: #c0392b;
+  }
+  .table-top-label {
+    font-size: 10px;
+    color: #c0392b;
+    margin-right: 6px;
+  }
+  .table-footnote {
+    font-size: 11px;
+    font-style: italic;
+    color: var(--label);
+    margin-top: 10px;
+    line-height: 1.5;
+  }
 
   /* ── Mobile ── */
   @media (max-width: 680px) {
@@ -1138,15 +1154,18 @@ function renderMap() {
 
 function renderTableCard(stats, label, firstColHeader) {
   if (!stats || !stats.length) return '';
-  const rows = stats.map(item => `
+  const sorted = [...stats].sort((a, b) => b.views_per_show - a.views_per_show);
+  const rows = sorted.map((item, i) => {
+    const isTop = i === 0;
+    const scoreCell = isTop
+      ? `<td><span class="table-top-label">← highest interest</span><span class="table-top-score">${item.views_per_show}</span></td>`
+      : `<td>${item.views_per_show}</td>`;
+    return `
     <tr>
       <td>${item.label}</td>
-      <td>${item.views.toLocaleString()}</td>
-      <td>${item.shows}</td>
-      <td>${item.highest_intensity
-        ? `<span class="table-intensity-value">${item.views_per_show}</span><span class="table-intensity-label">highest intensity</span>`
-        : item.views_per_show}</td>
-    </tr>`).join('');
+      ${scoreCell}
+    </tr>`;
+  }).join('');
   return `
   <div class="card card-full card-table-view">
     <img class="story-logo" src="logo.PNG" alt="Showrunner">
@@ -1154,11 +1173,12 @@ function renderTableCard(stats, label, firstColHeader) {
     <table class="table-view">
       <thead>
         <tr>
-          <th>${firstColHeader}</th><th>Impressions</th><th>Shows</th><th>Impr/show</th>
+          <th>${firstColHeader}</th><th>User Interest Score</th>
         </tr>
       </thead>
       <tbody>${rows}</tbody>
     </table>
+    <p class="table-footnote">User interest score reflects how engaged viewers are per show — calculated as average impressions per show in this category. A higher score means each show in this category captured more attention on average.</p>
   </div>`;
 }
 
