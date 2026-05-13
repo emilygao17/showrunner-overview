@@ -917,16 +917,9 @@
   .onview-charts { flex: 1; display: flex; flex-direction: column; gap: 10px; min-height: 0; }
   .onview-chart-wrap { flex: 1; display: flex; flex-direction: column; min-width: 0; min-height: 0; }
   .onview-subtitle { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 6px; flex-shrink: 0; text-align: left; }
-  /* Pie left (~40%), legend right (~60%) within each half */
-  .onview-chart-row { flex: 1; display: flex; gap: 18px; min-height: 0; align-items: center; }
-  .onview-chart-container { flex: 0 0 36%; aspect-ratio: 1; position: relative; min-width: 0; }
-  .onview-chart-container canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; }
-  .onview-legend { flex: 1; min-width: 0; overflow-y: auto; align-self: center; }
-  .onview-legend-item { display: flex; align-items: center; gap: 9px; padding: 5px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
-  .onview-legend-item:last-child { border-bottom: none; }
-  .onview-legend-swatch { flex-shrink: 0; width: 11px; height: 11px; border-radius: 2px; }
-  .onview-legend-name { flex: 1; font-size: 12px; line-height: 1.4; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .onview-legend-pct { flex-shrink: 0; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; padding-left: 4px; }
+  /* Bar chart fills remaining height of each half */
+  .onview-bar-container { flex: 1; position: relative; min-height: 0; }
+  .onview-bar-container canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; }
 </style>
 </head>
 <body>
@@ -1285,13 +1278,10 @@ function renderSubjectMatters(stats, month) {
   return renderTableCard(stats, 'Most Popular Subject Matters', 'Subject matter');
 }
 
-// ── On-View Pie Charts ──────────────────────────────────────────────────────
+// ── On-View Bar Charts ──────────────────────────────────────────────────────
 
-const PIE_PALETTE = [
-  '#a8c5a0', '#d4a574', '#8db4cc', '#d4917e', '#b09fcf',
-  '#c8b860', '#7ab5a8', '#c49060', '#95b8c4', '#c4826e',
-  '#98a8b8', '#c8b894',
-];
+const BAR_COLOR   = '#8db4cc';
+const OTHER_COLOR = '#C8C4BC';
 
 let _onViewCharts = [];
 
@@ -1304,17 +1294,11 @@ function renderOnView(onViewStats, label) {
     <div class="onview-charts">
       <div class="onview-chart-wrap">
         <div class="onview-subtitle">By medium</div>
-        <div class="onview-chart-row">
-          <div class="onview-chart-container"><canvas id="pie-medium"></canvas></div>
-          <div class="onview-legend" id="legend-medium"></div>
-        </div>
+        <div class="onview-bar-container"><canvas id="bar-medium"></canvas></div>
       </div>
       <div class="onview-chart-wrap">
         <div class="onview-subtitle">By subject matter</div>
-        <div class="onview-chart-row">
-          <div class="onview-chart-container"><canvas id="pie-subject"></canvas></div>
-          <div class="onview-legend" id="legend-subject"></div>
-        </div>
+        <div class="onview-bar-container"><canvas id="bar-subject"></canvas></div>
       </div>
     </div>
   </div>`;
@@ -1323,77 +1307,61 @@ function renderOnView(onViewStats, label) {
 function initOnViewCharts(onViewStats) {
   _onViewCharts.forEach(c => c.destroy());
   _onViewCharts = [];
-  const medCanvas = document.getElementById('pie-medium');
-  const subCanvas = document.getElementById('pie-subject');
+  const medCanvas = document.getElementById('bar-medium');
+  const subCanvas = document.getElementById('bar-subject');
   if (!medCanvas || !subCanvas || !onViewStats) return;
 
-  function groupOther(data, maxSlices) {
-    if (data.length <= maxSlices) return data;
-    const otherCount = data.slice(maxSlices - 1).reduce((s, d) => s + d.count, 0);
-    return [...data.slice(0, maxSlices - 1), { label: 'Other', count: otherCount }];
-  }
+  const totalShows = onViewStats.total || 1;
 
-  const OTHER_COLOR = '#C8C4BC';
-
-  function makePie(canvas, legendEl, rawData, maxSlices) {
-    const grouped = maxSlices ? groupOther(rawData, maxSlices) : rawData;
-
-    // Sort named slices desc; keep 'Other' pinned at end
-    const other = grouped.find(d => d.label === 'Other');
-    const named = grouped.filter(d => d.label !== 'Other').sort((a, b) => b.count - a.count);
-    const data = other ? [...named, other] : named;
-
-    const total = data.reduce((s, d) => s + d.count, 0);
-
-    // 'Other' gets neutral gray; named slices get palette colors
-    const colors = data.map((d, i) =>
-      d.label === 'Other' ? OTHER_COLOR : PIE_PALETTE[i % PIE_PALETTE.length]
-    );
-
-    // Rotate so 'Other' slice is centered at the bottom (90° in canvas coords).
-    // Formula: rotation = (otherFraction * 180) - 270
-    const rotation = other ? (other.count / total) * 180 - 270 : -90;
-
-    // Populate legend: named first, Other last
-    legendEl.innerHTML = data.map((d, i) => {
-      const pct = Math.round(d.count / total * 100);
-      return `<div class="onview-legend-item">
-        <span class="onview-legend-swatch" style="background:${colors[i]}"></span>
-        <span class="onview-legend-name">${d.label}</span>
-        <span class="onview-legend-pct">${pct}%</span>
-      </div>`;
-    }).join('');
+  function makeBar(canvas, rawData) {
+    const MAX = 10;
+    const sorted = [...rawData].sort((a, b) => b.count - a.count);
+    const named  = sorted.slice(0, MAX);
+    const otherCount = sorted.slice(MAX).reduce((s, d) => s + d.count, 0);
+    const data = otherCount > 0 ? [...named, { label: 'Other', count: otherCount }] : named;
 
     return new Chart(canvas, {
-      type: 'pie',
+      type: 'bar',
       data: {
         labels: data.map(d => d.label),
         datasets: [{
           data: data.map(d => d.count),
-          backgroundColor: colors,
-          borderWidth: 2,
-          borderColor: '#faf9f7',
+          backgroundColor: data.map(d => d.label === 'Other' ? OTHER_COLOR : BAR_COLOR),
+          borderWidth: 0,
+          borderRadius: 2,
         }],
       },
       options: {
+        indexAxis: 'y',
         responsive: true,
         maintainAspectRatio: false,
-        rotation,
+        layout: { padding: { right: 56 } },
+        scales: {
+          x: { display: false },
+          y: {
+            grid: { display: false },
+            border: { display: false },
+            ticks: { font: { size: 10 }, color: '#666', padding: 4 },
+          },
+        },
         plugins: {
           legend: { display: false },
-          tooltip: {
-            callbacks: {
-              label: ctx => ` ${ctx.label}: ${Math.round(ctx.parsed / total * 100)}%`,
-            },
+          tooltip: { enabled: false },
+          datalabels: {
+            display: true,
+            anchor: 'end',
+            align: 'end',
+            formatter: value => `${value}  ${Math.round(value / totalShows * 100)}%`,
+            font: { size: 9.5, weight: '500' },
+            color: '#888',
           },
-          datalabels: { display: false },
         },
       },
     });
   }
 
-  _onViewCharts.push(makePie(medCanvas, document.getElementById('legend-medium'), onViewStats.medium, null));
-  _onViewCharts.push(makePie(subCanvas, document.getElementById('legend-subject'), onViewStats.subject, 10));
+  _onViewCharts.push(makeBar(medCanvas, onViewStats.medium));
+  _onViewCharts.push(makeBar(subCanvas, onViewStats.subject));
 }
 
 function renderClosing(closing) {
