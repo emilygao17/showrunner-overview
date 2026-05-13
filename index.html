@@ -1697,7 +1697,7 @@ async function loadMonth(ym) {
   ].join('');
 
   const [yr, mo] = data.month.split('-');
-  document.documentElement.style.setProperty('--story-month-label', `"${MONTH_FULL[mo]} ${yr}"`);
+  document.documentElement.style.setProperty('--story-month-label', `"NYC — ${MONTH_FULL[mo]} ${yr}"`);
 
   initMap(data.map_checkins, data.month);
   initOnViewCharts(data.on_view_stats);
