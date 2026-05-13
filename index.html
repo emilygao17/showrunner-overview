@@ -871,6 +871,48 @@
   /* ── On-View Pie Charts card ── */
   .card-onview { display: none !important; }
   body.story-mode .card-onview { display: flex !important; flex-direction: column; }
+
+  /* Snapshot — "by the numbers" card (story mode only) */
+  .card-snapshot { display: none !important; }
+  body.story-mode .card-snapshot { display: flex !important; flex-direction: column; }
+  body.story-mode .snapshot-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    min-height: 0;
+  }
+  body.story-mode .snapshot-stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 22px 0;
+  }
+  body.story-mode .snapshot-stat:nth-child(odd) {
+    padding-right: 36px;
+    border-right: 1px solid rgba(0,0,0,0.08);
+  }
+  body.story-mode .snapshot-stat:nth-child(even) {
+    padding-left: 36px;
+  }
+  body.story-mode .snapshot-stat:not(:nth-last-child(-n+2)) {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  body.story-mode .snapshot-num {
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  body.story-mode .snapshot-label {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-top: 9px;
+  }
   /* Two halves stacked vertically */
   .onview-charts { flex: 1; display: flex; flex-direction: column; gap: 10px; min-height: 0; }
   .onview-chart-wrap { flex: 1; display: flex; flex-direction: column; min-width: 0; min-height: 0; }
@@ -997,6 +1039,29 @@ function renderStats(d) {
         <div class="cover-stat">${statLine}</div>
       </div>
       <div class="cover-img-row">${imgRow}</div>
+    </div>
+  </div>`;
+}
+
+function renderSnapshot(snapshot, label) {
+  if (!snapshot) return '';
+  const fmt = n => Number(n).toLocaleString('en-US');
+  const stat = (num, lbl) => `
+    <div class="snapshot-stat">
+      <div class="snapshot-num">${fmt(num)}</div>
+      <div class="snapshot-label">${lbl}</div>
+    </div>`;
+  return `
+  <div class="card card-full card-snapshot">
+    <img class="story-logo" src="logo.PNG" alt="Showrunner">
+    <div class="card-label">${label} — by the numbers</div>
+    <div class="snapshot-grid">
+      ${stat(snapshot.total_impressions, 'Showrunner app impressions')}
+      ${stat(snapshot.shows_opened,      'Shows opened this month')}
+      ${stat(snapshot.museum_openings,   'Museum openings')}
+      ${stat(snapshot.gallery_openings,  'Gallery openings')}
+      ${stat(snapshot.solo_shows,        'Solo shows')}
+      ${stat(snapshot.group_shows,       'Group shows')}
     </div>
   </div>`;
 }
@@ -1616,6 +1681,7 @@ async function loadMonth(ym) {
 
   main.innerHTML = [
     renderStats(data),
+    renderSnapshot(data.snapshot, data.label),
     renderSotm(data.show_of_the_month),
     renderTop5Views(data.top_5_views),
     renderTop5(data.top_5_seen),
