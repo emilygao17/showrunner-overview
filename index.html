@@ -542,6 +542,7 @@
     padding: 24px;
     flex-shrink: 0;
     position: relative;
+    border: 2px solid #D8D4C8;
   }
   body.story-mode .card:not(.stats-hero)::before {
     content: var(--story-month-label, '');
@@ -870,18 +871,20 @@
   /* ── On-View Pie Charts card ── */
   .card-onview { display: none !important; }
   body.story-mode .card-onview { display: flex !important; flex-direction: column; }
-  .onview-charts { flex: 1; display: flex; gap: 16px; min-height: 0; }
+  /* Two halves stacked vertically */
+  .onview-charts { flex: 1; display: flex; flex-direction: column; gap: 10px; min-height: 0; }
   .onview-chart-wrap { flex: 1; display: flex; flex-direction: column; min-width: 0; min-height: 0; }
-  .onview-subtitle { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 8px; flex-shrink: 0; text-align: left; }
-  .onview-chart-row { flex: 1; display: flex; gap: 14px; min-height: 0; align-items: flex-start; }
-  .onview-chart-container { flex-shrink: 0; width: min(52%, 200px); aspect-ratio: 1; position: relative; }
+  .onview-subtitle { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 6px; flex-shrink: 0; text-align: left; }
+  /* Pie left (~40%), legend right (~60%) within each half */
+  .onview-chart-row { flex: 1; display: flex; gap: 18px; min-height: 0; align-items: center; }
+  .onview-chart-container { flex: 0 0 40%; aspect-ratio: 1; position: relative; min-width: 0; }
   .onview-chart-container canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; }
-  .onview-legend { flex: 1; min-width: 0; overflow-y: auto; }
-  .onview-legend-item { display: flex; align-items: center; gap: 7px; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
+  .onview-legend { flex: 1; min-width: 0; overflow-y: auto; align-self: center; }
+  .onview-legend-item { display: flex; align-items: center; gap: 9px; padding: 5px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
   .onview-legend-item:last-child { border-bottom: none; }
-  .onview-legend-swatch { flex-shrink: 0; width: 8px; height: 8px; border-radius: 1px; }
-  .onview-legend-name { flex: 1; font-size: 10px; line-height: 1.3; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .onview-legend-pct { flex-shrink: 0; font-size: 9.5px; color: var(--muted); font-variant-numeric: tabular-nums; padding-left: 2px; }
+  .onview-legend-swatch { flex-shrink: 0; width: 11px; height: 11px; border-radius: 2px; }
+  .onview-legend-name { flex: 1; font-size: 12px; line-height: 1.4; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .onview-legend-pct { flex-shrink: 0; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; padding-left: 4px; }
 </style>
 </head>
 <body>
