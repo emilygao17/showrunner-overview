@@ -994,6 +994,10 @@ function renderSotm(show) {
       ${show.short_description ? `<div class="sotm-desc">${show.short_description}</div>` : ''}
       ${tagsHtml(show.mediums)}
       ${tagsHtml(show.artists)}
+      <div class="sotm-meta">
+        ${show.end_date ? `<span>Closes ${fmtDate(show.end_date)}</span>` : ''}
+        ${show.gallery_tier ? `<span>${show.gallery_tier}</span>` : ''}
+      </div>
       <div class="sotm-footnote">Show of the month determined by Showrunner user impressions.</div>
     </div>
   </div>`;
