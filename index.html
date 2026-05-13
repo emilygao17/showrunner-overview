@@ -1018,7 +1018,7 @@ function renderStats(d) {
 
   const [yr, mo] = d.month.split('-');
   const coverTitle = `${MONTH_FULL[mo]} ${yr} Roundup`;
-  const statLine = `${d.total_checkins.toLocaleString()} visits across ${d.total_shows_seen.toLocaleString()} exhibitions`;
+  const statLine = `${d.total_checkins.toLocaleString()} visits across NYC`;
 
   const imgRow = coverImgs
     .map(url => `<img src="${url}" alt="" loading="lazy">`)
