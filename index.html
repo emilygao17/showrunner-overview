@@ -913,11 +913,7 @@
     text-transform: uppercase;
     margin-top: 9px;
   }
-  /* Two halves stacked vertically */
-  .onview-charts { flex: 1; display: flex; flex-direction: column; gap: 10px; min-height: 0; }
-  .onview-chart-wrap { flex: 1; display: flex; flex-direction: column; min-width: 0; min-height: 0; }
-  .onview-subtitle { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 6px; flex-shrink: 0; text-align: left; }
-  /* Bar chart fills remaining height of each half */
+  /* Single vertical bar chart fills full card */
   .onview-bar-container { flex: 1; position: relative; min-height: 0; }
   .onview-bar-container canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; }
 </style>
@@ -1290,78 +1286,62 @@ function renderOnView(onViewStats, label) {
   return `
   <div class="card card-full card-onview">
     <img class="story-logo" src="logo.PNG" alt="Showrunner">
-    <div class="card-label">${label} — what's on view</div>
-    <div class="onview-charts">
-      <div class="onview-chart-wrap">
-        <div class="onview-subtitle">By medium</div>
-        <div class="onview-bar-container"><canvas id="bar-medium"></canvas></div>
-      </div>
-      <div class="onview-chart-wrap">
-        <div class="onview-subtitle">By subject matter</div>
-        <div class="onview-bar-container"><canvas id="bar-subject"></canvas></div>
-      </div>
-    </div>
+    <div class="card-label">${label} — shows by medium</div>
+    <div class="onview-bar-container"><canvas id="bar-medium"></canvas></div>
   </div>`;
 }
+
+const BAR_PALETTE = [
+  '#a8c5a0', '#d4a574', '#8db4cc', '#d4917e', '#b09fcf',
+  '#c8b860', '#7ab5a8', '#c49060', '#95b8c4', '#c4826e',
+];
 
 function initOnViewCharts(onViewStats) {
   _onViewCharts.forEach(c => c.destroy());
   _onViewCharts = [];
   const medCanvas = document.getElementById('bar-medium');
-  const subCanvas = document.getElementById('bar-subject');
-  if (!medCanvas || !subCanvas || !onViewStats) return;
+  if (!medCanvas || !onViewStats) return;
 
-  const totalShows = onViewStats.total || 1;
+  const sorted = [...onViewStats.medium].sort((a, b) => b.count - a.count).slice(0, 10);
 
-  function makeBar(canvas, rawData) {
-    const MAX = 10;
-    const sorted = [...rawData].sort((a, b) => b.count - a.count);
-    const named  = sorted.slice(0, MAX);
-    const otherCount = sorted.slice(MAX).reduce((s, d) => s + d.count, 0);
-    const data = otherCount > 0 ? [...named, { label: 'Other', count: otherCount }] : named;
-
-    return new Chart(canvas, {
-      type: 'bar',
-      data: {
-        labels: data.map(d => d.label),
-        datasets: [{
-          data: data.map(d => d.count),
-          backgroundColor: data.map(d => d.label === 'Other' ? OTHER_COLOR : BAR_COLOR),
-          borderWidth: 0,
-          borderRadius: 2,
-        }],
-      },
-      options: {
-        indexAxis: 'y',
-        responsive: true,
-        maintainAspectRatio: false,
-        layout: { padding: { right: 56 } },
-        scales: {
-          x: { display: false },
-          y: {
-            grid: { display: false },
-            border: { display: false },
-            ticks: { font: { size: 10 }, color: '#666', padding: 4 },
-          },
+  const chart = new Chart(medCanvas, {
+    type: 'bar',
+    data: {
+      labels: sorted.map(d => d.label),
+      datasets: [{
+        data: sorted.map(d => d.count),
+        backgroundColor: sorted.map((_, i) => BAR_PALETTE[i % BAR_PALETTE.length]),
+        borderWidth: 0,
+        borderRadius: 3,
+      }],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      layout: { padding: { top: 26 } },
+      scales: {
+        x: {
+          grid: { display: false },
+          border: { display: false },
+          ticks: { font: { size: 10 }, color: '#555', maxRotation: 35, minRotation: 0 },
         },
-        plugins: {
-          legend: { display: false },
-          tooltip: { enabled: false },
-          datalabels: {
-            display: true,
-            anchor: 'end',
-            align: 'end',
-            formatter: value => `${value}  ${Math.round(value / totalShows * 100)}%`,
-            font: { size: 9.5, weight: '500' },
-            color: '#888',
-          },
+        y: { display: false },
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: { enabled: false },
+        datalabels: {
+          display: true,
+          anchor: 'end',
+          align: 'top',
+          formatter: value => value,
+          font: { size: 12, weight: '700' },
+          color: '#333',
         },
       },
-    });
-  }
-
-  _onViewCharts.push(makeBar(medCanvas, onViewStats.medium));
-  _onViewCharts.push(makeBar(subCanvas, onViewStats.subject));
+    },
+  });
+  _onViewCharts.push(chart);
 }
 
 function renderClosing(closing) {
