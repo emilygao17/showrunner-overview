@@ -199,6 +199,13 @@
     color: var(--muted);
   }
   .sotm-meta strong { color: var(--ink); }
+  .sotm-footnote {
+    font-size: 11px;
+    font-style: italic;
+    color: var(--muted);
+    margin-top: auto;
+    padding-top: 8px;
+  }
   /* SOTM wrappers — magazine mode defaults */
   .sotm-img-wrap { display: block; }
   .sotm-logo { display: none; }
@@ -987,13 +994,7 @@ function renderSotm(show) {
       ${show.short_description ? `<div class="sotm-desc">${show.short_description}</div>` : ''}
       ${tagsHtml(show.mediums)}
       ${tagsHtml(show.artists)}
-      <div class="sotm-meta">
-        ${show.view_count ? `<span><strong>${show.view_count}</strong> impressions</span>` : ''}
-        <span><strong>${show.seen_count}</strong> check-ins</span>
-        ${show.save_count ? `<span><strong>${show.save_count}</strong> saves</span>` : ''}
-        ${show.end_date ? `<span>Closes ${fmtDate(show.end_date)}</span>` : ''}
-        ${show.gallery_tier ? `<span>${show.gallery_tier}</span>` : ''}
-      </div>
+      <div class="sotm-footnote">Show of the month determined by Showrunner user impressions.</div>
     </div>
   </div>`;
 }
