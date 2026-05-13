@@ -557,8 +557,9 @@
 
   /* Card label stays, reduce bottom margin */
   body.story-mode .card-label { font-size: 16px; letter-spacing: 0.08em; margin-bottom: 14px; flex-shrink: 0; }
-  .top5-views-subtitle { display: none; }
-  body.story-mode .top5-views-subtitle {
+  .top5-views-subtitle, .top5-seen-subtitle { display: none; }
+  body.story-mode .top5-views-subtitle,
+  body.story-mode .top5-seen-subtitle {
     display: block;
     font-size: 11px;
     font-style: italic;
@@ -1022,15 +1023,12 @@ function renderTop5(shows) {
         <div class="show-venue">${s.venue_name} · ${s.neighborhood}</div>
         ${s.mediums && s.mediums.length ? `<div class="show-medium">${s.mediums.join(', ')}</div>` : ''}
       </div>
-      <div>
-        <div class="show-count">${s.seen_count}</div>
-        <div class="show-count-lbl">seen</div>
-      </div>
     </div>`).join('');
   return `
   <div class="card card-half">
     <img class="story-logo" src="logo.PNG" alt="Showrunner">
     <div class="card-label">Top 5 Most Visited</div>
+    <div class="top5-seen-subtitle">Ranked by Showrunner user seen shows</div>
     <div class="show-list">${rows}</div>
   </div>`;
 }
