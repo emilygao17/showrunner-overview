@@ -631,17 +631,17 @@
   }
 
   /* SOTM — story mode */
-  body.story-mode .sotm-card { padding: 22px 24px 20px; }
+  body.story-mode .sotm-card { padding: 20px 24px 18px; }
   body.story-mode .sotm-logo {
     display: block;
-    width: 216px;
+    width: 180px;
     height: auto;
     flex-shrink: 0;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
   body.story-mode .sotm-img-wrap {
     width: 100%;
-    flex: 0 0 38%;
+    flex: 0 0 34%;
     overflow: hidden;
     border-radius: 8px;
   }
@@ -655,10 +655,10 @@
   }
   body.story-mode .sotm-body {
     flex: 1;
-    padding-top: 10px;
+    padding-top: 6px;
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 4px;
     justify-content: flex-start;
     overflow: hidden;
     min-height: 0;
@@ -668,15 +668,18 @@
     font-weight: 800;
     letter-spacing: 0.1em;
   }
-  body.story-mode .sotm-title { font-size: 26px; font-weight: 800; line-height: 1.1; }
-  body.story-mode .sotm-venue { font-size: 16px; }
+  body.story-mode .sotm-title { font-size: 22px; font-weight: 800; line-height: 1.1; }
+  body.story-mode .sotm-venue { font-size: 13px; }
   body.story-mode .sotm-desc {
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   body.story-mode .tag { font-size: 13px; padding: 4px 11px; }
   body.story-mode .tag-row { gap: 5px; }
-  body.story-mode .sotm-meta { font-size: 15px; gap: 12px; flex-wrap: wrap; }
 
   /* Shared story logo (all non-SOTM cards) */
   .story-logo { display: none; }
@@ -994,10 +997,6 @@ function renderSotm(show) {
       ${show.short_description ? `<div class="sotm-desc">${show.short_description}</div>` : ''}
       ${tagsHtml(show.mediums)}
       ${tagsHtml(show.artists)}
-      <div class="sotm-meta">
-        ${show.end_date ? `<span>Closes ${fmtDate(show.end_date)}</span>` : ''}
-        ${show.gallery_tier ? `<span>${show.gallery_tier}</span>` : ''}
-      </div>
       <div class="sotm-footnote">Show of the month determined by Showrunner user impressions.</div>
     </div>
   </div>`;
