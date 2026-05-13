@@ -8,6 +8,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,700;0,14..32,900;1,14..32,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
 <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2/dist/chartjs-plugin-datalabels.min.js"></script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -840,6 +842,14 @@
     .stats-hero .month-title { font-size: 24px; }
     .stat-num { font-size: 22px; }
   }
+  /* ── On-View Pie Charts card ── */
+  .card-onview { display: none !important; }
+  body.story-mode .card-onview { display: flex !important; flex-direction: column; }
+  .onview-charts { flex: 1; display: flex; gap: 12px; min-height: 0; }
+  .onview-chart-wrap { flex: 1; display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+  .onview-subtitle { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 6px; flex-shrink: 0; text-align: center; }
+  .onview-chart-container { flex: 1; position: relative; min-height: 0; }
+  .onview-chart-container canvas { position: absolute; inset: 0; width: 100% !important; height: 100% !important; }
 </style>
 </head>
 <body>
@@ -1190,6 +1200,97 @@ function renderSubjectMatters(stats, month) {
   return renderTableCard(stats, 'Most Popular Subject Matters', 'Subject matter');
 }
 
+// ── On-View Pie Charts ──────────────────────────────────────────────────────
+
+const PIE_PALETTE = [
+  '#a8c5a0', '#d4a574', '#8db4cc', '#d4917e', '#b09fcf',
+  '#c8b860', '#7ab5a8', '#c49060', '#95b8c4', '#c4826e',
+  '#98a8b8', '#c8b894',
+];
+
+let _onViewCharts = [];
+
+function renderOnView(onViewStats, label) {
+  if (!onViewStats) return '';
+  return `
+  <div class="card card-full card-onview">
+    <img class="story-logo" src="logo.PNG" alt="Showrunner">
+    <div class="card-label">${label} — what's on view</div>
+    <div class="onview-charts">
+      <div class="onview-chart-wrap">
+        <div class="onview-subtitle">By medium</div>
+        <div class="onview-chart-container"><canvas id="pie-medium"></canvas></div>
+      </div>
+      <div class="onview-chart-wrap">
+        <div class="onview-subtitle">By subject matter</div>
+        <div class="onview-chart-container"><canvas id="pie-subject"></canvas></div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function initOnViewCharts(onViewStats) {
+  _onViewCharts.forEach(c => c.destroy());
+  _onViewCharts = [];
+  const medCanvas = document.getElementById('pie-medium');
+  const subCanvas = document.getElementById('pie-subject');
+  if (!medCanvas || !subCanvas || !onViewStats) return;
+
+  function groupOther(data, maxSlices) {
+    if (data.length <= maxSlices) return data;
+    const otherCount = data.slice(maxSlices - 1).reduce((s, d) => s + d.count, 0);
+    return [...data.slice(0, maxSlices - 1), { label: 'Other', count: otherCount }];
+  }
+
+  function makePie(canvas, rawData, maxSlices) {
+    const data = maxSlices ? groupOther(rawData, maxSlices) : rawData;
+    const total = data.reduce((s, d) => s + d.count, 0);
+    return new Chart(canvas, {
+      type: 'pie',
+      data: {
+        labels: data.map(d => d.label),
+        datasets: [{
+          data: data.map(d => d.count),
+          backgroundColor: data.map((_, i) => PIE_PALETTE[i % PIE_PALETTE.length]),
+          borderWidth: 2,
+          borderColor: '#faf9f7',
+        }],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: { padding: 46 },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => ` ${ctx.label}: ${Math.round(ctx.parsed / total * 100)}%`,
+            },
+          },
+          datalabels: {
+            anchor: 'end',
+            align: 'end',
+            offset: 6,
+            display: 'auto',
+            formatter: (value, ctx) => {
+              const pct = Math.round(value / total * 100);
+              if (pct < 3) return null;
+              return [ctx.chart.data.labels[ctx.dataIndex], `${pct}%`];
+            },
+            font: ctx => ctx.dataIndex === 0
+              ? [{ size: 9, weight: '600', family: 'Inter, sans-serif' }, { size: 8, family: 'Inter, sans-serif' }]
+              : [{ size: 9, family: 'Inter, sans-serif' }, { size: 8, family: 'Inter, sans-serif' }],
+            color: '#3a3a3a',
+          },
+        },
+      },
+    });
+  }
+
+  _onViewCharts.push(makePie(medCanvas, onViewStats.medium, null));
+  _onViewCharts.push(makePie(subCanvas, onViewStats.subject, 10));
+}
+
 function renderClosing(closing) {
   if (!closing.length) return '';
   const rows = closing.map(c => `
@@ -1486,12 +1587,14 @@ async function loadMonth(ym) {
     renderClosingNext(data.closing_next_month),
     renderMediums(data.mediums_stats, data.month),
     renderSubjectMatters(data.subject_matters_stats, data.month),
+    renderOnView(data.on_view_stats, data.label),
   ].join('');
 
   const [yr, mo] = data.month.split('-');
   document.documentElement.style.setProperty('--story-month-label', `"${MONTH_FULL[mo]} ${yr}"`);
 
   initMap(data.map_checkins, data.month);
+  initOnViewCharts(data.on_view_stats);
 }
 
 // ── View toggle ────────────────────────────────────────────────────────────
