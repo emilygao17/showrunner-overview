@@ -931,19 +931,6 @@
 </main>
 
 <script>
-const MONTHS = [
-  { ym: '2025-07', label: 'Jul 2025' },
-  { ym: '2025-08', label: 'Aug 2025' },
-  { ym: '2025-09', label: 'Sep 2025' },
-  { ym: '2025-10', label: 'Oct 2025' },
-  { ym: '2025-11', label: 'Nov 2025' },
-  { ym: '2025-12', label: 'Dec 2025' },
-  { ym: '2026-01', label: 'Jan 2026' },
-  { ym: '2026-02', label: 'Feb 2026' },
-  { ym: '2026-03', label: 'Mar 2026' },
-  { ym: '2026-04', label: 'Apr 2026' },
-];
-
 const MONTH_SHORT = {
   '01':'Jan','02':'Feb','03':'Mar','04':'Apr','05':'May','06':'Jun',
   '07':'Jul','08':'Aug','09':'Sep','10':'Oct','11':'Nov','12':'Dec',
@@ -951,16 +938,21 @@ const MONTH_SHORT = {
 
 let currentMap = null;
 
-// ── Month nav ──────────────────────────────────────────────────────────────
+// ── Month nav (populated dynamically from /api/available-months) ──────────
 const nav = document.getElementById('month-nav');
-MONTHS.forEach(({ ym, label }) => {
-  const btn = document.createElement('button');
-  btn.className = 'month-btn';
-  btn.textContent = label;
-  btn.dataset.ym = ym;
-  btn.addEventListener('click', () => loadMonth(ym));
-  nav.appendChild(btn);
-});
+
+function buildMonthNav(months) {
+  nav.innerHTML = '';
+  for (const ym of months) {
+    const [y, m] = ym.split('-');
+    const btn = document.createElement('button');
+    btn.className = 'month-btn';
+    btn.textContent = `${MONTH_SHORT[m]} ${y}`;
+    btn.dataset.ym = ym;
+    btn.addEventListener('click', () => loadMonth(ym));
+    nav.appendChild(btn);
+  }
+}
 
 function setActiveBtn(ym) {
   document.querySelectorAll('.month-btn').forEach(b => {
@@ -1678,7 +1670,22 @@ viewToggle.addEventListener('click', () => {
 
 // ── Init ───────────────────────────────────────────────────────────────────
 applyView(localStorage.getItem('showrunner-view') !== 'magazine');
-loadMonth(MONTHS[MONTHS.length - 1].ym);
+
+(async () => {
+  try {
+    const res = await fetch('/api/available-months');
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const { months } = await res.json();
+    if (!months || !months.length) {
+      document.getElementById('main').innerHTML = '<div id="loading">No data available yet.</div>';
+      return;
+    }
+    buildMonthNav(months);
+    loadMonth(months[months.length - 1]);
+  } catch (e) {
+    document.getElementById('main').innerHTML = `<div id="loading" style="color:#c0392b">Failed to load months: ${e.message}</div>`;
+  }
+})();
 </script>
 </body>
 </html>

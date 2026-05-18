@@ -7,13 +7,15 @@
  */
 
 import 'dotenv/config';
-import { MONTHS, getPayload } from '../../lib/buildPayload.js';
+import { getPayload } from '../../lib/buildPayload.js';
+
+const MONTH_RE = /^\d{4}-(0[1-9]|1[0-2])$/;
 
 export default async function handler(req, res) {
   const { month } = req.query;
 
-  if (!MONTHS.includes(month)) {
-    return res.status(404).json({ error: `Unknown month: ${month}. Valid: ${MONTHS.join(', ')}` });
+  if (!MONTH_RE.test(month)) {
+    return res.status(400).json({ error: `Invalid month format: ${month}. Expected YYYY-MM.` });
   }
 
   try {

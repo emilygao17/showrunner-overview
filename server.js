@@ -7,17 +7,32 @@
 
 import 'dotenv/config';
 import express from 'express';
-import { MONTHS, getPayload } from './lib/buildPayload.js';
+import { getAvailableMonths, getPayload } from './lib/buildPayload.js';
 
 const app  = express();
 const PORT = process.env.PORT || 3000;
+const MONTH_RE = /^\d{4}-(0[1-9]|1[0-2])$/;
 
 app.use(express.static('.'));
 
+app.get('/api/available-months', async (_req, res) => {
+  try {
+    const months = await getAvailableMonths();
+    res.set('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=60');
+    res.json({ months });
+  } catch (err) {
+    if (err.message.startsWith('Supabase not configured')) {
+      return res.status(503).json({ error: err.message });
+    }
+    console.error(err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
 app.get('/api/monthly/:month', async (req, res) => {
   const { month } = req.params;
-  if (!MONTHS.includes(month)) {
-    return res.status(404).json({ error: `Unknown month: ${month}. Valid: ${MONTHS.join(', ')}` });
+  if (!MONTH_RE.test(month)) {
+    return res.status(400).json({ error: `Invalid month format: ${month}. Expected YYYY-MM.` });
   }
   try {
     const payload = await getPayload(month);
